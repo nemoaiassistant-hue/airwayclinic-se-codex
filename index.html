@@ -70,14 +70,14 @@
       inset: 0 0 auto;
       z-index: 100;
       height: var(--nav-height);
-      color: var(--white);
-      transition: background-color .25s ease, box-shadow .25s ease, color .25s ease, backdrop-filter .25s ease;
+      color: var(--dark-teal);
+      background: rgba(255, 255, 255, .97);
+      transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
     }
 
     .site-header.scrolled,
     .site-header.menu-active {
-      color: var(--dark-teal);
-      background: rgba(255, 255, 255, .94);
+      background: rgba(255, 255, 255, 1);
       box-shadow: 0 10px 30px rgba(26, 107, 105, .12);
       backdrop-filter: blur(16px);
     }
@@ -99,7 +99,6 @@
     .logo img {
       width: 154px;
       height: auto;
-      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .18));
     }
 
     .site-header.scrolled .logo img,
