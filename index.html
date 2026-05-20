@@ -678,14 +678,109 @@
     }
 
     .form-wrap {
-      min-height: 620px;
+      padding: 32px;
       overflow: hidden;
     }
 
-    .form-wrap iframe {
+    .form-wrap form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-wrap label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--dark-text);
+      margin-bottom: 6px;
+    }
+
+    .form-wrap input[type="text"],
+    .form-wrap input[type="email"],
+    .form-wrap input[type="tel"],
+    .form-wrap textarea {
       width: 100%;
-      min-height: 680px;
-      border: 0;
+      padding: 12px 14px;
+      border: 1px solid rgba(26, 107, 105, .2);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--dark-text);
+      background: var(--white);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .form-wrap input:focus,
+    .form-wrap textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59, 182, 179, .15);
+    }
+
+    .form-wrap textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-wrap .checkbox-group {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 4px;
+    }
+
+    .form-wrap .checkbox-group input[type="checkbox"] {
+      margin-top: 4px;
+      accent-color: var(--primary);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .form-wrap .checkbox-group span {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .form-wrap .submit-btn {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+      align-self: flex-start;
+    }
+
+    .form-wrap .submit-btn:hover {
+      background: var(--dark-teal);
+      transform: translateY(-1px);
+    }
+
+    .form-wrap .submit-btn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-success {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .form-success h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .form-success p {
+      color: var(--muted);
     }
 
     .site-footer {
@@ -1026,7 +1121,37 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sveav%C3%A4gen%2091%2C%20113%2050%20Stockholm" target="_blank" rel="noopener">Öppna i Google Maps</a>
         </div>
         <div class="form-wrap reveal" aria-label="Bokningsformulär">
-          <iframe src="https://api.leadconnectorhq.com/widget/form/mh37ZywHu6oAV9HiPXeG" title="Boka konsultation hos Airway Clinic Stockholm" loading="lazy"></iframe>
+          <form id="consultationForm">
+            <div>
+              <label for="firstName">Förnamn *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div>
+              <label for="lastName">Efternamn *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+              <label for="phone">Telefon *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+              <label for="email">E-post *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="concerns">Dina huvudsakliga bekymmer</label>
+              <textarea id="concerns" name="concerns" rows="4"></textarea>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="consentNonMarketing" name="consentNonMarketing">
+              <span>Genom att kryssa i denna ruta samtycker jag till att få icke-marknadsförande textmeddelanden från Airway Clinic. Din information är säker hos oss och kommer endast att delas med yrkesverksamma som är involverade i din behandling. Svara STOP för att avbryta prenumerationen.</span>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="consentMarketing" name="consentMarketing">
+              <span>Genom att kryssa i denna ruta samtycker jag till att få marknadsförings- och kampanjmeddelanden inklusive specialerbjudanden, rabatter, nya produktuppdateringar bland andra från Airway Clinic på det angivna telefonnumret. Svara STOP för att avbryta prenumerationen.</span>
+            </div>
+            <button type="submit" class="submit-btn">Skicka</button>
+          </form>
         </div>
       </div>
     </section>
@@ -1104,6 +1229,49 @@
     }, { threshold: 0.14 });
 
     document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+    // Form submission to GHL
+    const form = document.getElementById('consultationForm');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('.submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Skickar...';
+
+        const data = {
+          firstName: form.firstName.value,
+          lastName: form.lastName.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          concerns: form.concerns.value,
+          consentNonMarketing: form.consentNonMarketing.checked,
+          consentMarketing: form.consentMarketing.checked,
+        };
+
+        try {
+          const resp = await fetch('https://services.leadconnectorhq.com/contacts/?locationId=Z9UtrrCvJc8ObhTIILLF', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer pit-cabe849b-5358-410e-b953-f2f57bc5ed35',
+              'Version': '2021-07-28',
+            },
+            body: JSON.stringify(data),
+          });
+
+          if (resp.ok) {
+            form.parentElement.innerHTML = '<div class="form-success"><h3>Tack!</h3><p>Vi har tagit emot ditt meddelande och återkommer inom kort.</p></div>';
+          } else {
+            throw new Error('Server error');
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.textContent = 'Skicka';
+          alert('Något gick fel. Försök igen eller ring oss direkt.');
+        }
+      });
+    }
   </script>
 </body>
 </html>
