@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi | Dr. Sia</title>
+  <meta name="description" content="Airway Clinic Stockholm erbjuder luftvägsfokuserad tandvård, myofunktionell terapi, bettfysiologi och helhetsinriktad behandling för barn och vuxna.">
+  <link rel="canonical" href="/">
+  <link rel="alternate" hreflang="sv" href="/">
+  <link rel="alternate" hreflang="en" href="/en/">
+  <link rel="alternate" hreflang="x-default" href="/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi">
+  <meta property="og:description" content="Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi.">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="assets/logo-original.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Airway Clinic Stockholm">
+  <meta name="twitter:description" content="Helhetssyn på luftvägar, käkfunktion och tandvård i Stockholm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3bb6b3;
+      --primary-rgb: 59, 182, 179;
+      --dark-teal: #1a6b69;
+      --gold: #e8c170;
+      --light-bg: #f7f5f0;
+      --white: #ffffff;
+      --dark-text: #2c3e50;
+      --light-text: #f0f4f4;
+      --muted: #63747b;
+      --line: rgba(26, 107, 105, .14);
+      --shadow: 0 18px 48px rgba(26, 107, 105, .12);
+      --radius: 8px;
+      --nav-height: 78px;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--dark-text);
+      background: var(--white);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img,
+    iframe {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 40px, 1200px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      height: var(--nav-height);
+      transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+    }
+
+    .site-header.scrolled,
+    .site-header.menu-active {
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 8px 30px rgba(26, 107, 105, .1);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      min-width: 128px;
+    }
+
+    .logo img {
+      width: 148px;
+      height: auto;
+    }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 26px;
+      color: var(--dark-teal);
+      font-size: .96rem;
+      font-weight: 700;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-block: 8px;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      height: 2px;
+      content: "";
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform .2s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-actions {
+      display: none;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .language-switch .active {
+      color: var(--dark-teal);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      line-height: 1.1;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--primary);
+      box-shadow: 0 12px 28px rgba(var(--primary-rgb), .28);
+    }
+
+    .btn-primary:hover {
+      background: var(--dark-teal);
+      box-shadow: 0 16px 34px rgba(26, 107, 105, .25);
+    }
+
+    .btn-secondary {
+      color: var(--dark-teal);
+      background: rgba(255, 255, 255, .72);
+      border-color: rgba(26, 107, 105, .22);
+    }
+
+    .btn-secondary:hover {
+      background: var(--white);
+      border-color: var(--primary);
+      box-shadow: 0 14px 32px rgba(26, 107, 105, .12);
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(26, 107, 105, .18);
+      border-radius: 8px;
+      color: var(--dark-teal);
+      background: rgba(255, 255, 255, .75);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      content: "";
+      background: currentColor;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .menu-toggle {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle[aria-expanded="true"] span {
+      opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"]::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"]::after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-panel {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      z-index: 99;
+      display: grid;
+      gap: 18px;
+      padding: 22px 20px 28px;
+      background: rgba(255, 255, 255, .98);
+      border-top: 1px solid var(--line);
+      box-shadow: 0 20px 50px rgba(26, 107, 105, .16);
+      transform: translateY(-120%);
+      transition: transform .25s ease;
+    }
+
+    .mobile-panel.open {
+      transform: translateY(0);
+    }
+
+    .mobile-panel a {
+      color: var(--dark-teal);
+      font-weight: 800;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding-block: 80px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      padding: calc(var(--nav-height) + 48px) 0 118px;
+      background:
+        radial-gradient(circle at 82% 26%, rgba(var(--primary-rgb), .18), transparent 34%),
+        linear-gradient(135deg, #f7f5f0 0%, #ffffff 50%, #e0f4f3 100%);
+    }
+
+    .hero-content {
+      width: min(100%, 820px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 34px;
+      height: 2px;
+      content: "";
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      color: var(--dark-teal);
+      font-family: "Playfair Display", Georgia, serif;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(3.1rem, 9vw, 6.9rem);
+    }
+
+    h2 {
+      font-size: clamp(2.35rem, 5vw, 4.3rem);
+    }
+
+    h3 {
+      font-size: 1.45rem;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: #40565e;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .hero-wave {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 118px;
+      color: var(--white);
+      pointer-events: none;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 360px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(26, 107, 105, .94), rgba(var(--primary-rgb), .72)),
+        radial-gradient(circle at 28% 28%, rgba(255, 255, 255, .7), transparent 34%);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .about-visual::before,
+    .about-visual::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+    }
+
+    .about-visual::before {
+      width: 260px;
+      height: 260px;
+      top: 54px;
+      left: 44px;
+    }
+
+    .about-visual::after {
+      width: 440px;
+      height: 440px;
+      right: -180px;
+      bottom: -190px;
+    }
+
+    .about-visual-content {
+      position: absolute;
+      inset: auto 28px 28px;
+      z-index: 1;
+      color: var(--white);
+    }
+
+    .about-visual-content strong {
+      display: block;
+      color: var(--gold);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 4rem;
+      line-height: .92;
+    }
+
+    .about-copy p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .services {
+      background: var(--light-bg);
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 10px 28px rgba(26, 107, 105, .08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-card {
+      min-height: 238px;
+      padding: 28px;
+      border-left: 5px solid var(--primary);
+    }
+
+    .service-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      color: var(--dark-teal);
+      background: rgba(var(--primary-rgb), .13);
+    }
+
+    .service-icon svg {
+      width: 27px;
+      height: 27px;
+      stroke-width: 1.9;
+    }
+
+    .service-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .team-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .team-card {
+      display: grid;
+      justify-items: center;
+      padding: 34px 28px;
+      text-align: center;
+      border: 1px solid var(--line);
+    }
+
+    .portrait {
+      width: 188px;
+      height: 188px;
+      margin-bottom: 24px;
+      border: 5px solid var(--primary);
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 14px 34px rgba(26, 107, 105, .16);
+    }
+
+    .role {
+      margin: 8px 0 0;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .team-card p:last-child {
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
+
+    .stats {
+      padding-block: 48px;
+      color: var(--white);
+      background: var(--dark-teal);
+    }
+
+    .stats-grid {
+      display: grid;
+      gap: 28px;
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      color: var(--gold);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 8px;
+      color: var(--light-text);
+      font-weight: 800;
+    }
+
+    .testimonials {
+      background: linear-gradient(180deg, var(--white), #f8fbfb);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      position: relative;
+      padding: 32px 28px 28px;
+      border: 1px solid var(--line);
+    }
+
+    .testimonial-card::before {
+      position: absolute;
+      top: 10px;
+      right: 24px;
+      content: "\201D";
+      color: rgba(var(--primary-rgb), .22);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 6.4rem;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      position: relative;
+      margin: 0;
+      color: #435a62;
+      font-size: 1.03rem;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      margin-top: 18px;
+      color: var(--dark-teal);
+      font-weight: 900;
+    }
+
+    .contact {
+      background: var(--light-bg);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .contact-panel {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(26, 107, 105, .09);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .contact-list span {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      color: var(--dark-teal);
+      background: rgba(var(--primary-rgb), .13);
+    }
+
+    .contact-list b {
+      display: block;
+      color: var(--dark-teal);
+      line-height: 1.35;
+    }
+
+    .contact-list a,
+    .contact-list address {
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .map {
+      width: 100%;
+      height: 330px;
+      border: 0;
+      border-radius: var(--radius);
+      filter: saturate(.9);
+    }
+
+    .form-frame {
+      width: 100%;
+      min-height: 720px;
+      border: 0;
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .language-bar {
+      padding-block: 34px;
+      text-align: center;
+      background: var(--light-bg);
+      border-top: 1px solid rgba(26, 107, 105, .08);
+    }
+
+    .language-bar p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .language-bar .active {
+      color: var(--dark-teal);
+    }
+
+    .site-footer {
+      padding: 56px 0 34px;
+      color: var(--light-text);
+      background: var(--dark-teal);
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .footer-logo img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 16px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-grid p {
+      margin: 0;
+      color: rgba(240, 244, 244, .8);
+    }
+
+    .footer-title {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .footer-links,
+    .footer-contact {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+      color: rgba(240, 244, 244, .86);
+    }
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      margin-top: 38px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+      color: rgba(240, 244, 244, .7);
+      font-size: .92rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        width: min(100% - 56px, 1200px);
+      }
+
+      .services-grid,
+      .testimonial-grid,
+      .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .services-grid .service-card:last-child {
+        grid-column: 2;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .about-grid,
+      .team-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.25fr .75fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-menu,
+      .nav-actions {
+        display: flex;
+      }
+
+      .menu-toggle,
+      .mobile-panel {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: .96fr 1.04fr;
+        gap: 58px;
+      }
+
+      .contact-grid {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 34px;
+      }
+
+      .hero-content {
+        padding-top: 28px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      :root {
+        --nav-height: 70px;
+      }
+
+      section {
+        padding-block: 60px;
+      }
+
+      .logo img {
+        width: 126px;
+      }
+
+      .hero {
+        padding: calc(var(--nav-height) + 34px) 0 104px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 15vw, 4.9rem);
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .about-visual {
+        min-height: 300px;
+      }
+
+      .contact-panel {
+        padding: 24px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "Dentist"],
+      "name": "Airway Clinic Stockholm",
+      "image": "assets/logo-original.png",
+      "description": "Luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi i Stockholm.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sveavägen 91",
+        "postalCode": "113 50",
+        "addressLocality": "Stockholm",
+        "addressCountry": "SE"
+      },
+      "url": "/",
+      "telephone": "+46",
+      "email": "info@airwayclinic.se",
+      "medicalSpecialty": ["Dentistry", "Sleep Medicine", "Orofacial Myology"],
+      "areaServed": {
+        "@type": "City",
+        "name": "Stockholm"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Siavosh Hakimmaani"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="container nav" aria-label="Huvudnavigation">
+      <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
+        <img src="assets/logo-original.png" alt="Airway Clinic Stockholm">
+      </a>
+      <nav class="nav-menu" aria-label="Primär">
+        <a class="nav-link" href="#om-oss">Om oss</a>
+        <a class="nav-link" href="#behandlingar">Behandlingar</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="language-switch" aria-label="Språkval">
+          <span class="active">SV</span>
+          <span aria-hidden="true">|</span>
+          <a href="/en/" hreflang="en">EN</a>
+        </div>
+        <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-panel" id="mobile-menu" aria-label="Mobil navigation" data-mobile-panel>
+      <a href="#om-oss">Om oss</a>
+      <a href="#behandlingar">Behandlingar</a>
+      <a href="#team">Team</a>
+      <a href="#kontakt">Kontakt</a>
+      <div class="language-switch" aria-label="Språkval">
+        <span class="active">SV</span>
+        <span aria-hidden="true">|</span>
+        <a href="/en/" hreflang="en">EN</a>
+      </div>
+      <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content fade-in">
+          <h1 id="hero-title">Luftvägar som förändrar liv</h1>
+          <p class="hero-subtitle">Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#kontakt">Boka konsultation &rarr;</a>
+            <a class="btn btn-secondary" href="#om-oss">Läs mer</a>
+          </div>
+        </div>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="currentColor" d="M0,66 C200,122 368,16 590,61 C790,101 940,121 1120,70 C1266,28 1356,42 1440,68 L1440,130 L0,130 Z"></path>
+      </svg>
+    </section>
+
+    <section id="om-oss" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual fade-in" aria-hidden="true">
+          <div class="about-visual-content">
+            <strong>30+</strong>
+            <span>års klinisk erfarenhet av funktion, luftvägar och balans</span>
+          </div>
+        </div>
+        <div class="about-copy fade-in">
+          <p class="eyebrow">Vår filosofi</p>
+          <h2 id="about-title">Helhetssyn på tandvård</h2>
+          <p>På Airway Clinic Stockholm ser vi munnen som en del av hela kroppen. Käkarnas utveckling, tungans funktion, andningen och sömnen påverkar hur barn växer, hur vuxna återhämtar sig och hur kroppen hanterar belastning.</p>
+          <p>Med mer än 30 års erfarenhet arbetar vi för att hitta orsaken bakom besvär, inte bara lindra symtomen. Behandlingen utgår från varje patients funktionella mönster och kombinerar tandvård, myofunktionell terapi och bettfysiologisk kunskap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="behandlingar" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Behandlingar</p>
+          <h2 id="services-title">Funktionell vård för luftvägar, käkar och bett</h2>
+          <p>Vi kombinerar modern diagnostik med varsamma behandlingar som stödjer naturlig utveckling, bättre andning och stabil funktion.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21V7"/><path d="M7 12l5-5 5 5"/><path d="M5 21h14"/></svg></span>
+            <h3>Tillväxtledning</h3>
+            <p>Stöd för barns käktillväxt så att luftvägar, ansiktsutveckling och bett får bättre förutsättningar tidigt i livet.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12c3-5 13-5 16 0"/><path d="M6 14c2.5 3 9.5 3 12 0"/><path d="M12 7v10"/></svg></span>
+            <h3>Myofunktionell terapi</h3>
+            <p>Träning av tungans position, läppslut, sväljning och andningsmönster för stabilare oral funktion.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M9 14h6"/></svg></span>
+            <h3>Luftvägs- &amp; sömnanalys</h3>
+            <p>Utredning av andningsstörningar, snarkning och sömnrelaterade signaler som kan påverka energi och utveckling.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/><path d="M4 12h16"/></svg></span>
+            <h3>ALF-terapi</h3>
+            <p>Individanpassad behandling som stödjer kraniofacial balans, nervsystemets reglering och mjuk funktionell expansion.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 4c-2 2-3 5-3 8s1 6 3 8"/><path d="M16 4c2 2 3 5 3 8s-1 6-3 8"/><path d="M8 12h8"/></svg></span>
+            <h3>Käkfunktionell ortopedi (JFO)</h3>
+            <p>Ortopedisk påverkan av käkarnas relation och funktion med målet att förbättra balans utan kirurgi.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5v14"/><path d="M7 7l10 10"/><path d="M17 7 7 17"/></svg></span>
+            <h3>TMS / Käkledsbehandling</h3>
+            <p>Behandling för käkledsbesvär, muskelspänningar och smärta med fokus på funktionell avlastning och lindring.</p>
+          </article>
+          <article class="card service-card fade-in">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 3c2 0 3 1 5 1s3-1 5-1c2.5 0 4 2 4 5 0 5-3 13-6 13-1.5 0-1.5-3-3-3s-1.5 3-3 3C6 21 3 13 3 8c0-3 1.5-5 4-5Z"/></svg></span>
+            <h3>Allmän tandvård</h3>
+            <p>Omsorgsfull tandvård som stärker munhälsa, bettfunktion och långsiktig funktionell hälsa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Team</p>
+          <h2 id="team-title">Specialister med gemensamt fokus</h2>
+        </div>
+        <div class="team-grid">
+          <article class="card team-card fade-in">
+            <img class="portrait" src="assets/dr-sia.jpg" alt="Dr. Siavosh Hakimmaani" loading="lazy" width="800" height="795">
+            <h3>Dr. Siavosh Hakimmaani</h3>
+            <p class="role">D.D.S., Founder</p>
+            <p>Dr. Sia kombinerar lång erfarenhet av tandvård med ett luftvägsfokuserat arbetssätt där käkarnas utveckling, bettets funktion och patientens helhet står i centrum.</p>
+          </article>
+          <article class="card team-card fade-in">
+            <img class="portrait" src="assets/jessica-gorlee.jpg" alt="Jessica Gorlee" loading="lazy" width="853" height="1280">
+            <h3>Jessica Gorlee</h3>
+            <p class="role">Leg. Logoped &amp; OMFT-terapeut</p>
+            <p>Jessica arbetar med myofunktionell terapi och logopedisk kompetens för att stärka tungfunktion, sväljning, läppslut och hållbara andningsvanor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Klinikens erfarenhet">
+      <div class="container stats-grid">
+        <div class="fade-in">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Års erfarenhet</span>
+        </div>
+        <div class="fade-in">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Nöjda patienter</span>
+        </div>
+        <div class="fade-in">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Länder</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Patientberättelser</p>
+          <h2 id="testimonials-title">Vård som märks i vardagen</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="card testimonial-card fade-in">
+            <p>För första gången kändes det som att någon såg sambandet mellan mina tänder, min andning och min trötthet. Behandlingen gav mig en tydlig väg framåt.</p>
+            <strong>Patient, Stockholm</strong>
+          </article>
+          <article class="card testimonial-card fade-in">
+            <p>Vårt barn sover lugnare, andas bättre genom näsan och har fått bättre hållning. Det har gjort större skillnad än vi vågade hoppas på.</p>
+            <strong>Förälder till patient</strong>
+          </article>
+          <article class="card testimonial-card fade-in">
+            <p>Min käksmärta hade påverkat både arbete och sömn. Efter behandlingen är spänningen mycket mindre och jag förstår vad som utlöste problemet.</p>
+            <strong>Patient med käkledsbesvär</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="contact-title">Boka konsultation</h2>
+          <p>Besök oss på Sveavägen i Stockholm eller skicka en förfrågan via formuläret.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-panel fade-in">
+            <h3>Airway Clinic Stockholm</h3>
+            <ul class="contact-list">
+              <li>
+                <span aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5.2 7-12A7 7 0 0 0 5 9c0 6.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                <div><b>Adress</b><address>Sveavägen 91<br>113 50 Stockholm</address></div>
+              </li>
+              <li>
+                <span aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.4 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/></svg></span>
+                <div><b>Telefon</b><a href="tel:+46000000000">+46 00 000 00 00</a></div>
+              </li>
+              <li>
+                <span aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></span>
+                <div><b>E-post</b><a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a></div>
+              </li>
+            </ul>
+            <iframe class="map" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveav%C3%A4gen%2091%2C%20113%2050%20Stockholm&output=embed"></iframe>
+          </div>
+          <div class="contact-panel fade-in">
+            <iframe class="form-frame" title="Boka konsultation hos Airway Clinic Stockholm" src="https://api.leadconnectorhq.com/widget/form/mh37ZywHu6oAV9HiPXeG" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="language-bar" aria-label="Språk">
+      <div class="container">
+        <p><span class="active">Svenska</span> &middot; <a href="/en/" hreflang="en">English</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <a href="#top" aria-label="Airway Clinic Stockholm">
+            <img src="assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
+          </a>
+          <p>Luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi i Stockholm.</p>
+        </div>
+        <nav aria-label="Sidfot navigation">
+          <strong class="footer-title">Navigera</strong>
+          <ul class="footer-links">
+            <li><a href="#om-oss">Om oss</a></li>
+            <li><a href="#behandlingar">Behandlingar</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div>
+          <strong class="footer-title">Kontakt</strong>
+          <ul class="footer-contact">
+            <li>Sveavägen 91, 113 50 Stockholm</li>
+            <li><a href="tel:+46000000000">+46 00 000 00 00</a></li>
+            <li><a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2026 Airway Clinic Stockholm. Alla rättigheter förbehållna.</div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector("[data-header]");
+    const menuToggle = document.querySelector("[data-menu-toggle]");
+    const mobilePanel = document.querySelector("[data-mobile-panel]");
+
+    const setHeaderState = () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+
+    const closeMenu = () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Öppna meny");
+      mobilePanel.classList.remove("open");
+      header.classList.remove("menu-active");
+      document.body.classList.remove("menu-open");
+    };
+
+    window.addEventListener("scroll", setHeaderState, { passive: true });
+    setHeaderState();
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Öppna meny" : "Stäng meny");
+      mobilePanel.classList.toggle("open", !isOpen);
+      header.classList.toggle("menu-active", !isOpen);
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    mobilePanel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
+  </script>
+</body>
+</html>
