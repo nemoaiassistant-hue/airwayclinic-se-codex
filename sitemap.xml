@@ -162,4 +162,24 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Privacy EN -->
+  <url>
+    <loc>https://airwayclinic.se/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy SV -->
+  <url>
+    <loc>https://airwayclinic.se/sv/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
