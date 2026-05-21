@@ -20,6 +20,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Airway Clinic Stockholm">
   <meta name="twitter:description" content="Airway-focused dentistry, myofunctional therapy and jaw function care in Stockholm.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Siavosh Hakimmaani">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -126,6 +128,22 @@
       { "@type": "ListItem", "position": 6, "item": { "@type": "MedicalProcedure", "name": "TMJ Treatment", "description": "Care for jaw joint strain, muscle tension and pain patterns that affect daily comfort and function." } },
       { "@type": "ListItem", "position": 7, "item": { "@type": "MedicalProcedure", "name": "General Dentistry", "description": "Preventive and restorative dental care with attention to functional health, aesthetics and stability." } }
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://airwayclinic.se/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".faq-answer", ".service-card p", "#about p"]
   }
   </script>
   <style>
@@ -1200,6 +1218,38 @@
       line-height: 1.7;
       max-width: 700px;
     }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 0;
+    }
+    .breadcrumbs ol {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .breadcrumbs li::after {
+      content: '›';
+      margin-left: 4px;
+      color: var(--border);
+    }
+    .breadcrumbs li:last-child::after {
+      display: none;
+    }
+    .breadcrumbs a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
@@ -1237,6 +1287,14 @@
       </nav>
     </div>
   </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+      </ol>
+    </div>
+  </nav>
 
   <main id="top">
     <section class="hero section" aria-labelledby="hero-title">

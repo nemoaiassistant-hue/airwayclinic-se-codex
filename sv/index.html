@@ -21,6 +21,8 @@
   <meta name="twitter:title" content="Airway Clinic Stockholm">
   <meta name="twitter:description" content="Helhetssyn på luftvägar, käkfunktion och tandvård i Stockholm.">
   <meta name="twitter:image" content="https://airwayclinic.se/assets/hero-baby.jpg">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Siavosh Hakimmaani">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -1008,6 +1010,38 @@
       line-height: 1.7;
       max-width: 700px;
     }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 0;
+    }
+    .breadcrumbs ol {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .breadcrumbs li::after {
+      content: '›';
+      margin-left: 4px;
+      color: var(--border);
+    }
+    .breadcrumbs li:last-child::after {
+      display: none;
+    }
+    .breadcrumbs a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1103,6 +1137,22 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://airwayclinic.se/sv/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".faq-answer", ".service-card p", "#about p"]
+  }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
   <script>
@@ -1151,6 +1201,14 @@
     </div>
     <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
   </div>
+
+  <nav class="breadcrumbs" aria-label="Brödsmulor">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+      </ol>
+    </div>
+  </nav>
 
   <main id="top">
     <section class="hero" aria-label="Airway Clinic Stockholm">
