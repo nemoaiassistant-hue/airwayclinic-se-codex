@@ -292,7 +292,8 @@
       color: var(--white);
       background-image:
         linear-gradient(90deg, rgba(13, 65, 64, .94) 0%, rgba(26, 107, 105, .76) 42%, rgba(26, 107, 105, .26) 70%, rgba(26, 107, 105, .08) 100%),
-        url("../assets/hero-baby.jpg");
+        url("../assets/hero-baby.webp");
+        background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
       background-size: cover;
       background-position: 64% center;
     }
@@ -632,7 +633,8 @@
       color: var(--white);
       background-image:
         linear-gradient(90deg, rgba(15, 73, 72, .88), rgba(26, 107, 105, .58), rgba(26, 107, 105, .28)),
-        url("../assets/father-baby.jpg");
+        url("../assets/father-baby.webp");
+        background-image: image-set("../assets/father-baby.webp" type("image/webp"), "../assets/father-baby.jpg" type("image/jpeg"));
       background-size: cover;
       background-position: center 42%;
       background-attachment: fixed;
@@ -941,7 +943,8 @@
       .hero {
         background-image:
           linear-gradient(90deg, rgba(13, 65, 64, .94), rgba(26, 107, 105, .7), rgba(26, 107, 105, .24)),
-          url("../assets/hero-baby.jpg");
+          url("../assets/hero-baby.webp");
+        background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
         background-position: 58% center;
       }
       .hero-content { padding-top: calc(var(--nav-height) + 44px); }
@@ -1022,6 +1025,7 @@
       "addressCountry": "SE"
     },
     "email": "info@airwayclinic.se",
+    "openingHours": ["Mo 09:00-17:00", "Fr 09:00-17:00"],
     "areaServed": "Stockholm",
     "priceRange": "$$",
     "medicalSpecialty": ["Dentistry", "Orofacial Myology", "Sleep Dentistry"]
@@ -1122,6 +1126,7 @@
         <a class="nav-link" href="#om-oss">Om oss</a>
         <a class="nav-link" href="#behandlingar">Behandlingar</a>
         <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="../resources/">Resurser</a>
         <a class="nav-link" href="#kontakt">Kontakt</a>
       </nav>
       <div class="nav-actions">
@@ -1137,6 +1142,7 @@
     <a href="#om-oss">Om oss</a>
     <a href="#behandlingar">Behandlingar</a>
     <a href="#team">Team</a>
+    <a href="../resources/">Resurser</a>
     <a href="#kontakt">Kontakt</a>
     <div class="language-switch" aria-label="Språkval mobil">
       <span class="active" aria-current="true">SV</span>
@@ -1239,13 +1245,19 @@
         </div>
         <div class="team-grid">
           <article class="team-card reveal">
-            <img class="team-photo" src="../assets/dr-sia.jpg" alt="Dr. Siavosh Hakimmaani" loading="lazy">
+            <picture>
+              <source srcset="../assets/dr-sia.webp" type="image/webp">
+              <img class="team-photo" src="../assets/dr-sia.jpg" alt="Dr. Siavosh Hakimmaani" loading="lazy">
+            </picture>
             <h3>Dr. Siavosh Hakimmaani</h3>
             <span class="team-role">D.D.S., Founder</span>
             <p>Dr. Sia arbetar med ett helhetsperspektiv på tandvård där luftvägar, käkfunktion, sömn och ansiktsutveckling vägs in i varje behandlingsplan.</p>
           </article>
           <article class="team-card reveal">
-            <img class="team-photo" src="../assets/jessica-gorlee.jpg" alt="Jessica Gorlee" loading="lazy">
+            <picture>
+              <source srcset="../assets/jessica-gorlee.webp" type="image/webp">
+              <img class="team-photo" src="../assets/jessica-gorlee.jpg" alt="Jessica Gorlee" loading="lazy">
+            </picture>
             <h3>Jessica Gorlee</h3>
             <span class="team-role">Leg. Logoped &amp; OMFT-terapeut</span>
             <p>Jessica hjälper patienter att utveckla bättre tungfunktion, sväljning, munmotorik och näsandning genom strukturerad myofunktionell terapi.</p>
@@ -1343,6 +1355,10 @@
               <strong>E-post</strong>
               <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
             </li>
+            <li>
+              <strong>Öppettider</strong>
+              Måndag &amp; fredag: 09:00 – 17:00
+            </li>
           </ul>
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sveav%C3%A4gen%2091%2C%20113%2050%20Stockholm" target="_blank" rel="noopener">Öppna i Google Maps</a>
         </div>
@@ -1402,6 +1418,7 @@
           <h3>Kontakt</h3>
           <div class="footer-contact">
             <span>Sveavägen 91, 113 50 Stockholm</span>
+            <span>Måndag &amp; fredag: 09:00 – 17:00</span>
             <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
           </div>
         </div>

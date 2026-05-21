@@ -1,185 +1,270 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Homepage EN -->
+     1|<?xml version="1.0" encoding="UTF-8"?>
+     2|<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+     3|        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+     4|
+     5|  <!-- Homepage EN -->
+     6|  <url>
+     7|    <loc>https://airwayclinic.se/</loc>
+     8|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/"/>
+     9|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/"/>
+    10|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/"/>
+    11|    <changefreq>weekly</changefreq>
+    12|    <priority>1.0</priority>
+    13|  </url>
+    14|
+    15|  <!-- Homepage SV -->
+    16|  <url>
+    17|    <loc>https://airwayclinic.se/sv/</loc>
+    18|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/"/>
+    19|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/"/>
+    20|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/"/>
+    21|    <changefreq>weekly</changefreq>
+    22|    <priority>1.0</priority>
+    23|  </url>
+    24|
+    25|  <!-- Growth Guidance EN -->
+    26|  <url>
+    27|    <loc>https://airwayclinic.se/services/growth-guidance/</loc>
+    28|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/growth-guidance/"/>
+    29|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/growth-guidance/sv/"/>
+    30|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/growth-guidance/"/>
+    31|    <changefreq>monthly</changefreq>
+    32|    <priority>0.8</priority>
+    33|  </url>
+    34|
+    35|  <!-- Growth Guidance SV -->
+    36|  <url>
+    37|    <loc>https://airwayclinic.se/services/growth-guidance/sv/</loc>
+    38|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/growth-guidance/"/>
+    39|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/growth-guidance/sv/"/>
+    40|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/growth-guidance/"/>
+    41|    <changefreq>monthly</changefreq>
+    42|    <priority>0.8</priority>
+    43|  </url>
+    44|
+    45|  <!-- Myofunctional Therapy EN -->
+    46|  <url>
+    47|    <loc>https://airwayclinic.se/services/myofunctional-therapy/</loc>
+    48|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    49|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/myofunctional-therapy/sv/"/>
+    50|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    51|    <changefreq>monthly</changefreq>
+    52|    <priority>0.8</priority>
+    53|  </url>
+    54|
+    55|  <!-- Myofunctional Therapy SV -->
+    56|  <url>
+    57|    <loc>https://airwayclinic.se/services/myofunctional-therapy/sv/</loc>
+    58|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    59|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/myofunctional-therapy/sv/"/>
+    60|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    61|    <changefreq>monthly</changefreq>
+    62|    <priority>0.8</priority>
+    63|  </url>
+    64|
+    65|  <!-- Airway & Sleep Analysis EN -->
+    66|  <url>
+    67|    <loc>https://airwayclinic.se/services/airway-sleep-analysis/</loc>
+    68|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    69|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/airway-sleep-analysis/sv/"/>
+    70|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    71|    <changefreq>monthly</changefreq>
+    72|    <priority>0.8</priority>
+    73|  </url>
+    74|
+    75|  <!-- Airway & Sleep Analysis SV -->
+    76|  <url>
+    77|    <loc>https://airwayclinic.se/services/airway-sleep-analysis/sv/</loc>
+    78|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    79|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/airway-sleep-analysis/sv/"/>
+    80|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    81|    <changefreq>monthly</changefreq>
+    82|    <priority>0.8</priority>
+    83|  </url>
+    84|
+    85|  <!-- ALF Therapy EN -->
+    86|  <url>
+    87|    <loc>https://airwayclinic.se/services/alf-therapy/</loc>
+    88|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/alf-therapy/"/>
+    89|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/alf-therapy/sv/"/>
+    90|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/alf-therapy/"/>
+    91|    <changefreq>monthly</changefreq>
+    92|    <priority>0.8</priority>
+    93|  </url>
+    94|
+    95|  <!-- ALF Therapy SV -->
+    96|  <url>
+    97|    <loc>https://airwayclinic.se/services/alf-therapy/sv/</loc>
+    98|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/alf-therapy/"/>
+    99|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/alf-therapy/sv/"/>
+   100|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/alf-therapy/"/>
+   101|    <changefreq>monthly</changefreq>
+   102|    <priority>0.8</priority>
+   103|  </url>
+   104|
+   105|  <!-- JFO EN -->
+   106|  <url>
+   107|    <loc>https://airwayclinic.se/services/jfo/</loc>
+   108|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/jfo/"/>
+   109|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/jfo/sv/"/>
+   110|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/jfo/"/>
+   111|    <changefreq>monthly</changefreq>
+   112|    <priority>0.8</priority>
+   113|  </url>
+   114|
+   115|  <!-- JFO SV -->
+   116|  <url>
+   117|    <loc>https://airwayclinic.se/services/jfo/sv/</loc>
+   118|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/jfo/"/>
+   119|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/jfo/sv/"/>
+   120|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/jfo/"/>
+   121|    <changefreq>monthly</changefreq>
+   122|    <priority>0.8</priority>
+   123|  </url>
+   124|
+   125|  <!-- TMJ Treatment EN -->
+   126|  <url>
+   127|    <loc>https://airwayclinic.se/services/tmj-treatment/</loc>
+   128|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/tmj-treatment/"/>
+   129|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/tmj-treatment/sv/"/>
+   130|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/tmj-treatment/"/>
+   131|    <changefreq>monthly</changefreq>
+   132|    <priority>0.8</priority>
+   133|  </url>
+   134|
+   135|  <!-- TMJ Treatment SV -->
+   136|  <url>
+   137|    <loc>https://airwayclinic.se/services/tmj-treatment/sv/</loc>
+   138|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/tmj-treatment/"/>
+   139|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/tmj-treatment/sv/"/>
+   140|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/tmj-treatment/"/>
+   141|    <changefreq>monthly</changefreq>
+   142|    <priority>0.8</priority>
+   143|  </url>
+   144|
+   145|  <!-- General Dentistry EN -->
+   146|  <url>
+   147|    <loc>https://airwayclinic.se/services/general-dentistry/</loc>
+   148|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/general-dentistry/"/>
+   149|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/general-dentistry/sv/"/>
+   150|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/general-dentistry/"/>
+   151|    <changefreq>monthly</changefreq>
+   152|    <priority>0.8</priority>
+   153|  </url>
+   154|
+   155|  <!-- General Dentistry SV -->
+   156|  <url>
+   157|    <loc>https://airwayclinic.se/services/general-dentistry/sv/</loc>
+   158|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/general-dentistry/"/>
+   159|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/general-dentistry/sv/"/>
+   160|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/general-dentistry/"/>
+   161|    <changefreq>monthly</changefreq>
+   162|    <priority>0.8</priority>
+   163|  </url>
+   164|
+   165|  <!-- Privacy EN -->
+   166|  <url>
+   167|    <loc>https://airwayclinic.se/privacy</loc>
+   168|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
+   169|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
+   170|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
+   171|    <changefreq>yearly</changefreq>
+   172|    <priority>0.3</priority>
+   173|  </url>
+   174|
+   175|  <!-- Privacy SV -->
+   176|  <url>
+   177|    <loc>https://airwayclinic.se/sv/privacy</loc>
+   178|    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
+   179|    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
+   180|    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
+   181|    <changefreq>yearly</changefreq>
+   182|    <priority>0.3</priority>
+   183|  </url>
+   184|
+   185|
+  <!-- Resources EN -->
   <url>
-    <loc>https://airwayclinic.se/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Homepage SV -->
-  <url>
-    <loc>https://airwayclinic.se/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Growth Guidance EN -->
-  <url>
-    <loc>https://airwayclinic.se/services/growth-guidance/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/growth-guidance/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/growth-guidance/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/growth-guidance/"/>
+    <loc>https://airwayclinic.se/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Growth Guidance SV -->
   <url>
-    <loc>https://airwayclinic.se/services/growth-guidance/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/growth-guidance/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/growth-guidance/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/growth-guidance/"/>
+    <loc>https://airwayclinic.se/resources/what-is-airway-focused-dentistry/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/what-is-airway-focused-dentistry/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/what-is-airway-focused-dentistry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/what-is-airway-focused-dentistry/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Myofunctional Therapy EN -->
   <url>
-    <loc>https://airwayclinic.se/services/myofunctional-therapy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/myofunctional-therapy/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    <loc>https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/signs-your-child-may-have-an-airway-issue.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Myofunctional Therapy SV -->
   <url>
-    <loc>https://airwayclinic.se/services/myofunctional-therapy/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/myofunctional-therapy/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/myofunctional-therapy/"/>
+    <loc>https://airwayclinic.se/resources/how-myofunctional-therapy-works/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/how-myofunctional-therapy-works/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/how-myofunctional-therapy-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/how-myofunctional-therapy-works/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Airway & Sleep Analysis EN -->
   <url>
-    <loc>https://airwayclinic.se/services/airway-sleep-analysis/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/airway-sleep-analysis/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    <loc>https://airwayclinic.se/resources/tmj-and-breathing-the-connection/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/tmj-and-breathing-the-connection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
-  <!-- Airway & Sleep Analysis SV -->
+  <!-- Resources SV -->
   <url>
-    <loc>https://airwayclinic.se/services/airway-sleep-analysis/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/airway-sleep-analysis/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/airway-sleep-analysis/"/>
+    <loc>https://airwayclinic.se/sv/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- ALF Therapy EN -->
   <url>
-    <loc>https://airwayclinic.se/services/alf-therapy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/alf-therapy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/alf-therapy/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/alf-therapy/"/>
+    <loc>https://airwayclinic.se/sv/resources/what-is-airway-focused-dentistry.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/what-is-airway-focused-dentistry/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/what-is-airway-focused-dentistry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/what-is-airway-focused-dentistry/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- ALF Therapy SV -->
   <url>
-    <loc>https://airwayclinic.se/services/alf-therapy/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/alf-therapy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/alf-therapy/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/alf-therapy/"/>
+    <loc>https://airwayclinic.se/sv/resources/signs-your-child-may-have-an-airway-issue.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/signs-your-child-may-have-an-airway-issue.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- JFO EN -->
   <url>
-    <loc>https://airwayclinic.se/services/jfo/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/jfo/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/jfo/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/jfo/"/>
+    <loc>https://airwayclinic.se/sv/resources/how-myofunctional-therapy-works.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/how-myofunctional-therapy-works/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/how-myofunctional-therapy-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/how-myofunctional-therapy-works/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- JFO SV -->
   <url>
-    <loc>https://airwayclinic.se/services/jfo/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/jfo/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/jfo/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/jfo/"/>
+    <loc>https://airwayclinic.se/sv/resources/tmj-and-breathing-the-connection.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/tmj-and-breathing-the-connection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- TMJ Treatment EN -->
-  <url>
-    <loc>https://airwayclinic.se/services/tmj-treatment/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/tmj-treatment/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/tmj-treatment/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/tmj-treatment/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- TMJ Treatment SV -->
-  <url>
-    <loc>https://airwayclinic.se/services/tmj-treatment/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/tmj-treatment/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/tmj-treatment/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/tmj-treatment/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- General Dentistry EN -->
-  <url>
-    <loc>https://airwayclinic.se/services/general-dentistry/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/general-dentistry/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/general-dentistry/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/general-dentistry/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- General Dentistry SV -->
-  <url>
-    <loc>https://airwayclinic.se/services/general-dentistry/sv/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/services/general-dentistry/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/services/general-dentistry/sv/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/services/general-dentistry/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Privacy EN -->
-  <url>
-    <loc>https://airwayclinic.se/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Privacy SV -->
-  <url>
-    <loc>https://airwayclinic.se/sv/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://airwayclinic.se/privacy"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/privacy"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
+   186|
