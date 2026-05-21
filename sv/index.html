@@ -718,13 +718,15 @@
       overflow: hidden;
     }
 
-    .form-wrap form {
+    .form-wrap form,
+    #consultationForm {
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
-    .form-wrap label {
+    .form-wrap label,
+    #consultationForm label {
       display: block;
       font-size: 0.88rem;
       font-weight: 500;
@@ -735,7 +737,11 @@
     .form-wrap input[type="text"],
     .form-wrap input[type="email"],
     .form-wrap input[type="tel"],
-    .form-wrap textarea {
+    .form-wrap textarea,
+    #consultationForm input[type="text"],
+    #consultationForm input[type="email"],
+    #consultationForm input[type="tel"],
+    #consultationForm textarea {
       width: 100%;
       padding: 12px 14px;
       border: 1px solid rgba(26, 107, 105, .2);
@@ -745,13 +751,20 @@
       color: var(--dark-text);
       background: var(--white);
       transition: border-color .2s ease, box-shadow .2s ease;
+      box-sizing: border-box;
     }
 
     .form-wrap input:focus,
-    .form-wrap textarea:focus {
+    .form-wrap textarea:focus,
+    #consultationForm input:focus,
+    #consultationForm textarea:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(59, 182, 179, .15);
+    }
+
+    #consultationForm textarea {
+      display: block;
     }
 
     .form-wrap textarea {
