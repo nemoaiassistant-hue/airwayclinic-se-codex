@@ -473,12 +473,31 @@
       bottom: 46px;
     }
 
-    .about-visual .line {
+    .visual-card {
       position: absolute;
-      inset: auto 40px 46px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), rgba(255, 255, 255, 0.05));
-      border-radius: 99px;
+      right: 28px;
+      bottom: 28px;
+      padding: 28px;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 8px;
+      background: rgba(12, 64, 63, .44);
+      backdrop-filter: blur(12px);
+    }
+
+    .visual-card strong {
+      display: block;
+      color: var(--gold);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .visual-card span {
+      display: block;
+      margin-top: 8px;
+      color: var(--light-text);
+      font-weight: 700;
     }
 
     .about-copy {
@@ -1099,7 +1118,10 @@
     <section class="about section" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
         <div class="about-visual fade-in" aria-hidden="true">
-          <span class="line"></span>
+          <div class="visual-card">
+            <strong>30+</strong>
+            <span>years of clinical experience focused on airway health, jaw function and long-term wellbeing.</span>
+          </div>
         </div>
         <div class="about-copy fade-in">
           <p class="section-label">Our Philosophy</p>
