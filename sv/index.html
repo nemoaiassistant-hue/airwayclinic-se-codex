@@ -292,10 +292,8 @@
       align-items: center;
       overflow: hidden;
       color: var(--white);
-      background-image:
-        linear-gradient(90deg, rgba(13, 65, 64, .94) 0%, rgba(26, 107, 105, .76) 42%, rgba(26, 107, 105, .26) 70%, rgba(26, 107, 105, .08) 100%),
-        url("../assets/hero-baby.webp");
-        background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
+      background-image: url("../assets/hero-baby.webp");
+      background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
       background-size: cover;
       background-position: 64% center;
     }
@@ -304,7 +302,7 @@
       position: absolute;
       inset: 0;
       content: "";
-      background: linear-gradient(180deg, rgba(0, 0, 0, .28), rgba(0, 0, 0, .02) 34%, rgba(0, 0, 0, .26));
+      background: linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .02) 34%, rgba(0, 0, 0, .16));
       pointer-events: none;
     }
 
@@ -313,6 +311,12 @@
       z-index: 1;
       max-width: 760px;
       padding: calc(var(--nav-height) + 56px) 0 132px;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero .eyebrow {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     .eyebrow {
