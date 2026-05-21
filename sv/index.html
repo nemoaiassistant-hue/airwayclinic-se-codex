@@ -9,6 +9,8 @@
   <link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/">
   <link rel="alternate" hreflang="en" href="https://airwayclinic.se/">
   <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sv_SE">
   <meta property="og:title" content="Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi">
@@ -951,6 +953,58 @@
       }
       .contact-details { padding: 28px 22px; }
     }
+
+    .faq {
+      background: var(--white);
+    }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--light-bg);
+      padding: 0;
+    }
+
+    .faq-item summary {
+      padding: 20px 0;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--dark-text);
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-item summary:hover {
+      color: var(--teal);
+    }
+
+    .faq-item p {
+      padding: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 700px;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -967,11 +1021,82 @@
       "addressLocality": "Stockholm",
       "addressCountry": "SE"
     },
-    "telephone": "+46 8 123 456 78",
     "email": "info@airwayclinic.se",
     "areaServed": "Stockholm",
     "priceRange": "$$",
     "medicalSpecialty": ["Dentistry", "Orofacial Myology", "Sleep Dentistry"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är luftvägsfokuserad tandvård?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "När bör mitt barn undersökas för luftvägsbedömning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är myofunktionell terapi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur vet jag om mitt barn har ett luftvägsproblem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behandlar ni vuxna såväl som barn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer vid en konsultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Airway Clinic Behandlingar",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "MedicalProcedure", "name": "Tillväxtledning", "description": "Tidig vägledning av käk- och ansiktsutveckling för att stödja bättre luftvägar, bett och funktion." } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "MedicalProcedure", "name": "Myofunktionell terapi", "description": "Träning för tunga, läppar och ansiktsmuskler som stärker näsandning, sväljning och stabil oral funktion." } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "MedicalProcedure", "name": "Luftvägs- och sömnanalys", "description": "Bedömning av andningsmönster, sömnrelaterade symtom och anatomiska faktorer." } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "MedicalProcedure", "name": "ALF-terapi", "description": "Skonsam ortodontisk terapi som kan bidra till bättre balans i käke, gom, luftväg och kraniofacial funktion." } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "MedicalProcedure", "name": "Käkfunktionell ortopedi", "description": "Funktionell behandling för växande patienter där käkarnas utveckling vägleds i rätt riktning." } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "MedicalProcedure", "name": "Käkledsbehandling", "description": "Utredning och behandling av käkledsbesvär, muskelspänningar och smärta." } },
+      { "@type": "ListItem", "position": 7, "item": { "@type": "MedicalProcedure", "name": "Allmän tandvård", "description": "Trygg tandvård med förebyggande fokus och hänsyn till patientens helhetshälsa." } }
+    ]
   }
   </script>
 </head>
@@ -1152,6 +1277,41 @@
       </div>
     </section>
 
+    <section class="faq section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="centered fade-in">
+          <p class="section-label">VANLIGA FRÅGOR</p>
+          <h2 class="section-title" id="faq-title">Vanliga frågor om luftvägstandvård</h2>
+        </div>
+        <div class="faq-grid fade-in">
+          <details class="faq-item">
+            <summary>Vad är luftvägsfokuserad tandvård?</summary>
+            <p>Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra.</p>
+          </details>
+          <details class="faq-item">
+            <summary>När bör mitt barn undersökas för luftvägsbedömning?</summary>
+            <p>Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Vad är myofunktionell terapi?</summary>
+            <p>Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hur vet jag om mitt barn har ett luftvägsproblem?</summary>
+            <p>Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Behandlar ni vuxna såväl som barn?</summary>
+            <p>Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Vad händer vid en konsultation?</summary>
+            <p>En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="family" aria-label="För hela familjen">
       <div class="container family-content reveal">
         <p class="eyebrow">FAMILJENS LUFTVÄGSHÄLSA</p>
@@ -1170,10 +1330,6 @@
             <li>
               <strong>Adress</strong>
               <span>Sveavägen 91<br>113 50 Stockholm</span>
-            </li>
-            <li>
-              <strong>Telefon</strong>
-              <a href="tel:+46812345678">+46 8 123 456 78</a>
             </li>
             <li>
               <strong>E-post</strong>
@@ -1238,7 +1394,6 @@
           <h3>Kontakt</h3>
           <div class="footer-contact">
             <span>Sveavägen 91, 113 50 Stockholm</span>
-            <a href="tel:+46812345678">+46 8 123 456 78</a>
             <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
           </div>
         </div>
