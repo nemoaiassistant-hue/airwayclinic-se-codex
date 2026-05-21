@@ -31,9 +31,9 @@
       --muted: #6a7f7f; --light-text: rgba(255,255,255,.85);
       --font: 'DM Sans', system-ui, -apple-system, sans-serif;
     }
-    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); background: rgba(255,255,255,.97); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; z-index: 100; border-bottom: 1px solid rgba(0,0,0,.06); }
-    .nav a.logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav img { height: 48px; width: auto; }
+
+
+
     .nav .lang-flags { display: flex; gap: 6px; margin-left: auto; margin-right: 20px; font-size: 1.4rem; }
     .nav .lang-flags a { text-decoration: none; opacity: .5; transition: opacity .2s; }
     .nav .lang-flags a.active { opacity: 1; }
@@ -54,16 +54,57 @@
     .footer a:hover { color: white; }
     @media (max-width: 600px) { .article-wrap { padding: calc(var(--nav-height) + 24px) 16px 60px; } article h1 { font-size: 1.6rem; } article h2 { font-size: 1.2rem; } }
 
+
+    /* Hamburger nav */
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 50; background: rgba(255,255,255,.97); backdrop-filter: blur(12px); }
+    .nav { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 28px; }
+    .brand { display: flex; align-items: center; flex: 0 0 auto; }
+    .brand img { width: 150px; height: auto; }
+    .menu-toggle { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(26,107,105,.18); border-radius: 8px; background: rgba(255,255,255,.7); cursor: pointer; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { width: 21px; height: 2px; display: block; position: relative; background: #1a6b69; transition: transform .2s ease, opacity .2s ease; }
+    .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+    .menu-toggle span::before { top: -7px; }
+    .menu-toggle span::after { top: 7px; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .nav-panel { display: none; position: absolute; top: 90px; left: 0; right: 0; padding: 1rem 28px 1.25rem; background: rgba(255,255,255,.98); box-shadow: 0 20px 35px rgba(26,107,105,.12); }
+    .nav-panel.open { display: block; }
+    .nav-links { display: flex; flex-direction: column; list-style: none; padding: 0; margin: 0 0 1rem; }
+    .nav-links a { display: block; padding: .65rem 0; color: #2c3e50; font-weight: 700; text-decoration: none; }
+    .nav-links a:hover { color: #1a6b69; }
+    .nav-actions { display: flex; align-items: center; gap: .9rem; }
+    .btn-primary { display: inline-block; padding: .75rem 1.5rem; border-radius: 8px; background: #3bb6b3; color: #fff; text-decoration: none; font-weight: 700; box-shadow: 0 12px 28px rgba(59,182,179,.25); }
+    .btn-primary:hover { background: #1a6b69; }
+    .lang-flags { display: flex; align-items: center; gap: 6px; margin-left: auto; margin-right: 12px; }
+    .lang-flag { font-size: 1.3rem; text-decoration: none; line-height: 1; opacity: .5; transition: opacity .2s; }
+    .lang-flag:hover { opacity: .8; }
+    .lang-flag.active { opacity: 1; }
+    body { padding-top: 90px; }
+
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <a href="../../" class="logo-link"><img src="../../assets/logo-original.png" alt="Airway Clinic" width="177" height="90"></a>
-    <div class="lang-flags">
-      <a href="../../resources/how-myofunctional-therapy-works.html">🇬🇧</a>
-      <a href="how-myofunctional-therapy-works.html" class="active">🇸🇪</a>
+  <header class="site-header">
+    <div class="nav">
+      <a class="brand" href="../../"><img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm"></a>
+      <div class="lang-flags">
+        <a href="../../resources/how-myofunctional-therapy-works/" class="lang-flag" title="English">🇬🇧</a>
+        <a href="how-myofunctional-therapy-works.html" class="lang-flag active" title="Svenska">🇸🇪</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="navPanel" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav class="nav-panel" id="navPanel">
+        <ul class="nav-links">
+          <li><a href="../../#om-oss">Om oss</a></li>
+          <li><a href="../../#tjanster">Tjänster</a></li>
+          <li><a href="../../#team">Team</a></li>
+          <li><a href="../">Resurser</a></li>
+          <li><a href="../../#kontakt">Kontakt</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="../../#kontakt">Boka konsultation</a>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
   <div class="article-wrap">
     <a href="../" class="back-link">← Tillbaka till resurser</a>
          1|<article>
@@ -186,5 +227,18 @@
   <footer class="footer">
     &copy; 2026 Airway Clinic Stockholm. <a href="../privacy.html">Integritetspolicy</a>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const panel = document.getElementById('navPanel');
+    if (toggle && panel) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        panel.classList.toggle('open');
+      });
+    }
+  </script>
+
 </body>
 </html>
