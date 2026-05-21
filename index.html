@@ -899,9 +899,12 @@
 
     .footer-logo {
       width: 155px;
-      filter: brightness(0) invert(1) brightness(1.2);
-      opacity: 0.94;
       margin-bottom: 1rem;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: auto;
     }
 
     .footer-heading {
@@ -1292,9 +1295,8 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <img class="footer-logo" src="assets/logo-original.png" alt="Airway Clinic Stockholm logo" loading="lazy">
-          <p>Airway-focused dentistry, myofunctional therapy and jaw function care in Stockholm.</p>
+        <div class="footer-logo">
+          <img src="assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
         </div>
         <div>
           <p class="footer-heading">Navigation</p>
