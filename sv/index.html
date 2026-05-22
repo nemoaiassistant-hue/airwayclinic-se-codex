@@ -1,1594 +1,1594 @@
 <!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi</title>
-  <meta name="description" content="Airway Clinic Stockholm erbjuder luftvägsfokuserad tandvård, myofunktionell terapi, bettfysiologi och helhetsinriktad behandling för barn och vuxna i Stockholm.">
-  <link rel="canonical" href="https://airwayclinic.se/sv/">
-  <link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/">
-  <link rel="alternate" hreflang="en" href="https://airwayclinic.se/">
-  <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="sv_SE">
-  <meta property="og:title" content="Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi">
-  <meta property="og:description" content="Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi.">
-  <meta property="og:url" content="https://airwayclinic.se/">
-  <meta property="og:image" content="https://airwayclinic.se/assets/hero-baby.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Airway Clinic Stockholm">
-  <meta name="twitter:description" content="Helhetssyn på luftvägar, käkfunktion och tandvård i Stockholm.">
-  <meta name="twitter:image" content="https://airwayclinic.se/assets/hero-baby.jpg">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Dr. Siavosh Hakimmaani">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #3bb6b3;
-      --dark-teal: #1a6b69;
-      --gold: #e8c170;
-      --light-bg: #f7f5f0;
-      --white: #ffffff;
-      --dark-text: #2c3e50;
-      --light-text: #f0f4f4;
-      --muted: #66777e;
-      --line: rgba(26, 107, 105, .14);
-      --shadow: 0 18px 44px rgba(26, 107, 105, .13);
-      --nav-height: 90px;
-      color-scheme: light;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: var(--nav-height);
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--dark-text);
-      background: var(--white);
-      line-height: 1.6;
-      text-rendering: optimizeLegibility;
-    }
-
-    body.menu-open { overflow: hidden; }
-
-    img, iframe { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-
-    .container {
-      width: min(100% - 40px, 1200px);
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 100;
-      height: var(--nav-height);
-      color: var(--dark-teal);
-      background: rgba(255, 255, 255, .97);
-      transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
-    }
-
-    .site-header.scrolled,
-    .site-header.menu-active {
-      background: rgba(255, 255, 255, 1);
-      box-shadow: 0 10px 30px rgba(26, 107, 105, .12);
-      backdrop-filter: blur(16px);
-    }
-
-    .nav {
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      min-width: 132px;
-    }
-
-    .logo img {
-      width: 154px;
-      height: auto;
-    }
-
-    .site-header.scrolled .logo img,
-    .site-header.menu-active .logo img { filter: none; }
-
-    .lang-flags {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: auto;
-    }
-
-    .lang-flag {
-      font-size: 1.3rem;
-      text-decoration: none;
-      line-height: 1;
-      opacity: .5;
-      transition: opacity .2s ease;
-      padding: 2px;
-    }
-
-    .lang-flag:hover { opacity: .8; }
-    .lang-flag.active { opacity: 1; }
-
-    .nav-menu,
-    .nav-actions {
-      display: none;
-      align-items: center;
-    }
-
-    .nav-menu {
-      gap: 28px;
-      font-size: .95rem;
-      font-weight: 800;
-    }
-
-    .nav-link {
-      position: relative;
-      padding-block: 8px;
-    }
-
-    .nav-link::after {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 1px;
-      height: 2px;
-      content: "";
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform .2s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link:focus-visible::after { transform: scaleX(1); }
-
-    .nav-actions { gap: 16px; }
-
-    .language-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .88rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .language-switch .active { font-weight: 900; }
-    .language-switch a { opacity: .78; }
-    .language-switch a:hover { opacity: 1; color: var(--gold); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 22px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      font-weight: 800;
-      line-height: 1.1;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      color: var(--white);
-      background: var(--primary);
-      box-shadow: 0 12px 28px rgba(59, 182, 179, .28);
-    }
-
-    .btn-primary:hover {
-      background: var(--dark-teal);
-      box-shadow: 0 16px 34px rgba(26, 107, 105, .25);
-    }
-
-    .btn-hero {
-      color: #173f3e;
-      background: linear-gradient(135deg, var(--gold), #f4dc9b);
-      box-shadow: 0 18px 36px rgba(232, 193, 112, .28);
-    }
-
-    .btn-hero:hover {
-      color: var(--white);
-      background: var(--primary);
-      box-shadow: 0 18px 40px rgba(59, 182, 179, .3);
-    }
-
-    .menu-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 5px;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(255, 255, 255, .4);
-      border-radius: 8px;
-      color: currentColor;
-      background: rgba(255, 255, 255, .16);
-      cursor: pointer;
-    }
-
-    .site-header.scrolled .menu-toggle,
-    .site-header.menu-active .menu-toggle {
-      border-color: rgba(26, 107, 105, .2);
-      background: rgba(26, 107, 105, .05);
-    }
-
-    .menu-toggle span,
-    .menu-toggle::before,
-    .menu-toggle::after {
-      display: block;
-      width: 20px;
-      height: 2px;
-      content: "";
-      background: currentColor;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-
-    .menu-toggle[aria-expanded="true"] span { opacity: 0; }
-    .menu-toggle[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
-    .menu-toggle[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-panel {
-      position: fixed;
-      top: var(--nav-height);
-      left: 0;
-      right: 0;
-      z-index: 99;
-      display: grid;
-      gap: 18px;
-      padding: 24px 20px 30px;
-      color: var(--dark-teal);
-      background: rgba(255, 255, 255, .98);
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 26px 40px rgba(26, 107, 105, .16);
-      transform: translateY(-140%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform .25s ease, opacity .25s ease;
-    }
-
-    .mobile-panel.open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .mobile-panel a {
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      font-weight: 800;
-    }
-
-    .mobile-panel .language-switch { justify-content: flex-start; }
-    .mobile-panel .btn { width: fit-content; }
-
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      align-items: center;
-      overflow: hidden;
-      color: var(--white);
-      background-image: url("../assets/hero-baby.webp");
-      background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
-      background-size: cover;
-      background-position: 64% center;
-    }
-
-    .hero::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .02) 34%, rgba(0, 0, 0, .16));
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      padding: calc(var(--nav-height) + 56px) 0 132px;
-    }
-
-    .hero h1,
-    .hero p,
-    .hero .eyebrow {
-      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.9);
-    }
-
-    .eyebrow {
-      margin: 0 0 16px;
-      color: #fff;
-      font-size: .78rem;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .hero p.eyebrow {
-      color: #fff;
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      font-family: "Playfair Display", Georgia, serif;
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-
-    h1 {
-      max-width: 720px;
-      font-size: clamp(3rem, 9vw, 6.9rem);
-      color: var(--white);
-      text-shadow: 0 14px 38px rgba(0, 0, 0, .28);
-    }
-
-    .hero p {
-      max-width: 690px;
-      margin: 24px 0 34px;
-      color: var(--light-text);
-      font-size: clamp(1.08rem, 2.2vw, 1.45rem);
-      line-height: 1.55;
-      text-shadow: 0 8px 22px rgba(0, 0, 0, .22);
-    }
-
-    .wave {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      z-index: 2;
-      width: 100%;
-      height: 86px;
-      color: var(--white);
-    }
-
-    section { padding: 92px 0; }
-
-    .section-header {
-      max-width: 760px;
-      margin: 0 auto 46px;
-      text-align: center;
-    }
-
-    .section-header h2,
-    .about-copy h2,
-    .contact h2 {
-      color: var(--dark-teal);
-      font-size: clamp(2.25rem, 5vw, 4.35rem);
-    }
-
-    .section-header p {
-      margin: 18px auto 0;
-      color: var(--muted);
-      font-size: 1.06rem;
-    }
-
-    .about-grid {
-      display: grid;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .about-visual {
-      min-height: 420px;
-      border-radius: 8px;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 22% 22%, rgba(232, 193, 112, .92), transparent 30%),
-        linear-gradient(135deg, var(--dark-teal), var(--primary));
-      box-shadow: var(--shadow);
-    }
-
-    .about-visual::before,
-    .about-visual::after {
-      position: absolute;
-      content: "";
-      border: 1px solid rgba(255, 255, 255, .4);
-      border-radius: 50%;
-    }
-
-    .about-visual::before {
-      width: 240px;
-      height: 240px;
-      right: -58px;
-      top: 46px;
-    }
-
-    .about-visual::after {
-      width: 360px;
-      height: 360px;
-      left: -120px;
-      bottom: -118px;
-      border-color: rgba(255, 255, 255, .24);
-    }
-
-    .visual-card {
-      position: absolute;
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-      padding: 28px;
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, .28);
-      border-radius: 8px;
-      background: rgba(12, 64, 63, .44);
-      backdrop-filter: blur(12px);
-    }
-
-    .visual-card strong {
-      display: block;
-      color: var(--gold);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 3rem;
-      line-height: 1;
-    }
-
-    .visual-card span {
-      display: block;
-      margin-top: 8px;
-      color: var(--light-text);
-      font-weight: 700;
-    }
-
-    .about-copy p {
-      margin: 20px 0 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .services { background: var(--light-bg); }
-
-    .services-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .service-card,
-    .testimonial-card {
-      border-radius: 8px;
-      background: var(--white);
-      box-shadow: 0 10px 28px rgba(26, 107, 105, .08);
-      transition: transform .22s ease, box-shadow .22s ease;
-    }
-
-    .service-card:hover,
-    .testimonial-card:hover,
-    .team-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-card {
-      min-height: 240px;
-      padding: 30px;
-      border: 1px solid rgba(26, 107, 105, .1);
-      border-left: 5px solid var(--primary);
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    .service-card:hover h3 {
-      color: var(--primary);
-    }
-
-    .learn-more {
-      display: inline-block;
-      margin-top: auto;
-      padding-top: 12px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-decoration: none;
-      transition: color .2s ease;
-    }
-
-    .learn-more:hover {
-      color: var(--dark-teal);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 24px;
-      color: var(--dark-teal);
-      font-size: 1.45rem;
-      font-weight: 900;
-      border-radius: 8px;
-      background: rgba(59, 182, 179, .13);
-    }
-
-    .service-card h3,
-    .team-card h3 {
-      color: var(--dark-teal);
-      font-size: 1.48rem;
-    }
-
-    .service-card p,
-    .team-card p,
-    .testimonial-card p {
-      margin: 14px 0 0;
-      color: var(--muted);
-    }
-
-    .team-grid {
-      display: grid;
-      gap: 26px;
-    }
-
-    .team-card {
-      padding: 34px 28px;
-      text-align: center;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--white);
-      box-shadow: 0 10px 30px rgba(26, 107, 105, .07);
-      transition: transform .22s ease, box-shadow .22s ease;
-    }
-
-    .team-photo {
-      width: 174px;
-      height: 174px;
-      margin: 0 auto 24px;
-      border: 5px solid var(--primary);
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center;
-      box-shadow: 0 14px 28px rgba(26, 107, 105, .16);
-    }
-
-    .team-role {
-      display: block;
-      margin-top: 8px;
-      color: var(--gold);
-      font-size: .9rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .stats {
-      padding: 54px 0;
-      color: var(--white);
-      background: var(--dark-teal);
-    }
-
-    .stats-grid {
-      display: grid;
-      gap: 28px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--gold);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(3rem, 7vw, 5.2rem);
-      line-height: 1;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 8px;
-      color: var(--light-text);
-      font-weight: 800;
-    }
-
-    .testimonials { background: var(--white); }
-
-    .testimonial-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .testimonial-card {
-      position: relative;
-      min-height: 230px;
-      padding: 34px 28px;
-      border: 1px solid var(--line);
-    }
-
-    .testimonial-card::before {
-      content: "\201D";
-      position: absolute;
-      top: 10px;
-      right: 24px;
-      color: rgba(59, 182, 179, .16);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 6.5rem;
-      line-height: 1;
-    }
-
-    .testimonial-card cite {
-      display: block;
-      margin-top: 22px;
-      color: var(--dark-teal);
-      font-style: normal;
-      font-weight: 900;
-    }
-
-    .family {
-      position: relative;
-      min-height: 560px;
-      display: grid;
-      align-items: center;
-      color: var(--white);
-      background-image:
-        linear-gradient(90deg, rgba(15, 73, 72, .88), rgba(26, 107, 105, .58), rgba(26, 107, 105, .28)),
-        url("../assets/father-baby.webp");
-        background-image: image-set("../assets/father-baby.webp" type("image/webp"), "../assets/father-baby.jpg" type("image/jpeg"));
-      background-size: cover;
-      background-position: center 42%;
-      background-attachment: fixed;
-    }
-
-    .family-content {
-      max-width: 680px;
-      padding: 92px 0;
-    }
-
-    .family h2 {
-      color: var(--white);
-      font-size: clamp(2.7rem, 7vw, 5.6rem);
-      text-shadow: 0 14px 34px rgba(0, 0, 0, .24);
-    }
-
-    .family p {
-      margin: 22px 0 32px;
-      color: var(--light-text);
-      font-size: clamp(1.08rem, 2.2vw, 1.35rem);
-      max-width: 620px;
-    }
-
-    p.eyebrow,
-    .family p.eyebrow,
-    .section-header p.eyebrow,
-    .about-copy p.eyebrow,
-    .contact p.eyebrow {
-      margin: 0 0 16px;
-      color: var(--gold);
-      font-size: .78rem;
-      font-weight: 900;
-      line-height: 1.2;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      text-shadow: none;
-    }
-
-    .contact { background: var(--light-bg); }
-
-    .contact-grid {
-      display: grid;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .contact-details,
-    .form-wrap {
-      border-radius: 8px;
-      background: var(--white);
-      border: 1px solid rgba(26, 107, 105, .1);
-      box-shadow: 0 12px 34px rgba(26, 107, 105, .08);
-    }
-
-    .contact-details { padding: 34px; }
-
-    .contact-list {
-      display: grid;
-      gap: 22px;
-      margin: 30px 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .contact-list strong {
-      display: block;
-      color: var(--dark-teal);
-      font-size: .9rem;
-      text-transform: uppercase;
-    }
-
-    .contact-list span,
-    .contact-list a {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .map-link {
-      color: var(--dark-teal);
-      font-weight: 900;
-      text-decoration: underline;
-      text-decoration-color: var(--gold);
-      text-decoration-thickness: 2px;
-      text-underline-offset: 5px;
-    }
-
-    .form-wrap {
-      padding: 32px;
-      overflow: hidden;
-    }
-
-    .form-wrap form,
-    #consultationForm {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .form-wrap label,
-    #consultationForm label {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--dark-text);
-      margin-bottom: 6px;
-    }
-
-    .form-wrap input[type="text"],
-    .form-wrap input[type="email"],
-    .form-wrap input[type="tel"],
-    .form-wrap textarea,
-    #consultationForm input[type="text"],
-    #consultationForm input[type="email"],
-    #consultationForm input[type="tel"],
-    #consultationForm textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid rgba(26, 107, 105, .2);
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      color: var(--dark-text);
-      background: var(--white);
-      transition: border-color .2s ease, box-shadow .2s ease;
-      box-sizing: border-box;
-    }
-
-    .form-wrap input:focus,
-    .form-wrap textarea:focus,
-    #consultationForm input:focus,
-    #consultationForm textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(59, 182, 179, .15);
-    }
-
-    #consultationForm textarea {
-      display: block;
-    }
-
-    .form-wrap textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .form-wrap .checkbox-group {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin-top: 4px;
-    }
-
-    .form-wrap .checkbox-group input[type="checkbox"] {
-      margin-top: 4px;
-      accent-color: var(--primary);
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
-    .form-wrap .checkbox-group span {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .form-wrap .submit-btn {
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .2s ease, transform .2s ease;
-      align-self: flex-start;
-    }
-
-    .form-wrap .submit-btn:hover {
-      background: var(--dark-teal);
-      transform: translateY(-1px);
-    }
-
-    .form-wrap .submit-btn:disabled {
-      opacity: .6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .form-success {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .form-success h3 {
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .form-success p {
-      color: var(--muted);
-    }
-
-    .site-footer {
-      padding: 56px 0 34px;
-      color: var(--light-text);
-      background: #134f4d;
-    }
-
-    .footer-grid {
-      display: grid;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .footer-logo img {
-      width: 156px;
-      height: auto;
-      padding: 8px 10px;
-      border-radius: 8px;
-      background: var(--white);
-    }
-
-    .footer-grid h3 {
-      color: var(--gold);
-      font-family: "Inter", sans-serif;
-      font-size: .88rem;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .footer-links,
-    .footer-contact {
-      display: grid;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .footer-links a:hover { color: var(--gold); }
-
-    .copyright {
-      margin-top: 38px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, .14);
-      color: rgba(240, 244, 244, .75);
-      font-size: .92rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .001ms !important;
-        animation-duration: .001ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    @media (min-width: 640px) {
-      .services-grid,
-      .testimonial-grid,
-      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .footer-grid { grid-template-columns: 1.2fr .8fr 1fr; }
-    }
-
-    @media (min-width: 768px) {
-      section { padding: 110px 0; }
-      .about-grid,
-      .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-      .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .hero-content { padding-bottom: 150px; }
-    }
-
-    @media (min-width: 1024px) {
-      .nav-menu,
-      .nav-actions { display: flex; }
-      .menu-toggle { display: none; }
-      .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .service-card:last-child { grid-column: 2 / span 1; }
-      .hero { background-position: center center; }
-    }
-
-    @media (max-width: 767px) {
-      .container { width: min(100% - 32px, 1200px); }
-      .hero {
-        background-image:
-          linear-gradient(90deg, rgba(13, 65, 64, .94), rgba(26, 107, 105, .7), rgba(26, 107, 105, .24)),
-          url("../assets/hero-baby.webp");
-        background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
-        background-position: 58% center;
-      }
-      .hero-content { padding-top: calc(var(--nav-height) + 44px); }
-      .about-visual { min-height: 340px; }
-      .family {
-        min-height: 520px;
-        background-attachment: scroll;
-        background-position: center center;
-      }
-      .contact-details { padding: 28px 22px; }
-    }
-
-    .faq {
-      background: var(--white);
-    }
-
-    .faq-grid {
-      max-width: 800px;
-      margin: 40px auto 0;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--light-bg);
-      padding: 0;
-    }
-
-    .faq-item summary {
-      padding: 20px 0;
-      font-weight: 600;
-      font-size: 1.05rem;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--dark-text);
-    }
-
-    .faq-item summary::-webkit-details-marker { display: none; }
-
-    .faq-item summary::after {
-      content: '+';
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: var(--teal);
-      flex-shrink: 0;
-      margin-left: 16px;
-    }
-
-    .faq-item[open] summary::after {
-      content: '−';
-    }
-
-    .faq-item summary:hover {
-      color: var(--teal);
-    }
-
-    .faq-item p {
-      padding: 0 0 20px;
-      color: var(--muted);
-      line-height: 1.7;
-      max-width: 700px;
-    }
-
-    /* Breadcrumbs */
-    .breadcrumbs {
-      background: var(--light-bg);
-      border-bottom: 1px solid var(--border);
-      padding: 6px 0;
-    }
-    .breadcrumbs ol {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-    .breadcrumbs li::after {
-      content: '›';
-      margin-left: 4px;
-      color: var(--border);
-    }
-    .breadcrumbs li:last-child::after {
-      display: none;
-    }
-    .breadcrumbs a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-    .breadcrumbs a:hover {
-      color: var(--primary);
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Dentist"],
-    "name": "Airway Clinic Stockholm",
-    "url": "https://airwayclinic.se/",
-    "image": "https://airwayclinic.se/assets/logo-original.png",
-    "description": "Luftvägsfokuserad tandvård, myofunktionell terapi, bettfysiologi och helhetsinriktad behandling i Stockholm.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Sveavägen 91",
-      "postalCode": "113 50",
-      "addressLocality": "Stockholm",
-      "addressCountry": "SE"
-    },
-      "email": "info@airwayclinic.se",
-      "sameAs": ["https://www.google.com/maps/place/?q=place_id:ChIJLRblYhSdX0YRgDT89Ew-zYw"],
-      "openingHours": ["Mo 09:00-17:00", "Fr 09:00-17:00"],
-    "areaServed": "Stockholm",
-    "priceRange": "$$",
-    "medicalSpecialty": ["Dentistry", "Orofacial Myology", "Sleep Dentistry"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "5"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Vad är luftvägsfokuserad tandvård?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "När bör mitt barn undersökas för luftvägsbedömning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vad är myofunktionell terapi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur vet jag om mitt barn har ett luftvägsproblem?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Behandlar ni vuxna såväl som barn?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vad händer vid en konsultation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt."
-        }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Airway Clinic Behandlingar",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "item": { "@type": "MedicalProcedure", "name": "Tillväxtledning", "description": "Tidig vägledning av käk- och ansiktsutveckling för att stödja bättre luftvägar, bett och funktion." } },
-      { "@type": "ListItem", "position": 2, "item": { "@type": "MedicalProcedure", "name": "Myofunktionell terapi", "description": "Träning för tunga, läppar och ansiktsmuskler som stärker näsandning, sväljning och stabil oral funktion." } },
-      { "@type": "ListItem", "position": 3, "item": { "@type": "MedicalProcedure", "name": "Luftvägs- och sömnanalys", "description": "Bedömning av andningsmönster, sömnrelaterade symtom och anatomiska faktorer." } },
-      { "@type": "ListItem", "position": 4, "item": { "@type": "MedicalProcedure", "name": "ALF-terapi", "description": "Skonsam ortodontisk terapi som kan bidra till bättre balans i käke, gom, luftväg och kraniofacial funktion." } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "MedicalProcedure", "name": "Käkfunktionell ortopedi", "description": "Funktionell behandling för växande patienter där käkarnas utveckling vägleds i rätt riktning." } },
-      { "@type": "ListItem", "position": 6, "item": { "@type": "MedicalProcedure", "name": "Käkledsbehandling", "description": "Utredning och behandling av käkledsbesvär, muskelspänningar och smärta." } },
-      { "@type": "ListItem", "position": 7, "item": { "@type": "MedicalProcedure", "name": "Allmän tandvård", "description": "Trygg tandvård med förebyggande fokus och hänsyn till patientens helhetshälsa." } }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://airwayclinic.se/sv/" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SpeakableSpecification",
-    "cssSelector": [".faq-answer", ".service-card p", "#about p"]
-  }
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PWZNFWFLPY');
-  </script>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi</title>
+ <meta name="description" content="Airway Clinic Stockholm erbjuder luftvägsfokuserad tandvård, myofunktionell terapi, bettfysiologi och helhetsinriktad behandling för barn och vuxna i Stockholm.">
+ <link rel="canonical" href="https://airwayclinic.se/sv/">
+ <link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/">
+ <link rel="alternate" hreflang="en" href="https://airwayclinic.se/">
+ <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/">
+ <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+ <meta property="og:type" content="website">
+ <meta property="og:locale" content="sv_SE">
+ <meta property="og:title" content="Airway Clinic Stockholm — Luftvägstandvård & Myofunktionell Terapi">
+ <meta property="og:description" content="Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi.">
+ <meta property="og:url" content="https://airwayclinic.se/">
+ <meta property="og:image" content="https://airwayclinic.se/assets/hero-baby.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Airway Clinic Stockholm">
+ <meta name="twitter:description" content="Helhetssyn på luftvägar, käkfunktion och tandvård i Stockholm.">
+ <meta name="twitter:image" content="https://airwayclinic.se/assets/hero-baby.jpg">
+ <meta name="robots" content="index, follow">
+ <meta name="author" content="Dr. Siavosh Hakimmaani">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+ <style>
+ :root {
+ --primary: #3bb6b3;
+ --dark-teal: #1a6b69;
+ --gold: #e8c170;
+ --light-bg: #f7f5f0;
+ --white: #ffffff;
+ --dark-text: #2c3e50;
+ --light-text: #f0f4f4;
+ --muted: #66777e;
+ --line: rgba(26, 107, 105, .14);
+ --shadow: 0 18px 44px rgba(26, 107, 105, .13);
+ --nav-height: 90px;
+ color-scheme: light;
+ }
+
+ * { box-sizing: border-box; }
+
+ html {
+ scroll-behavior: smooth;
+ scroll-padding-top: var(--nav-height);
+ }
+
+ body {
+ margin: 0;
+ font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+ color: var(--dark-text);
+ background: var(--white);
+ line-height: 1.6;
+ text-rendering: optimizeLegibility;
+ }
+
+ body.menu-open { overflow: hidden; }
+
+ img, iframe { display: block; max-width: 100%; }
+ a { color: inherit; text-decoration: none; }
+ button { font: inherit; }
+
+ .container {
+ width: min(100% - 40px, 1200px);
+ margin-inline: auto;
+ }
+
+ .site-header {
+ position: fixed;
+ inset: 0 0 auto;
+ z-index: 100;
+ height: var(--nav-height);
+ color: var(--dark-teal);
+ background: rgba(255, 255, 255, .97);
+ transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+ }
+
+ .site-header.scrolled,
+ .site-header.menu-active {
+ background: rgba(255, 255, 255, 1);
+ box-shadow: 0 10px 30px rgba(26, 107, 105, .12);
+ backdrop-filter: blur(16px);
+ }
+
+ .nav {
+ height: var(--nav-height);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 18px;
+ }
+
+ .logo {
+ display: inline-flex;
+ align-items: center;
+ min-width: 132px;
+ }
+
+ .logo img {
+ width: 154px;
+ height: auto;
+ }
+
+ .site-header.scrolled .logo img,
+ .site-header.menu-active .logo img { filter: none; }
+
+ .lang-flags {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ margin-left: auto;
+ }
+
+ .lang-flag {
+ font-size: 1.3rem;
+ text-decoration: none;
+ line-height: 1;
+ opacity: .5;
+ transition: opacity .2s ease;
+ padding: 2px;
+ }
+
+ .lang-flag:hover { opacity: .8; }
+ .lang-flag.active { opacity: 1; }
+
+ .nav-menu,
+ .nav-actions {
+ display: none;
+ align-items: center;
+ }
+
+ .nav-menu {
+ gap: 28px;
+ font-size: .95rem;
+ font-weight: 800;
+ }
+
+ .nav-link {
+ position: relative;
+ padding-block: 8px;
+ }
+
+ .nav-link::after {
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 1px;
+ height: 2px;
+ content: "";
+ background: var(--gold);
+ transform: scaleX(0);
+ transition: transform .2s ease;
+ }
+
+ .nav-link:hover::after,
+ .nav-link:focus-visible::after { transform: scaleX(1); }
+
+ .nav-actions { gap: 16px; }
+
+ .language-switch {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ font-size: .88rem;
+ font-weight: 800;
+ white-space: nowrap;
+ }
+
+ .language-switch .active { font-weight: 900; }
+ .language-switch a { opacity: .78; }
+ .language-switch a:hover { opacity: 1; color: var(--gold); }
+
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 46px;
+ padding: 12px 22px;
+ border: 1px solid transparent;
+ border-radius: 999px;
+ font-weight: 800;
+ line-height: 1.1;
+ cursor: pointer;
+ transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+ }
+
+ .btn:hover { transform: translateY(-2px); }
+
+ .btn-primary {
+ color: var(--white);
+ background: var(--primary);
+ box-shadow: 0 12px 28px rgba(59, 182, 179, .28);
+ }
+
+ .btn-primary:hover {
+ background: var(--dark-teal);
+ box-shadow: 0 16px 34px rgba(26, 107, 105, .25);
+ }
+
+ .btn-hero {
+ color: #173f3e;
+ background: linear-gradient(135deg, var(--gold), #f4dc9b);
+ box-shadow: 0 18px 36px rgba(232, 193, 112, .28);
+ }
+
+ .btn-hero:hover {
+ color: var(--white);
+ background: var(--primary);
+ box-shadow: 0 18px 40px rgba(59, 182, 179, .3);
+ }
+
+ .menu-toggle {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5px;
+ width: 44px;
+ height: 44px;
+ border: 1px solid rgba(255, 255, 255, .4);
+ border-radius: 8px;
+ color: currentColor;
+ background: rgba(255, 255, 255, .16);
+ cursor: pointer;
+ }
+
+ .site-header.scrolled .menu-toggle,
+ .site-header.menu-active .menu-toggle {
+ border-color: rgba(26, 107, 105, .2);
+ background: rgba(26, 107, 105, .05);
+ }
+
+ .menu-toggle span,
+ .menu-toggle::before,
+ .menu-toggle::after {
+ display: block;
+ width: 20px;
+ height: 2px;
+ content: "";
+ background: currentColor;
+ transition: transform .2s ease, opacity .2s ease;
+ }
+
+ .menu-toggle[aria-expanded="true"] span { opacity: 0; }
+ .menu-toggle[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
+ .menu-toggle[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
+
+ .mobile-panel {
+ position: fixed;
+ top: var(--nav-height);
+ left: 0;
+ right: 0;
+ z-index: 99;
+ display: grid;
+ gap: 18px;
+ padding: 24px 20px 30px;
+ color: var(--dark-teal);
+ background: rgba(255, 255, 255, .98);
+ border-bottom: 1px solid var(--line);
+ box-shadow: 0 26px 40px rgba(26, 107, 105, .16);
+ transform: translateY(-140%);
+ opacity: 0;
+ pointer-events: none;
+ transition: transform .25s ease, opacity .25s ease;
+ }
+
+ .mobile-panel.open {
+ transform: translateY(0);
+ opacity: 1;
+ pointer-events: auto;
+ }
+
+ .mobile-panel a {
+ min-height: 44px;
+ display: flex;
+ align-items: center;
+ font-weight: 800;
+ }
+
+ .mobile-panel .language-switch { justify-content: flex-start; }
+ .mobile-panel .btn { width: fit-content; }
+
+ .hero {
+ position: relative;
+ min-height: 100vh;
+ min-height: 100svh;
+ display: grid;
+ align-items: center;
+ overflow: hidden;
+ color: var(--white);
+ background-image: url("../assets/hero-baby.webp");
+ background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
+ background-size: cover;
+ background-position: 64% center;
+ }
+
+ .hero::after {
+ position: absolute;
+ inset: 0;
+ content: "";
+ background: linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .02) 34%, rgba(0, 0, 0, .16));
+ pointer-events: none;
+ }
+
+ .hero-content {
+ position: relative;
+ z-index: 1;
+ max-width: 760px;
+ padding: calc(var(--nav-height) + 56px) 0 132px;
+ }
+
+ .hero h1,
+ .hero p,
+ .hero .eyebrow {
+ text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.9);
+ }
+
+ .eyebrow {
+ margin: 0 0 16px;
+ color: #fff;
+ font-size: .78rem;
+ font-weight: 900;
+ letter-spacing: .14em;
+ text-transform: uppercase;
+ }
+
+ .hero p.eyebrow {
+ color: #fff;
+ }
+
+ h1, h2, h3 {
+ margin: 0;
+ font-family: "Playfair Display", Georgia, serif;
+ line-height: 1.08;
+ letter-spacing: 0;
+ }
+
+ h1 {
+ max-width: 720px;
+ font-size: clamp(3rem, 9vw, 6.9rem);
+ color: var(--white);
+ text-shadow: 0 14px 38px rgba(0, 0, 0, .28);
+ }
+
+ .hero p {
+ max-width: 690px;
+ margin: 24px 0 34px;
+ color: var(--light-text);
+ font-size: clamp(1.08rem, 2.2vw, 1.45rem);
+ line-height: 1.55;
+ text-shadow: 0 8px 22px rgba(0, 0, 0, .22);
+ }
+
+ .wave {
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: -1px;
+ z-index: 2;
+ width: 100%;
+ height: 86px;
+ color: var(--white);
+ }
+
+ section { padding: 92px 0; }
+
+ .section-header {
+ max-width: 760px;
+ margin: 0 auto 46px;
+ text-align: center;
+ }
+
+ .section-header h2,
+ .about-copy h2,
+ .contact h2 {
+ color: var(--dark-teal);
+ font-size: clamp(2.25rem, 5vw, 4.35rem);
+ }
+
+ .section-header p {
+ margin: 18px auto 0;
+ color: var(--muted);
+ font-size: 1.06rem;
+ }
+
+ .about-grid {
+ display: grid;
+ gap: 42px;
+ align-items: center;
+ }
+
+ .about-visual {
+ min-height: 420px;
+ border-radius: 8px;
+ position: relative;
+ overflow: hidden;
+ background:
+ radial-gradient(circle at 22% 22%, rgba(232, 193, 112, .92), transparent 30%),
+ linear-gradient(135deg, var(--dark-teal), var(--primary));
+ box-shadow: var(--shadow);
+ }
+
+ .about-visual::before,
+ .about-visual::after {
+ position: absolute;
+ content: "";
+ border: 1px solid rgba(255, 255, 255, .4);
+ border-radius: 50%;
+ }
+
+ .about-visual::before {
+ width: 240px;
+ height: 240px;
+ right: -58px;
+ top: 46px;
+ }
+
+ .about-visual::after {
+ width: 360px;
+ height: 360px;
+ left: -120px;
+ bottom: -118px;
+ border-color: rgba(255, 255, 255, .24);
+ }
+
+ .visual-card {
+ position: absolute;
+ left: 28px;
+ right: 28px;
+ bottom: 28px;
+ padding: 28px;
+ color: var(--white);
+ border: 1px solid rgba(255, 255, 255, .28);
+ border-radius: 8px;
+ background: rgba(12, 64, 63, .44);
+ backdrop-filter: blur(12px);
+ }
+
+ .visual-card strong {
+ display: block;
+ color: var(--gold);
+ font-family: "Playfair Display", Georgia, serif;
+ font-size: 3rem;
+ line-height: 1;
+ }
+
+ .visual-card span {
+ display: block;
+ margin-top: 8px;
+ color: var(--light-text);
+ font-weight: 700;
+ }
+
+ .about-copy p {
+ margin: 20px 0 0;
+ color: var(--muted);
+ font-size: 1.05rem;
+ }
+
+ .services { background: var(--light-bg); }
+
+ .services-grid {
+ display: grid;
+ gap: 22px;
+ }
+
+ .service-card,
+ .testimonial-card {
+ border-radius: 8px;
+ background: var(--white);
+ box-shadow: 0 10px 28px rgba(26, 107, 105, .08);
+ transition: transform .22s ease, box-shadow .22s ease;
+ }
+
+ .service-card:hover,
+ .testimonial-card:hover,
+ .team-card:hover {
+ transform: translateY(-4px);
+ box-shadow: var(--shadow);
+ }
+
+ .service-card {
+ min-height: 240px;
+ padding: 30px;
+ border: 1px solid rgba(26, 107, 105, .1);
+ border-left: 5px solid var(--primary);
+ display: flex;
+ flex-direction: column;
+ text-decoration: none;
+ color: inherit;
+ cursor: pointer;
+ }
+
+ .service-card:hover h3 {
+ color: var(--primary);
+ }
+
+ .learn-more {
+ display: inline-block;
+ margin-top: auto;
+ padding-top: 12px;
+ font-size: 0.88rem;
+ font-weight: 600;
+ color: var(--primary);
+ text-decoration: none;
+ transition: color .2s ease;
+ }
+
+ .learn-more:hover {
+ color: var(--dark-teal);
+ }
+
+ .service-icon {
+ width: 48px;
+ height: 48px;
+ display: grid;
+ place-items: center;
+ margin-bottom: 24px;
+ color: var(--dark-teal);
+ font-size: 1.45rem;
+ font-weight: 900;
+ border-radius: 8px;
+ background: rgba(59, 182, 179, .13);
+ }
+
+ .service-card h3,
+ .team-card h3 {
+ color: var(--dark-teal);
+ font-size: 1.48rem;
+ }
+
+ .service-card p,
+ .team-card p,
+ .testimonial-card p {
+ margin: 14px 0 0;
+ color: var(--muted);
+ }
+
+ .team-grid {
+ display: grid;
+ gap: 26px;
+ }
+
+ .team-card {
+ padding: 34px 28px;
+ text-align: center;
+ border: 1px solid var(--line);
+ border-radius: 8px;
+ background: var(--white);
+ box-shadow: 0 10px 30px rgba(26, 107, 105, .07);
+ transition: transform .22s ease, box-shadow .22s ease;
+ }
+
+ .team-photo {
+ width: 174px;
+ height: 174px;
+ margin: 0 auto 24px;
+ border: 5px solid var(--primary);
+ border-radius: 50%;
+ object-fit: cover;
+ object-position: center;
+ box-shadow: 0 14px 28px rgba(26, 107, 105, .16);
+ }
+
+ .team-role {
+ display: block;
+ margin-top: 8px;
+ color: var(--gold);
+ font-size: .9rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ }
+
+ .stats {
+ padding: 54px 0;
+ color: var(--white);
+ background: var(--dark-teal);
+ }
+
+ .stats-grid {
+ display: grid;
+ gap: 28px;
+ text-align: center;
+ }
+
+ .stat strong {
+ display: block;
+ color: var(--gold);
+ font-family: "Playfair Display", Georgia, serif;
+ font-size: clamp(3rem, 7vw, 5.2rem);
+ line-height: 1;
+ }
+
+ .stat span {
+ display: block;
+ margin-top: 8px;
+ color: var(--light-text);
+ font-weight: 800;
+ }
+
+ .testimonials { background: var(--white); }
+
+ .testimonial-grid {
+ display: grid;
+ gap: 22px;
+ }
+
+ .testimonial-card {
+ position: relative;
+ min-height: 230px;
+ padding: 34px 28px;
+ border: 1px solid var(--line);
+ }
+
+ .testimonial-card::before {
+ content: "\201D";
+ position: absolute;
+ top: 10px;
+ right: 24px;
+ color: rgba(59, 182, 179, .16);
+ font-family: "Playfair Display", Georgia, serif;
+ font-size: 6.5rem;
+ line-height: 1;
+ }
+
+ .testimonial-card cite {
+ display: block;
+ margin-top: 22px;
+ color: var(--dark-teal);
+ font-style: normal;
+ font-weight: 900;
+ }
+
+ .family {
+ position: relative;
+ min-height: 560px;
+ display: grid;
+ align-items: center;
+ color: var(--white);
+ background-image:
+ linear-gradient(90deg, rgba(15, 73, 72, .88), rgba(26, 107, 105, .58), rgba(26, 107, 105, .28)),
+ url("../assets/father-baby.webp");
+ background-image: image-set("../assets/father-baby.webp" type("image/webp"), "../assets/father-baby.jpg" type("image/jpeg"));
+ background-size: cover;
+ background-position: center 42%;
+ background-attachment: fixed;
+ }
+
+ .family-content {
+ max-width: 680px;
+ padding: 92px 0;
+ }
+
+ .family h2 {
+ color: var(--white);
+ font-size: clamp(2.7rem, 7vw, 5.6rem);
+ text-shadow: 0 14px 34px rgba(0, 0, 0, .24);
+ }
+
+ .family p {
+ margin: 22px 0 32px;
+ color: var(--light-text);
+ font-size: clamp(1.08rem, 2.2vw, 1.35rem);
+ max-width: 620px;
+ }
+
+ p.eyebrow,
+ .family p.eyebrow,
+ .section-header p.eyebrow,
+ .about-copy p.eyebrow,
+ .contact p.eyebrow {
+ margin: 0 0 16px;
+ color: var(--gold);
+ font-size: .78rem;
+ font-weight: 900;
+ line-height: 1.2;
+ letter-spacing: .14em;
+ text-transform: uppercase;
+ text-shadow: none;
+ }
+
+ .contact { background: var(--light-bg); }
+
+ .contact-grid {
+ display: grid;
+ gap: 34px;
+ align-items: start;
+ }
+
+ .contact-details,
+ .form-wrap {
+ border-radius: 8px;
+ background: var(--white);
+ border: 1px solid rgba(26, 107, 105, .1);
+ box-shadow: 0 12px 34px rgba(26, 107, 105, .08);
+ }
+
+ .contact-details { padding: 34px; }
+
+ .contact-list {
+ display: grid;
+ gap: 22px;
+ margin: 30px 0;
+ padding: 0;
+ list-style: none;
+ }
+
+ .contact-list strong {
+ display: block;
+ color: var(--dark-teal);
+ font-size: .9rem;
+ text-transform: uppercase;
+ }
+
+ .contact-list span,
+ .contact-list a {
+ display: block;
+ margin-top: 4px;
+ color: var(--muted);
+ font-weight: 700;
+ }
+
+ .map-link {
+ color: var(--dark-teal);
+ font-weight: 900;
+ text-decoration: underline;
+ text-decoration-color: var(--gold);
+ text-decoration-thickness: 2px;
+ text-underline-offset: 5px;
+ }
+
+ .form-wrap {
+ padding: 32px;
+ overflow: hidden;
+ }
+
+ .form-wrap form,
+ #consultationForm {
+ display: flex;
+ flex-direction: column;
+ gap: 18px;
+ }
+
+ .form-wrap label,
+ #consultationForm label {
+ display: block;
+ font-size: 0.88rem;
+ font-weight: 500;
+ color: var(--dark-text);
+ margin-bottom: 6px;
+ }
+
+ .form-wrap input[type="text"],
+ .form-wrap input[type="email"],
+ .form-wrap input[type="tel"],
+ .form-wrap textarea,
+ #consultationForm input[type="text"],
+ #consultationForm input[type="email"],
+ #consultationForm input[type="tel"],
+ #consultationForm textarea {
+ width: 100%;
+ padding: 12px 14px;
+ border: 1px solid rgba(26, 107, 105, .2);
+ border-radius: 6px;
+ font-family: inherit;
+ font-size: 0.95rem;
+ color: var(--dark-text);
+ background: var(--white);
+ transition: border-color .2s ease, box-shadow .2s ease;
+ box-sizing: border-box;
+ }
+
+ .form-wrap input:focus,
+ .form-wrap textarea:focus,
+ #consultationForm input:focus,
+ #consultationForm textarea:focus {
+ outline: none;
+ border-color: var(--primary);
+ box-shadow: 0 0 0 3px rgba(59, 182, 179, .15);
+ }
+
+ #consultationForm textarea {
+ display: block;
+ }
+
+ .form-wrap textarea {
+ min-height: 100px;
+ resize: vertical;
+ }
+
+ .form-wrap .checkbox-group {
+ display: flex;
+ gap: 10px;
+ align-items: flex-start;
+ margin-top: 4px;
+ }
+
+ .form-wrap .checkbox-group input[type="checkbox"] {
+ margin-top: 4px;
+ accent-color: var(--primary);
+ width: 18px;
+ height: 18px;
+ flex-shrink: 0;
+ }
+
+ .form-wrap .checkbox-group span {
+ font-size: 0.82rem;
+ color: var(--muted);
+ line-height: 1.5;
+ }
+
+ .form-wrap .submit-btn {
+ background: var(--primary);
+ color: var(--white);
+ border: none;
+ padding: 14px 32px;
+ border-radius: 50px;
+ font-family: inherit;
+ font-size: 1rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background .2s ease, transform .2s ease;
+ align-self: flex-start;
+ }
+
+ .form-wrap .submit-btn:hover {
+ background: var(--dark-teal);
+ transform: translateY(-1px);
+ }
+
+ .form-wrap .submit-btn:disabled {
+ opacity: .6;
+ cursor: not-allowed;
+ transform: none;
+ }
+
+ .form-success {
+ text-align: center;
+ padding: 40px 20px;
+ }
+
+ .form-success h3 {
+ color: var(--primary);
+ margin-bottom: 8px;
+ }
+
+ .form-success p {
+ color: var(--muted);
+ }
+
+ .site-footer {
+ padding: 56px 0 34px;
+ color: var(--light-text);
+ background: #134f4d;
+ }
+
+ .footer-grid {
+ display: grid;
+ gap: 30px;
+ align-items: start;
+ }
+
+ .footer-logo img {
+ width: 156px;
+ height: auto;
+ padding: 8px 10px;
+ border-radius: 8px;
+ background: var(--white);
+ }
+
+ .footer-grid h3 {
+ color: var(--gold);
+ font-family: "Inter", sans-serif;
+ font-size: .88rem;
+ font-weight: 900;
+ letter-spacing: .1em;
+ text-transform: uppercase;
+ }
+
+ .footer-links,
+ .footer-contact {
+ display: grid;
+ gap: 10px;
+ margin-top: 16px;
+ }
+
+ .footer-links a:hover { color: var(--gold); }
+
+ .copyright {
+ margin-top: 38px;
+ padding-top: 24px;
+ border-top: 1px solid rgba(255, 255, 255, .14);
+ color: rgba(240, 244, 244, .75);
+ font-size: .92rem;
+ }
+
+ .reveal {
+ opacity: 0;
+ transform: translateY(24px);
+ transition: opacity .65s ease, transform .65s ease;
+ }
+
+ .reveal.visible {
+ opacity: 1;
+ transform: translateY(0);
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after {
+ scroll-behavior: auto !important;
+ transition-duration: .001ms !important;
+ animation-duration: .001ms !important;
+ }
+
+ .reveal {
+ opacity: 1;
+ transform: none;
+ }
+ }
+
+ @media (min-width: 640px) {
+ .services-grid,
+ .testimonial-grid,
+ .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .footer-grid { grid-template-columns: 1.2fr .8fr 1fr; }
+ }
+
+ @media (min-width: 768px) {
+ section { padding: 110px 0; }
+ .about-grid,
+ .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+ .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ .hero-content { padding-bottom: 150px; }
+ }
+
+ @media (min-width: 1024px) {
+ .nav-menu,
+ .nav-actions { display: flex; }
+ .menu-toggle { display: none; }
+ .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ .service-card:last-child { grid-column: 2 / span 1; }
+ .hero { background-position: center center; }
+ }
+
+ @media (max-width: 767px) {
+ .container { width: min(100% - 32px, 1200px); }
+ .hero {
+ background-image:
+ linear-gradient(90deg, rgba(13, 65, 64, .94), rgba(26, 107, 105, .7), rgba(26, 107, 105, .24)),
+ url("../assets/hero-baby.webp");
+ background-image: image-set("../assets/hero-baby.webp" type("image/webp"), "../assets/hero-baby.jpg" type("image/jpeg"));
+ background-position: 58% center;
+ }
+ .hero-content { padding-top: calc(var(--nav-height) + 44px); }
+ .about-visual { min-height: 340px; }
+ .family {
+ min-height: 520px;
+ background-attachment: scroll;
+ background-position: center center;
+ }
+ .contact-details { padding: 28px 22px; }
+ }
+
+ .faq {
+ background: var(--white);
+ }
+
+ .faq-grid {
+ max-width: 800px;
+ margin: 40px auto 0;
+ }
+
+ .faq-item {
+ border-bottom: 1px solid var(--light-bg);
+ padding: 0;
+ }
+
+ .faq-item summary {
+ padding: 20px 0;
+ font-weight: 600;
+ font-size: 1.05rem;
+ cursor: pointer;
+ list-style: none;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ color: var(--dark-text);
+ }
+
+ .faq-item summary::-webkit-details-marker { display: none; }
+
+ .faq-item summary::after {
+ content: '+';
+ font-size: 1.4rem;
+ font-weight: 300;
+ color: var(--teal);
+ flex-shrink: 0;
+ margin-left: 16px;
+ }
+
+ .faq-item[open] summary::after {
+ content: '−';
+ }
+
+ .faq-item summary:hover {
+ color: var(--teal);
+ }
+
+ .faq-item p {
+ padding: 0 0 20px;
+ color: var(--muted);
+ line-height: 1.7;
+ max-width: 700px;
+ }
+
+ /* Breadcrumbs */
+ .breadcrumbs {
+ background: var(--light-bg);
+ border-bottom: 1px solid var(--border);
+ padding: 6px 0;
+ }
+ .breadcrumbs ol {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ font-size: 0.78rem;
+ color: var(--muted);
+ }
+ .breadcrumbs li::after {
+ content: '›';
+ margin-left: 4px;
+ color: var(--border);
+ }
+ .breadcrumbs li:last-child::after {
+ display: none;
+ }
+ .breadcrumbs a {
+ color: var(--muted);
+ text-decoration: none;
+ }
+ .breadcrumbs a:hover {
+ color: var(--primary);
+ }
+ </style>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": ["LocalBusiness", "Dentist"],
+ "name": "Airway Clinic Stockholm",
+ "url": "https://airwayclinic.se/",
+ "image": "https://airwayclinic.se/assets/logo-original.png",
+ "description": "Luftvägsfokuserad tandvård, myofunktionell terapi, bettfysiologi och helhetsinriktad behandling i Stockholm.",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "Sveavägen 91",
+ "postalCode": "113 50",
+ "addressLocality": "Stockholm",
+ "addressCountry": "SE"
+ },
+ "email": "info@airwayclinic.se",
+ "sameAs": ["https://www.google.com/maps/place/?q=place_id:ChIJLRblYhSdX0YRgDT89Ew-zYw"],
+ "openingHours": ["Mo 09:00-17:00", "Fr 09:00-17:00"],
+ "areaServed": "Stockholm",
+ "priceRange": "$$",
+ "medicalSpecialty": ["Dentistry", "Orofacial Myology", "Sleep Dentistry"],
+ "aggregateRating": {
+ "@type": "AggregateRating",
+ "ratingValue": "5",
+ "bestRating": "5",
+ "worstRating": "1",
+ "ratingCount": "5"
+ }
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Vad är luftvägsfokuserad tandvård?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "När bör mitt barn undersökas för luftvägsbedömning?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Vad är myofunktionell terapi?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Hur vet jag om mitt barn har ett luftvägsproblem?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Behandlar ni vuxna såväl som barn?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Vad händer vid en konsultation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt."
+ }
+ }
+ ]
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Airway Clinic Behandlingar",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "item": { "@type": "MedicalProcedure", "name": "Tillväxtledning", "description": "Tidig vägledning av käk- och ansiktsutveckling för att stödja bättre luftvägar, bett och funktion." } },
+ { "@type": "ListItem", "position": 2, "item": { "@type": "MedicalProcedure", "name": "Myofunktionell terapi", "description": "Träning för tunga, läppar och ansiktsmuskler som stärker näsandning, sväljning och stabil oral funktion." } },
+ { "@type": "ListItem", "position": 3, "item": { "@type": "MedicalProcedure", "name": "Luftvägs- och sömnanalys", "description": "Bedömning av andningsmönster, sömnrelaterade symtom och anatomiska faktorer." } },
+ { "@type": "ListItem", "position": 4, "item": { "@type": "MedicalProcedure", "name": "ALF-terapi", "description": "Skonsam ortodontisk terapi som kan bidra till bättre balans i käke, gom, luftväg och kraniofacial funktion." } },
+ { "@type": "ListItem", "position": 5, "item": { "@type": "MedicalProcedure", "name": "Käkfunktionell ortopedi", "description": "Funktionell behandling för växande patienter där käkarnas utveckling vägleds i rätt riktning." } },
+ { "@type": "ListItem", "position": 6, "item": { "@type": "MedicalProcedure", "name": "Käkledsbehandling", "description": "Utredning och behandling av käkledsbesvär, muskelspänningar och smärta." } },
+ { "@type": "ListItem", "position": 7, "item": { "@type": "MedicalProcedure", "name": "Allmän tandvård", "description": "Trygg tandvård med förebyggande fokus och hänsyn till patientens helhetshälsa." } }
+ ]
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://airwayclinic.se/sv/" }
+ ]
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "SpeakableSpecification",
+ "cssSelector": [".faq-answer", ".service-card p", "#about p"]
+ }
+ </script>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-PWZNFWFLPY');
+ </script>
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
-    <div class="container nav" aria-label="Huvudnavigation">
-      <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
-        <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
-      </a>
-      <div class="lang-flags" aria-label="Språkval">
-        <a href="./" class="lang-flag active" title="Svenska">🇸🇪</a>
-        <a href="../" class="lang-flag" title="English">🇬🇧</a>
-      </div>
-      <nav class="nav-menu" aria-label="Primär navigation">
-        <a class="nav-link" href="#om-oss">Om oss</a>
-        <a class="nav-link" href="#behandlingar">Behandlingar</a>
-        <a class="nav-link" href="#team">Team</a>
-        <a class="nav-link" href="../resources/">Resurser</a>
-        <a class="nav-link" href="#kontakt">Kontakt</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
-      </div>
-      <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="mobilePanel" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </header>
+ <header class="site-header" id="siteHeader">
+ <div class="container nav" aria-label="Huvudnavigation">
+ <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
+ <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
+ </a>
+ <div class="lang-flags" aria-label="Språkval">
+ <a href="./" class="lang-flag active" title="Svenska">🇸🇪</a>
+ <a href="../" class="lang-flag" title="English">🇬🇧</a>
+ </div>
+ <nav class="nav-menu" aria-label="Primär navigation">
+ <a class="nav-link" href="#om-oss">Om oss</a>
+ <a class="nav-link" href="#behandlingar">Behandlingar</a>
+ <a class="nav-link" href="#team">Team</a>
+ <a class="nav-link" href="../resources/">Resurser</a>
+ <a class="nav-link" href="#kontakt">Kontakt</a>
+ </nav>
+ <div class="nav-actions">
+ <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
+ </div>
+ <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="mobilePanel" aria-expanded="false">
+ <span></span>
+ </button>
+ </div>
+ </header>
 
-  <div class="mobile-panel" id="mobilePanel">
-    <a href="#om-oss">Om oss</a>
-    <a href="#behandlingar">Behandlingar</a>
-    <a href="#team">Team</a>
-    <a href="../resources/">Resurser</a>
-    <a href="#kontakt">Kontakt</a>
-    <div class="language-switch" aria-label="Språkval mobil">
-      <span class="active" aria-current="true">SV</span>
-      <span aria-hidden="true">|</span>
-      <a href="/en/" lang="en">EN</a>
-    </div>
-    <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
-  </div>
+ <div class="mobile-panel" id="mobilePanel">
+ <a href="#om-oss">Om oss</a>
+ <a href="#behandlingar">Behandlingar</a>
+ <a href="#team">Team</a>
+ <a href="../resources/">Resurser</a>
+ <a href="#kontakt">Kontakt</a>
+ <div class="language-switch" aria-label="Språkval mobil">
+ <span class="active" aria-current="true">SV</span>
+ <span aria-hidden="true">|</span>
+ <a href="/en/" lang="en">EN</a>
+ </div>
+ <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
+ </div>
 
-  <nav class="breadcrumbs" aria-label="Brödsmulor">
-    <div class="container">
-      <ol>
-        <li><a href="/sv/">Hem</a></li>
-      </ol>
-    </div>
-  </nav>
+ <nav class="breadcrumbs" aria-label="Brödsmulor">
+ <div class="container">
+ <ol>
+ <li><a href="/sv/">Hem</a></li>
+ </ol>
+ </div>
+ </nav>
 
-  <main id="top">
-    <section class="hero" aria-label="Airway Clinic Stockholm">
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Airway Clinic Stockholm</p>
-        <h1>Luftvägar som förändrar liv</h1>
-        <p>Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi</p>
-        <a class="btn btn-hero" href="#kontakt">Boka konsultation &rarr;</a>
-      </div>
-      <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
-        <path fill="currentColor" d="M0,66 C170,114 315,24 505,58 C715,96 834,126 1048,70 C1198,31 1322,31 1440,58 L1440,110 L0,110 Z"></path>
-      </svg>
-    </section>
+ <main id="top">
+ <section class="hero" aria-label="Airway Clinic Stockholm">
+ <div class="container hero-content reveal">
+ <p class="eyebrow">Airway Clinic Stockholm</p>
+ <h1>Luftvägar som förändrar liv</h1>
+ <p>Stockholms ledande klinik för luftvägsfokuserad tandvård, myofunktionell terapi och bettfysiologi</p>
+ <a class="btn btn-hero" href="#kontakt">Boka konsultation &rarr;</a>
+ </div>
+ <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+ <path fill="currentColor" d="M0,66 C170,114 315,24 505,58 C715,96 834,126 1048,70 C1198,31 1322,31 1440,58 L1440,110 L0,110 Z"></path>
+ </svg>
+ </section>
 
-    <section id="om-oss" class="about">
-      <div class="container about-grid">
-        <div class="about-visual reveal" aria-hidden="true">
-          <div class="visual-card">
-            <strong>30+</strong>
-            <span>år av klinisk erfarenhet med fokus på luftvägar, käkfunktion och långsiktig hälsa.</span>
-          </div>
-        </div>
-        <div class="about-copy reveal">
-          <p class="eyebrow">VÅR FILOSOFI</p>
-          <h2>Helhetssyn på tandvård</h2>
-          <p>Vi ser munnen som en del av hela kroppen. Andning, tungfunktion, käkutveckling, sömn och hållning påverkar varandra och behöver bedömas tillsammans.</p>
-          <p>Med över 30 års erfarenhet arbetar vi för att hitta orsaken bakom symtomen, inte bara behandla följderna. Målet är stabil funktion, bättre luftvägar och en vårdplan som passar varje patient.</p>
-        </div>
-      </div>
-    </section>
+ <section id="om-oss" class="about">
+ <div class="container about-grid">
+ <div class="about-visual reveal" aria-hidden="true">
+ <div class="visual-card">
+ <strong>30+</strong>
+ <span>år av klinisk erfarenhet med fokus på luftvägar, käkfunktion och långsiktig hälsa.</span>
+ </div>
+ </div>
+ <div class="about-copy reveal">
+ <p class="eyebrow">VÅR FILOSOFI</p>
+ <h2>Helhetssyn på tandvård</h2>
+ <p>Vi ser munnen som en del av hela kroppen. Andning, tungfunktion, käkutveckling, sömn och hållning påverkar varandra och behöver bedömas tillsammans.</p>
+ <p>Med över 30 års erfarenhet arbetar vi för att hitta orsaken bakom symtomen, inte bara behandla följderna. Målet är stabil funktion, bättre luftvägar och en vårdplan som passar varje patient.</p>
+ </div>
+ </div>
+ </section>
 
-    <section id="behandlingar" class="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">BEHANDLINGAR</p>
-          <h2>Vård för luftvägar, käke och funktion</h2>
-          <p>Individuella behandlingsplaner för barn, ungdomar och vuxna med fokus på utveckling, andning och hållbar oral hälsa.</p>
-        </div>
-        <div class="services-grid">
-          <a href="../services/growth-guidance/sv/" class="service-card reveal">
-            <div class="service-icon">1</div>
-            <h3>Tillväxtledning</h3>
-            <p>Tidig vägledning av käk- och ansiktsutveckling för att stödja bättre luftvägar, bett och funktion under barnets uppväxt.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/myofunctional-therapy/sv/" class="service-card reveal">
-            <div class="service-icon">2</div>
-            <h3>Myofunktionell terapi</h3>
-            <p>Träning för tunga, läppar och ansiktsmuskler som stärker näsandning, sväljning och stabil oral funktion.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/airway-sleep-analysis/sv/" class="service-card reveal">
-            <div class="service-icon">3</div>
-            <h3>Luftvägs- &amp; sömnanalys</h3>
-            <p>Bedömning av andningsmönster, sömnrelaterade symtom och anatomiska faktorer som kan påverka återhämtning och energi.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/alf-therapy/sv/" class="service-card reveal">
-            <div class="service-icon">4</div>
-            <h3>ALF-terapi</h3>
-            <p>Skonsam ortodontisk terapi som kan bidra till bättre balans i käke, gom, luftväg och kraniofacial funktion.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/jfo/sv/" class="service-card reveal">
-            <div class="service-icon">5</div>
-            <h3>Käkfunktionell ortopedi (JFO)</h3>
-            <p>Funktionell behandling för växande patienter där käkarnas utveckling och relation vägleds i rätt riktning.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/tmj-treatment/sv/" class="service-card reveal">
-            <div class="service-icon">6</div>
-            <h3>TMS / Käkledsbehandling</h3>
-            <p>Utredning och behandling av käkledsbesvär, muskelspänningar, bettfunktion och smärta kopplad till käksystemet.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-          <a href="../services/general-dentistry/sv/" class="service-card reveal">
-            <div class="service-icon">7</div>
-            <h3>Allmän tandvård</h3>
-            <p>Trygg tandvård med förebyggande fokus, tydlig kommunikation och hänsyn till patientens helhetshälsa.</p>
-            <span class="learn-more">Läs mer →</span>
-          </a>
-        </div>
-      </div>
-    </section>
+ <section id="behandlingar" class="services">
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="eyebrow">BEHANDLINGAR</p>
+ <h2>Vård för luftvägar, käke och funktion</h2>
+ <p>Individuella behandlingsplaner för barn, ungdomar och vuxna med fokus på utveckling, andning och hållbar oral hälsa.</p>
+ </div>
+ <div class="services-grid">
+ <a href="../services/growth-guidance/sv/" class="service-card reveal">
+ <div class="service-icon">1</div>
+ <h3>Tillväxtledning</h3>
+ <p>Tidig vägledning av käk- och ansiktsutveckling för att stödja bättre luftvägar, bett och funktion under barnets uppväxt.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/myofunctional-therapy/sv/" class="service-card reveal">
+ <div class="service-icon">2</div>
+ <h3>Myofunktionell terapi</h3>
+ <p>Träning för tunga, läppar och ansiktsmuskler som stärker näsandning, sväljning och stabil oral funktion.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/airway-sleep-analysis/sv/" class="service-card reveal">
+ <div class="service-icon">3</div>
+ <h3>Luftvägs- &amp; sömnanalys</h3>
+ <p>Bedömning av andningsmönster, sömnrelaterade symtom och anatomiska faktorer som kan påverka återhämtning och energi.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/alf-therapy/sv/" class="service-card reveal">
+ <div class="service-icon">4</div>
+ <h3>ALF-terapi</h3>
+ <p>Skonsam ortodontisk terapi som kan bidra till bättre balans i käke, gom, luftväg och kraniofacial funktion.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/jfo/sv/" class="service-card reveal">
+ <div class="service-icon">5</div>
+ <h3>Käkfunktionell ortopedi (JFO)</h3>
+ <p>Funktionell behandling för växande patienter där käkarnas utveckling och relation vägleds i rätt riktning.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/tmj-treatment/sv/" class="service-card reveal">
+ <div class="service-icon">6</div>
+ <h3>Käkledsbehandling</h3>
+ <p>Utredning och behandling av käkledsbesvär, muskelspänningar, bettfunktion och smärta kopplad till käksystemet.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ <a href="../services/general-dentistry/sv/" class="service-card reveal">
+ <div class="service-icon">7</div>
+ <h3>Allmän tandvård</h3>
+ <p>Trygg tandvård med förebyggande fokus, tydlig kommunikation och hänsyn till patientens helhetshälsa.</p>
+ <span class="learn-more">Läs mer →</span>
+ </a>
+ </div>
+ </div>
+ </section>
 
-    <section id="team" class="team">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">TEAM</p>
-          <h2>Möt vårt kliniska team</h2>
-          <p>Tvärprofessionell erfarenhet inom luftvägsfokuserad tandvård, bettfysiologi, logopedi och orofacial myologi.</p>
-        </div>
-        <div class="team-grid">
-          <article class="team-card reveal">
-            <picture>
-              <source srcset="../assets/dr-sia-400.webp 400w, ../assets/dr-sia-800.webp 800w, ../assets/dr-sia-1200.webp 1200w" type="image/webp" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
-              <img class="team-photo" src="../assets/dr-sia-800.jpg" alt="Dr. Siavosh Hakimmaani" loading="lazy" srcset="../assets/dr-sia-400.jpg 400w, ../assets/dr-sia-800.jpg 800w, ../assets/dr-sia-1200.jpg 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
-            </picture>
-            <h3>Dr. Siavosh Hakimmaani</h3>
-            <span class="team-role">D.D.S., Founder</span>
-            <p>Dr. Sia arbetar med ett helhetsperspektiv på tandvård där luftvägar, käkfunktion, sömn och ansiktsutveckling vägs in i varje behandlingsplan.</p>
-          </article>
-          <article class="team-card reveal">
-            <picture>
-              <source srcset="../assets/jessica-gorlee-400.webp 400w, ../assets/jessica-gorlee-800.webp 800w, ../assets/jessica-gorlee-1200.webp 1200w" type="image/webp" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
-              <img class="team-photo" src="../assets/jessica-gorlee-800.jpg" alt="Jessica Gorlee" loading="lazy" srcset="../assets/jessica-gorlee-400.jpg 400w, ../assets/jessica-gorlee-800.jpg 800w, ../assets/jessica-gorlee-1200.jpg 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
-            </picture>
-            <h3>Jessica Gorlee</h3>
-            <span class="team-role">Leg. Logoped &amp; OMFT-terapeut</span>
-            <p>Jessica hjälper patienter att utveckla bättre tungfunktion, sväljning, munmotorik och näsandning genom strukturerad myofunktionell terapi.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+ <section id="team" class="team">
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="eyebrow">TEAM</p>
+ <h2>Möt vårt kliniska team</h2>
+ <p>Tvärprofessionell erfarenhet inom luftvägsfokuserad tandvård, bettfysiologi, logopedi och orofacial myologi.</p>
+ </div>
+ <div class="team-grid">
+ <article class="team-card reveal">
+ <picture>
+ <source srcset="../assets/dr-sia-400.webp 400w, ../assets/dr-sia-800.webp 800w, ../assets/dr-sia-1200.webp 1200w" type="image/webp" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
+ <img class="team-photo" src="../assets/dr-sia-800.jpg" alt="Dr. Siavosh Hakimmaani" loading="lazy" srcset="../assets/dr-sia-400.jpg 400w, ../assets/dr-sia-800.jpg 800w, ../assets/dr-sia-1200.jpg 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
+ </picture>
+ <h3>Dr. Siavosh Hakimmaani</h3>
+ <span class="team-role">D.D.S., Founder</span>
+ <p>Dr. Sia arbetar med ett helhetsperspektiv på tandvård där luftvägar, käkfunktion, sömn och ansiktsutveckling vägs in i varje behandlingsplan.</p>
+ </article>
+ <article class="team-card reveal">
+ <picture>
+ <source srcset="../assets/jessica-gorlee-400.webp 400w, ../assets/jessica-gorlee-800.webp 800w, ../assets/jessica-gorlee-1200.webp 1200w" type="image/webp" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
+ <img class="team-photo" src="../assets/jessica-gorlee-800.jpg" alt="Jessica Gorlee" loading="lazy" srcset="../assets/jessica-gorlee-400.jpg 400w, ../assets/jessica-gorlee-800.jpg 800w, ../assets/jessica-gorlee-1200.jpg 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px">
+ </picture>
+ <h3>Jessica Gorlee</h3>
+ <span class="team-role">Leg. Logoped &amp; OMFT-terapeut</span>
+ <p>Jessica hjälper patienter att utveckla bättre tungfunktion, sväljning, munmotorik och näsandning genom strukturerad myofunktionell terapi.</p>
+ </article>
+ </div>
+ </div>
+ </section>
 
-    <section class="stats" aria-label="Klinikstatistik">
-      <div class="container stats-grid">
-        <div class="stat reveal"><strong>30+</strong><span>Års erfarenhet</span></div>
-        <div class="stat reveal"><strong>1000+</strong><span>Nöjda patienter</span></div>
-        <div class="stat reveal"><strong>3</strong><span>Länder</span></div>
-      </div>
-    </section>
+ <section class="stats" aria-label="Klinikstatistik">
+ <div class="container stats-grid">
+ <div class="stat reveal"><strong>30+</strong><span>Års erfarenhet</span></div>
+ <div class="stat reveal"><strong>1000+</strong><span>Nöjda patienter</span></div>
+ <div class="stat reveal"><strong>3</strong><span>Länder</span></div>
+ </div>
+ </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">PATIENTRÖSTER</p>
-          <h2>Omsorg som märks i vardagen</h2>
-        </div>
-        <div class="testimonial-grid">
-          <article class="testimonial-card reveal">
-            <p>Vi fick äntligen en förklaring till vår sons munandning och oroliga sömn. Behandlingen var tydlig, varm och väldigt professionell.</p>
-            <cite>Förälder till patient</cite>
-          </article>
-          <article class="testimonial-card reveal">
-            <p>Teamet såg sambanden mellan käkspänning, bett och andning på ett sätt jag inte upplevt tidigare. Det gjorde stor skillnad.</p>
-            <cite>Vuxen patient</cite>
-          </article>
-          <article class="testimonial-card reveal">
-            <p>Jessica gav enkla övningar som gick att få in hemma. Vi märkte snabbt förbättring i både läppslutning och näsandning.</p>
-            <cite>Familj i Stockholm</cite>
-          </article>
-        </div>
-      </div>
-    </section>
+ <section class="testimonials">
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="eyebrow">PATIENTRÖSTER</p>
+ <h2>Omsorg som märks i vardagen</h2>
+ </div>
+ <div class="testimonial-grid">
+ <article class="testimonial-card reveal">
+ <p>Vi fick äntligen en förklaring till vår sons munandning och oroliga sömn. Behandlingen var tydlig, varm och väldigt professionell.</p>
+ <cite>Förälder till patient</cite>
+ </article>
+ <article class="testimonial-card reveal">
+ <p>Teamet såg sambanden mellan käkspänning, bett och andning på ett sätt jag inte upplevt tidigare. Det gjorde stor skillnad.</p>
+ <cite>Vuxen patient</cite>
+ </article>
+ <article class="testimonial-card reveal">
+ <p>Jessica gav enkla övningar som gick att få in hemma. Vi märkte snabbt förbättring i både läppslutning och näsandning.</p>
+ <cite>Familj i Stockholm</cite>
+ </article>
+ </div>
+ </div>
+ </section>
 
-    <section class="faq section" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="centered fade-in">
-          <p class="section-label">VANLIGA FRÅGOR</p>
-          <h2 class="section-title" id="faq-title">Vanliga frågor om luftvägstandvård</h2>
-        </div>
-        <div class="faq-grid fade-in">
-          <details class="faq-item">
-            <summary>Vad är luftvägsfokuserad tandvård?</summary>
-            <p>Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra.</p>
-          </details>
-          <details class="faq-item">
-            <summary>När bör mitt barn undersökas för luftvägsbedömning?</summary>
-            <p>Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Vad är myofunktionell terapi?</summary>
-            <p>Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Hur vet jag om mitt barn har ett luftvägsproblem?</summary>
-            <p>Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Behandlar ni vuxna såväl som barn?</summary>
-            <p>Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Vad händer vid en konsultation?</summary>
-            <p>En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+ <section class="faq section" aria-labelledby="faq-title">
+ <div class="container">
+ <div class="centered fade-in">
+ <p class="section-label">VANLIGA FRÅGOR</p>
+ <h2 class="section-title" id="faq-title">Vanliga frågor om luftvägstandvård</h2>
+ </div>
+ <div class="faq-grid fade-in">
+ <details class="faq-item">
+ <summary>Vad är luftvägsfokuserad tandvård?</summary>
+ <p>Luftvägsfokuserad tandvård ser sambandet mellan oral hälsa, andning, käkutveckling och sömn. Istället för att behandla tänder isolerat bedöms hur luftväg, tungposition, ansiktstillväxt och bett påverkar varandra.</p>
+ </details>
+ <details class="faq-item">
+ <summary>När bör mitt barn undersökas för luftvägsbedömning?</summary>
+ <p>Tidig utredning är idealisk. Vi rekommenderar en första bedömning runt 3–5 års ålder, när käktillväxtmönster och andningsvanor börjar bli tydliga. Tidig insats kan vägleda utveckling och förhindra mer komplexa problem senare.</p>
+ </details>
+ <details class="faq-item">
+ <summary>Vad är myofunktionell terapi?</summary>
+ <p>Myofunktionell terapi är ett träningsprogram med övningar som tränar korrekt tungposition, sväljmönster och näsandning. Det stödjer ortodontiska resultat, förbättrar sömnkvalitet och hjälper till att etablera sunda orala vanor.</p>
+ </details>
+ <details class="faq-item">
+ <summary>Hur vet jag om mitt barn har ett luftvägsproblem?</summary>
+ <p>Vanliga tecken inkluderar munandning, snarkningar, tandgnissling, rastlös sömn, sängvätning, koncentrationssvårigheter och trängda tänder. Om du noterar något av dessa kan en luftvägsbedömning hjälpa till att identifiera orsaken.</p>
+ </details>
+ <details class="faq-item">
+ <summary>Behandlar ni vuxna såväl som barn?</summary>
+ <p>Ja. Vi behandlar patienter i alla åldrar. Vuxna kan ofta ha nytta av luftvägsbedömning för problem som käkledsbesvär, kronisk spänning, sömnproblem och huvudvärk som kan kopplas till andning och käkfunktion.</p>
+ </details>
+ <details class="faq-item">
+ <summary>Vad händer vid en konsultation?</summary>
+ <p>En konsultation inkluderar genomgång av din medicinska och tandvårdshistorik, en klinisk undersökning av andning, käkfunktion och orala strukturer, samt en diskussion om fynd och behandlingsalternativ. Vi tar oss tid att förklara allt tydligt.</p>
+ </details>
+ </div>
+ </div>
+ </section>
 
-    <section class="family" aria-label="För hela familjen">
-      <div class="container family-content reveal">
-        <p class="eyebrow">FAMILJENS LUFTVÄGSHÄLSA</p>
-        <h2>För hela familjen</h2>
-        <p>Från nyfödda till vuxna — vi finns här för er familjs luftvägshälsa.</p>
-        <a class="btn btn-hero" href="#kontakt">Boka konsultation &rarr;</a>
-      </div>
-    </section>
+ <section class="family" aria-label="För hela familjen">
+ <div class="container family-content reveal">
+ <p class="eyebrow">FAMILJENS LUFTVÄGSHÄLSA</p>
+ <h2>För hela familjen</h2>
+ <p>Från nyfödda till vuxna — vi finns här för er familjs luftvägshälsa.</p>
+ <a class="btn btn-hero" href="#kontakt">Boka konsultation &rarr;</a>
+ </div>
+ </section>
 
-    <section id="kontakt" class="contact">
-      <div class="container contact-grid">
-        <div class="contact-details reveal">
-          <p class="eyebrow">KONTAKT</p>
-          <h2>Boka konsultation</h2>
-          <ul class="contact-list">
-            <li>
-              <strong>Adress</strong>
-              <span>Sveavägen 91<br>113 50 Stockholm</span>
-            </li>
-            <li>
-              <strong>E-post</strong>
-              <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
-            </li>
-            <li>
-              <strong>Öppettider</strong>
-              Måndag &amp; fredag: 09:00 – 17:00
-            </li>
-          </ul>
-          <iframe class="map-frame" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed"></iframe>
-        </div>
-        <div class="form-wrap reveal" aria-label="Bokningsformulär">
-          <form id="consultationForm">
-            <div>
-              <label for="firstName">Förnamn *</label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div>
-              <label for="lastName">Efternamn *</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div>
-              <label for="phone">Telefon *</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div>
-              <label for="email">E-post *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="concerns">Dina huvudsakliga bekymmer</label>
-              <textarea id="concerns" name="concerns" rows="4"></textarea>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" id="consentNonMarketing" name="consentNonMarketing">
-              <span>Genom att kryssa i denna ruta samtycker jag till att få icke-marknadsförande textmeddelanden från Airway Clinic. Din information är säker hos oss och kommer endast att delas med yrkesverksamma som är involverade i din behandling. Svara STOP för att avbryta prenumerationen.</span>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" id="consentMarketing" name="consentMarketing">
-              <span>Genom att kryssa i denna ruta samtycker jag till att få marknadsförings- och kampanjmeddelanden inklusive specialerbjudanden, rabatter, nya produktuppdateringar bland andra från Airway Clinic på det angivna telefonnumret. Svara STOP för att avbryta prenumerationen.</span>
-            </div>
-            <button type="submit" class="submit-btn">Skicka</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+ <section id="kontakt" class="contact">
+ <div class="container contact-grid">
+ <div class="contact-details reveal">
+ <p class="eyebrow">KONTAKT</p>
+ <h2>Boka konsultation</h2>
+ <ul class="contact-list">
+ <li>
+ <strong>Adress</strong>
+ <span>Sveavägen 91<br>113 50 Stockholm</span>
+ </li>
+ <li>
+ <strong>E-post</strong>
+ <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
+ </li>
+ <li>
+ <strong>Öppettider</strong>
+ Måndag &amp; fredag: 09:00 – 17:00
+ </li>
+ </ul>
+ <iframe class="map-frame" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed"></iframe>
+ </div>
+ <div class="form-wrap reveal" aria-label="Bokningsformulär">
+ <form id="consultationForm">
+ <div>
+ <label for="firstName">Förnamn *</label>
+ <input type="text" id="firstName" name="firstName" required>
+ </div>
+ <div>
+ <label for="lastName">Efternamn *</label>
+ <input type="text" id="lastName" name="lastName" required>
+ </div>
+ <div>
+ <label for="phone">Telefon *</label>
+ <input type="tel" id="phone" name="phone" required>
+ </div>
+ <div>
+ <label for="email">E-post *</label>
+ <input type="email" id="email" name="email" required>
+ </div>
+ <div>
+ <label for="concerns">Dina huvudsakliga bekymmer</label>
+ <textarea id="concerns" name="concerns" rows="4"></textarea>
+ </div>
+ <div class="checkbox-group">
+ <input type="checkbox" id="consentNonMarketing" name="consentNonMarketing">
+ <span>Genom att kryssa i denna ruta samtycker jag till att få icke-marknadsförande textmeddelanden från Airway Clinic. Din information är säker hos oss och kommer endast att delas med yrkesverksamma som är involverade i din behandling. Svara STOP för att avbryta prenumerationen.</span>
+ </div>
+ <div class="checkbox-group">
+ <input type="checkbox" id="consentMarketing" name="consentMarketing">
+ <span>Genom att kryssa i denna ruta samtycker jag till att få marknadsförings- och kampanjmeddelanden inklusive specialerbjudanden, rabatter, nya produktuppdateringar bland andra från Airway Clinic på det angivna telefonnumret. Svara STOP för att avbryta prenumerationen.</span>
+ </div>
+ <button type="submit" class="submit-btn">Skicka</button>
+ </form>
+ </div>
+ </div>
+ </section>
+ </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo">
-          <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
-        </div>
-        <div>
-          <h3>Navigering</h3>
-          <div class="footer-links">
-            <a href="#om-oss">Om oss</a>
-            <a href="#behandlingar">Behandlingar</a>
-            <a href="#team">Team</a>
-            <a href="#kontakt">Kontakt</a>
-          </div>
-        </div>
-        <div>
-          <h3>Kontakt</h3>
-          <div class="footer-contact">
-            <span>Sveavägen 91, 113 50 Stockholm</span>
-            <span>Måndag &amp; fredag: 09:00 – 17:00</span>
-            <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="copyright">&copy; 2026 Airway Clinic Stockholm. Alla rättigheter förbehållna. <a href="privacy.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Integritetspolicy</a></div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-logo">
+ <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
+ </div>
+ <div>
+ <h3>Navigering</h3>
+ <div class="footer-links">
+ <a href="#om-oss">Om oss</a>
+ <a href="#behandlingar">Behandlingar</a>
+ <a href="#team">Team</a>
+ <a href="#kontakt">Kontakt</a>
+ </div>
+ </div>
+ <div>
+ <h3>Kontakt</h3>
+ <div class="footer-contact">
+ <span>Sveavägen 91, 113 50 Stockholm</span>
+ <span>Måndag &amp; fredag: 09:00 – 17:00</span>
+ <a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a>
+ 
+ </div>
+ </div>
+ </div>
+ <div class="copyright">&copy; 2026 Airway Clinic Stockholm. Alla rättigheter förbehållna. <a href="privacy.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Integritetspolicy</a></div>
+ </div>
+ </footer>
 
-  <script>
-    const header = document.getElementById('siteHeader');
-    const menuButton = document.querySelector('.menu-toggle');
-    const mobilePanel = document.getElementById('mobilePanel');
-    const mobileLinks = mobilePanel.querySelectorAll('a');
+ <script>
+ const header = document.getElementById('siteHeader');
+ const menuButton = document.querySelector('.menu-toggle');
+ const mobilePanel = document.getElementById('mobilePanel');
+ const mobileLinks = mobilePanel.querySelectorAll('a');
 
-    function syncHeader() {
-      header.classList.toggle('scrolled', window.scrollY > 24);
-    }
+ function syncHeader() {
+ header.classList.toggle('scrolled', window.scrollY > 24);
+ }
 
-    function closeMenu() {
-      document.body.classList.remove('menu-open');
-      header.classList.remove('menu-active');
-      mobilePanel.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Öppna meny');
-    }
+ function closeMenu() {
+ document.body.classList.remove('menu-open');
+ header.classList.remove('menu-active');
+ mobilePanel.classList.remove('open');
+ menuButton.setAttribute('aria-expanded', 'false');
+ menuButton.setAttribute('aria-label', 'Öppna meny');
+ }
 
-    menuButton.addEventListener('click', () => {
-      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      document.body.classList.toggle('menu-open', !isOpen);
-      header.classList.toggle('menu-active', !isOpen);
-      mobilePanel.classList.toggle('open', !isOpen);
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Öppna meny' : 'Stäng meny');
-    });
+ menuButton.addEventListener('click', () => {
+ const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+ document.body.classList.toggle('menu-open', !isOpen);
+ header.classList.toggle('menu-active', !isOpen);
+ mobilePanel.classList.toggle('open', !isOpen);
+ menuButton.setAttribute('aria-expanded', String(!isOpen));
+ menuButton.setAttribute('aria-label', isOpen ? 'Öppna meny' : 'Stäng meny');
+ });
 
-    mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
-    window.addEventListener('scroll', syncHeader, { passive: true });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024) closeMenu();
-    });
-    syncHeader();
+ mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
+ window.addEventListener('scroll', syncHeader, { passive: true });
+ window.addEventListener('resize', () => {
+ if (window.innerWidth >= 1024) closeMenu();
+ });
+ syncHeader();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.14 });
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach((entry) => {
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ observer.unobserve(entry.target);
+ }
+ });
+ }, { threshold: 0.14 });
 
-    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+ document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
-    // Form submission to GHL
-    const form = document.getElementById('consultationForm');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('.submit-btn');
-        btn.disabled = true;
-        btn.textContent = 'Skickar...';
+ // Form submission to GHL
+ const form = document.getElementById('consultationForm');
+ if (form) {
+ form.addEventListener('submit', async (e) => {
+ e.preventDefault();
+ const btn = form.querySelector('.submit-btn');
+ btn.disabled = true;
+ btn.textContent = 'Skickar...';
 
-        const data = {
-          firstName: form.firstName.value,
-          lastName: form.lastName.value,
-          email: form.email.value,
-          phone: form.phone.value,
-          concerns: form.concerns.value,
-          consentNonMarketing: form.consentNonMarketing.checked,
-          consentMarketing: form.consentMarketing.checked,
-        };
+ const data = {
+ firstName: form.firstName.value,
+ lastName: form.lastName.value,
+ email: form.email.value,
+ phone: form.phone.value,
+ concerns: form.concerns.value,
+ consentNonMarketing: form.consentNonMarketing.checked,
+ consentMarketing: form.consentMarketing.checked,
+ };
 
-        try {
-          const resp = await fetch('https://services.leadconnectorhq.com/contacts/?locationId=Z9UtrrCvJc8ObhTIILLF', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer pit-cabe849b-5358-410e-b953-f2f57bc5ed35',
-              'Version': '2021-07-28',
-            },
-            body: JSON.stringify(data),
-          });
+ try {
+ const resp = await fetch('https://services.leadconnectorhq.com/contacts/?locationId=Z9UtrrCvJc8ObhTIILLF', {
+ method: 'POST',
+ headers: {
+ 'Content-Type': 'application/json',
+ 'Authorization': 'Bearer pit-cabe849b-5358-410e-b953-f2f57bc5ed35',
+ 'Version': '2021-07-28',
+ },
+ body: JSON.stringify(data),
+ });
 
-          if (resp.ok) {
-            form.parentElement.innerHTML = '<div class="form-success"><h3>Tack!</h3><p>Vi har tagit emot ditt meddelande och återkommer inom kort.</p></div>';
-          } else {
-            throw new Error('Server error');
-          }
-        } catch (err) {
-          btn.disabled = false;
-          btn.textContent = 'Skicka';
-          alert('Något gick fel. Försök igen eller ring oss direkt.');
-        }
-      });
-    }
-  </script>
-  <!-- <script src="../assets/chatbot.js"></script> -->
+ if (resp.ok) {
+ form.parentElement.innerHTML = '<div class="form-success"><h3>Tack!</h3><p>Vi har tagit emot ditt meddelande och återkommer inom kort.</p></div>';
+ } else {
+ throw new Error('Server error');
+ }
+ } catch (err) {
+ btn.disabled = false;
+ btn.textContent = 'Skicka';
+ alert('Något gick fel. Försök igen eller ring oss direkt.');
+ }
+ });
+ }
+ </script>
+ <!-- <script src="../assets/chatbot.js"></script> -->
 </body>
 </html>
