@@ -73,8 +73,8 @@
         </div>
       </div>
       <div class="tg-messages" id="chatMessages">
-        <div class="tg-date-sep"><span>Today</span></div>
-        <div class="tg-msg bot">Welcome to Airway Clinic! 👋<span class="time">now</span><br>We speak English and Swedish. Tap an option or type your question.</div>
+        <div class="tg-date-sep"><span id="chatDateLabel">Today</span></div>
+        <div class="tg-msg bot" id="chatWelcome">Welcome to Airway Clinic! 👋<span class="time">now</span><br>We speak English and Swedish. Tap an option or type your question.</div>
       </div>
       <div class="tg-quick-replies" id="quickReplies">
         <button class="tg-quick-btn" onclick="window._chatQuick(this)">Sleep issues?</button>
@@ -137,4 +137,14 @@
   };
 
   window._chatQuick=function(btn){window._chatSend(btn.textContent)};
+
+  // Auto-detect page language and update welcome text
+  if(document.documentElement.lang==='sv'){
+    document.getElementById('chatDateLabel').textContent='Idag';
+    document.getElementById('chatWelcome').innerHTML='Välkommen till Airway Clinic! 👋<span class="time">nu</span><br>Vi pratar svenska och engelska. Välj ett alternativ eller skriv din fråga.';
+    var qrWrap=document.getElementById('quickReplies');
+    var svBtns=['Sömnproblem?','Barn','Boka konsultation','Käksmärta'];
+    qrWrap.innerHTML='';
+    svBtns.forEach(function(t){var b=document.createElement('button');b.className='tg-quick-btn';b.textContent=t;b.onclick=function(){window._chatQuick(b)};qrWrap.appendChild(b)});
+  }
 })();
