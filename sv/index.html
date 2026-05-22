@@ -1436,37 +1436,8 @@
  <iframe class="map-frame" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed"></iframe>
  </div>
  <div class="form-wrap reveal" aria-label="Bokningsformulär">
- <form id="consultationForm">
- <div>
- <label for="firstName">Förnamn *</label>
- <input type="text" id="firstName" name="firstName" required>
- </div>
- <div>
- <label for="lastName">Efternamn *</label>
- <input type="text" id="lastName" name="lastName" required>
- </div>
- <div>
- <label for="phone">Telefon *</label>
- <input type="tel" id="phone" name="phone" required>
- </div>
- <div>
- <label for="email">E-post *</label>
- <input type="email" id="email" name="email" required>
- </div>
- <div>
- <label for="concerns">Dina huvudsakliga bekymmer</label>
- <textarea id="concerns" name="concerns" rows="4"></textarea>
- </div>
- <div class="checkbox-group">
- <input type="checkbox" id="consentNonMarketing" name="consentNonMarketing">
- <span>Genom att kryssa i denna ruta samtycker jag till att få icke-marknadsförande textmeddelanden från Airway Clinic. Din information är säker hos oss och kommer endast att delas med yrkesverksamma som är involverade i din behandling. Svara STOP för att avbryta prenumerationen.</span>
- </div>
- <div class="checkbox-group">
- <input type="checkbox" id="consentMarketing" name="consentMarketing">
- <span>Genom att kryssa i denna ruta samtycker jag till att få marknadsförings- och kampanjmeddelanden inklusive specialerbjudanden, rabatter, nya produktuppdateringar bland andra från Airway Clinic på det angivna telefonnumret. Svara STOP för att avbryta prenumerationen.</span>
- </div>
- <button type="submit" class="submit-btn">Skicka</button>
- </form>
+ <iframe src="https://api.leadconnectorhq.com/widget/form/xD58fF9SENlSKO7QQ8bG" style="width:100%;min-height:828px;border:none;border-radius:12px;" id="inline-xD58fF9SENlSKO7QQ8bG" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website Form" data-height="828" data-layout-iframe-id="inline-xD58fF9SENlSKO7QQ8bG" data-form-id="xD58fF9SENlSKO7QQ8bG" title="Website Form"></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
  </div>
  </div>
  </section>
@@ -1548,48 +1519,6 @@
 
  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
- // Form submission to GHL
- const form = document.getElementById('consultationForm');
- if (form) {
- form.addEventListener('submit', async (e) => {
- e.preventDefault();
- const btn = form.querySelector('.submit-btn');
- btn.disabled = true;
- btn.textContent = 'Skickar...';
-
- const data = {
- firstName: form.firstName.value,
- lastName: form.lastName.value,
- email: form.email.value,
- phone: form.phone.value,
- concerns: form.concerns.value,
- consentNonMarketing: form.consentNonMarketing.checked,
- consentMarketing: form.consentMarketing.checked,
- };
-
- try {
- const resp = await fetch('https://services.leadconnectorhq.com/contacts/?locationId=Z9UtrrCvJc8ObhTIILLF', {
- method: 'POST',
- headers: {
- 'Content-Type': 'application/json',
- 'Authorization': 'Bearer pit-cabe849b-5358-410e-b953-f2f57bc5ed35',
- 'Version': '2021-07-28',
- },
- body: JSON.stringify(data),
- });
-
- if (resp.ok) {
- form.parentElement.innerHTML = '<div class="form-success"><h3>Tack!</h3><p>Vi har tagit emot ditt meddelande och återkommer inom kort.</p></div>';
- } else {
- throw new Error('Server error');
- }
- } catch (err) {
- btn.disabled = false;
- btn.textContent = 'Skicka';
- alert('Något gick fel. Försök igen eller ring oss direkt.');
- }
- });
- }
  </script>
  <!-- <script src="../assets/chatbot.js"></script> -->
 </body>
