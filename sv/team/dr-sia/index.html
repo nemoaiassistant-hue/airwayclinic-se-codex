@@ -112,7 +112,10 @@
     <section style="padding: calc(var(--nav-height, 76px) + 40px) 0 60px; background: var(--white, #fff);">
       <div class="container" style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;">
         <div style="flex:0 0 280px;">
-          <img src="../../../assets/dr-sia.jpg" alt="Dr. Siavosh Hakimmaani" style="width:100%;border-radius:12px;box-shadow:var(--shadow, 0 18px 44px rgba(26,107,105,.13));" width="280" height="350">
+          <picture>
+            <source srcset="../../../assets/dr-sia-400.webp 400w, ../../../assets/dr-sia-800.webp 800w, ../../../assets/dr-sia-1200.webp 1200w" type="image/webp" sizes="(max-width: 480px) 280px, 400px">
+            <img src="../../../assets/dr-sia-800.jpg" alt="Dr. Siavosh Hakimmaani" style="width:100%;border-radius:12px;box-shadow:var(--shadow, 0 18px 44px rgba(26,107,105,.13));" width="280" height="350" srcset="../../../assets/dr-sia-400.jpg 400w, ../../../assets/dr-sia-800.jpg 800w, ../../../assets/dr-sia-1200.jpg 1200w" sizes="(max-width: 480px) 280px, 400px">
+          </picture>
         </div>
         <div style="flex:1;min-width:280px;">
           <p class="eyebrow" style="color:var(--gold, #e8c170);">VÅRT TEAM</p>
