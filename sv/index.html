@@ -120,6 +120,8 @@
  padding: 2px;
  }
 
+ .lang-flag .flag-img { display: none; }
+
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
 
@@ -926,12 +928,23 @@
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
 
- .lang-flag img {
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img {
+ display: block;
+ margin-top: 2px;
+ }
+
+ .lang-flag::before {
+ content: "";
+ display: block;
  width: 22px;
  height: 16px;
  border-radius: 2px;
- margin-bottom: 2px;
+ background-size: cover;
  }
+
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
 
  .site-header:not(.scrolled):not(.menu-active) .nav-links a {
  color: var(--dark-teal);
@@ -1203,8 +1216,8 @@
  <header class="site-header" id="siteHeader">
  <div class="container nav">
  <div class="lang-flags" aria-label="Språkval">
- <a href="./" class="lang-flag active" title="Svenska"><img src="https://flagcdn.com/w40/se.png" alt="SV" width="22" height="16">SV</a>
- <a href="../" class="lang-flag" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN" width="22" height="16">EN</a>
+ <a href="./" class="lang-flag active" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
+ <a href="../" class="lang-flag" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
  </div>
  <a class="brand" href="#top" aria-label="Airway Clinic Stockholm">
  <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
