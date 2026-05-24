@@ -217,6 +217,53 @@
 ]
 </script>
  <style>
+ /* === STANDARD NAV === */
+ :root { --nav-height: 90px; --radius: 8px; }
+ * { box-sizing: border-box; }
+ html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+ body { margin: 0; font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; overflow-x: hidden; }
+ body.menu-open { overflow: hidden; }
+ img { display: block; max-width: 100%; }
+ a { color: inherit; text-decoration: none; }
+ button { font: inherit; }
+ .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+ .site-header { position: fixed; inset: 0 0 auto; z-index: 100; height: var(--nav-height); background: #fff; color: #1a6b69; box-shadow: 0 8px 28px rgba(26,107,105,.08); }
+ .nav { height: var(--nav-height); display: flex; align-items: center; gap: 10px; padding: 0 28px; }
+ .lang-flags { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+ .lang-flag { font-size: 1.3rem; line-height: 1; opacity: .5; transition: opacity .2s ease; padding: 2px; }
+ .lang-flag:hover { opacity: .8; }
+ .lang-flag.active { opacity: 1; }
+ .brand { display: inline-flex; align-items: center; }
+ .brand img { width: 154px; height: auto; }
+ .menu-toggle { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(26,107,105,.18); border-radius: 8px; background: #fff; color: #1a6b69; cursor: pointer; margin-left: auto; }
+ .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { width: 21px; height: 2px; display: block; position: relative; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+ .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+ .menu-toggle span::before { top: -7px; }
+ .menu-toggle span::after { top: 7px; }
+ .menu-toggle[aria-expanded="true"] span { background: transparent; }
+ .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+ .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+ .nav-panel { display: none; position: absolute; top: var(--nav-height); left: 0; right: 0; padding: 1rem 28px 1.25rem; background: rgba(255,255,255,.98); box-shadow: 0 20px 35px rgba(26,107,105,.12); }
+ .nav-panel.open { display: block; }
+ .nav-links { display: flex; flex-direction: column; gap: .2rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+ .nav-links a { display: block; padding: .65rem 0; font-weight: 800; }
+ .nav-links a:hover { color: #1a6b69; }
+ .lang-flag .flag-img { display: none; }
+ @media (min-width: 1024px) {
+ .menu-toggle { display: none; }
+ .lang-flags { flex-direction: column; gap: 4px; }
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img { display: block; font-size: .65rem; font-weight: 700; color: #1a6b69; margin-top: 2px; }
+ .lang-flag::before { content: ""; display: block; width: 22px; height: 16px; border-radius: 2px; background-size: cover; }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; background: transparent; box-shadow: none; }
+ .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; }
+ .nav-links a { padding: 0; font-size: .95rem; }
+ }
+ @media (max-width: 430px) { .brand img { width: 130px; } }
+ /* === END NAV === */
+
  :root {
  --primary: #3bb6b3;
  --dark-teal: #1a6b69;
@@ -397,8 +444,6 @@
 
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
-
- .lang-flag .flag-img { display: none; }
 
  .nav-panel {
  display: none;
@@ -1387,13 +1432,13 @@
 </head>
 <body>
  <header class="site-header" id="siteHeader">
- <div class="container nav">
+ <div class="nav">
  <div class="lang-flags" aria-label="Language">
  <a href="./sv/" class="lang-flag" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
  <a href="./" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
  </div>
- <a class="brand" href="#top" aria-label="Airway Clinic Stockholm home">
- <img src="assets/logo-original.png" alt="Airway Clinic Stockholm logo">
+ <a class="brand" href="#top" aria-label="Airway Clinic Stockholm">
+ <img src="assets/logo-original.png" alt="Airway Clinic Stockholm">
  </a>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
  <span aria-hidden="true"></span>
@@ -1765,10 +1810,6 @@
  const panel = document.getElementById("navPanel");
  const navLinks = panel.querySelectorAll("a[href^='#']");
 
- function updateHeader() {
- header.classList.toggle("scrolled", window.scrollY > 16);
- }
-
  function closeMenu() {
  panel.classList.remove("open");
  header.classList.remove("menu-active");
@@ -1785,23 +1826,8 @@
  toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
  });
 
- navLinks.forEach((link) => {
- link.addEventListener("click", closeMenu);
- });
-
- window.addEventListener("scroll", updateHeader, { passive: true });
- updateHeader();
-
- const observer = new IntersectionObserver((entries) => {
- entries.forEach((entry) => {
- if (entry.isIntersecting) {
- entry.target.classList.add("visible");
- observer.unobserve(entry.target);
- }
- });
- }, { threshold: 0.15 });
-
- document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
+ navLinks.forEach((link) => { link.addEventListener("click", closeMenu); });
+ window.addEventListener("resize", () => { if (window.innerWidth >= 1024) closeMenu(); });
 
  </script>
  <!-- <script src="assets/chatbot.js"></script> -->
