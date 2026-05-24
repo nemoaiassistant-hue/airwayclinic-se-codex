@@ -945,7 +945,9 @@
 
  .lang-flags {
  gap: 4px;
- margin-left: 8px;
+ margin-left: 0;
+ margin-right: 10px;
+ flex-direction: column;
  }
 
  .lang-flag {
@@ -1211,13 +1213,13 @@
 <body>
  <header class="site-header" id="siteHeader">
  <div class="container nav" aria-label="Huvudnavigation">
- <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
- <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
- </a>
  <div class="lang-flags" aria-label="Språkval">
  <a href="./" class="lang-flag active" title="Svenska"><img src="https://flagcdn.com/w40/se.png" alt="SV" width="22" height="16">SV</a>
  <a href="../" class="lang-flag" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN" width="22" height="16">EN</a>
  </div>
+ <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
+ <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
+ </a>
  <nav class="nav-menu" aria-label="Primär navigation">
  <a class="nav-link" href="#om-oss">Om oss</a>
  <a class="nav-link" href="#behandlingar">Behandlingar</a>
