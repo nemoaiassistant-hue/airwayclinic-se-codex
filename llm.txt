@@ -1,0 +1,94 @@
+# Airway Clinic Stockholm
+> https://nemoaiassistant-hue.github.io/airwayclinic-se-codex/
+
+## About
+Airway Clinic Stockholm is a specialist dental clinic focused on airway-focused dentistry, myofunctional therapy, and jaw function. With 30+ years of clinical experience, the clinic treats the underlying cause behind symptoms such as mouth breathing, disturbed sleep, crowded teeth, jaw pain and recurring tension. The clinic serves patients of all ages — from young children to adults — and looks at breathing, jaw development, tongue function, sleep, posture and the nervous system together.
+
+## Location
+Stockholm, Sweden
+
+## Contact
+- Phone: +46 8 33 34 55
+- Email: info@airwayclinic.se
+- Booking: Online consultation form available on the Contact section of the website
+
+## Team
+
+### Dr. Siavosh Hakimmaani
+Founder and lead clinician. Licensed dentist with 30+ years of experience in airway-focused dentistry, TMJ treatment, and functional orthopaedics. Has practised in Sweden, the UK, and the USA.
+
+### Jessica Gorlee
+Myofunctional therapist and clinical team member. Specialises in tongue position, swallowing patterns, and breathing retraining.
+
+## Services
+
+### Growth Guidance
+Children's jaw growth support for optimal facial development, airway capacity and stable oral function. For ages 3–12.
+
+### Myofunctional Therapy
+Training for tongue position, swallowing and breathing patterns that influence teeth, jaws and sleep. Suitable for children and adults.
+
+### Airway & Sleep Analysis
+Assessment of breathing disorders that can affect sleep quality, daytime energy and whole-body health. Includes evaluation for sleep apnoea, snoring, and mouth breathing.
+
+### ALF Therapy
+Gentle appliance therapy designed to support craniofacial balance and neurological function. Uses the Advanced Lightwire Functional (ALF) appliance.
+
+### Jaw Functional Orthopaedics (JFO)
+Functional orthopaedic treatment to guide jaw relationships and development without surgery. Non-invasive approach for children and teenagers.
+
+### TMJ Treatment
+Care for jaw joint strain, muscle tension and pain patterns that affect daily comfort and function. For teenagers and adults with TMJ disorder, jaw clicking, and chronic tension.
+
+### General Dentistry
+Preventive and restorative dental care with attention to functional health, aesthetics and stability.
+
+## Who We Help
+
+### Young Children (Ages 3–6)
+Common concerns: Mouth breathing, thumb sucking, snoring, delayed speech.
+Treatments: Growth Guidance, Myofunctional Therapy.
+
+### Children (Ages 7–12)
+Common concerns: Crowded teeth, jaw pain, poor sleep, bedwetting, ADHD-like symptoms.
+Treatments: ALF Therapy, JFO, Myofunctional Therapy, Airway Analysis.
+
+### Teenagers (Ages 13–17)
+Common concerns: Orthodontic relapse, TMJ discomfort, headaches, fatigue.
+Treatments: TMJ Treatment, ALF Therapy, General Dentistry.
+
+### Adults (Ages 18+)
+Common concerns: Sleep apnoea, chronic jaw tension, TMJ disorder, teeth grinding.
+Treatments: Airway & Sleep Analysis, TMJ Treatment, Myofunctional Therapy.
+
+## Consultation Process
+1. Complete health questionnaire — Tell us about your concerns, medical history and symptoms.
+2. Clinical examination — Thorough assessment of airway, jaw function, tongue posture and breathing patterns.
+3. Discussion of findings — We explain what we found and what it means.
+4. Personalised treatment plan — A clear path forward tailored to your needs.
+
+## Languages
+- English (default)
+- Swedish (available)
+
+## Resources
+Educational articles and guides about airway dentistry, sleep health, jaw function, and treatment options. Available on the Resources page.
+
+## Legal
+- Privacy Policy: /privacy.html
+- Terms of Service: /terms.html
+
+## Sitemap
+- / (English homepage)
+- /sv/ (Swedish homepage)
+- /services/growth-guidance/
+- /services/myofunctional-therapy/
+- /services/airway-sleep-analysis/
+- /services/alf-therapy/
+- /services/jfo/
+- /services/tmj-treatment/
+- /services/general-dentistry/
+- /resources/
+- /team/
+- /privacy.html
+- /terms.html
