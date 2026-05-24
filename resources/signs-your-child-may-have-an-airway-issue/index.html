@@ -6,16 +6,16 @@
  <meta name="robots" content="index, follow">
  <title>Signs Your Child May Have an Airway Issue — Airway Clinic Stockholm</title>
  <meta name="description" content="Signs your child may have an airway issue. Learn to recognise mouth breathing, snoring and other warning signals for sleep-disordered breathing.">
- <link rel="canonical" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue.html">
+ <link rel="canonical" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/">
  <meta property="og:title" content="Signs Your Child May Have an Airway Issue — Airway Clinic Stockholm">
  <meta property="og:description" content="Signs your child may have an airway issue. Learn to recognise mouth breathing, snoring and other warning signals for sleep-disordered breathing.">
  <meta property="og:type" content="article">
- <meta property="og:url" content="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue.html">
+ <meta property="og:url" content="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/">
  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
- <link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue.html">
+ <link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/">
  <link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/signs-your-child-may-have-an-airway-issue.html">
- <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue.html">
+ <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/signs-your-child-may-have-an-airway-issue/">
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
  <script>
@@ -128,6 +128,65 @@
  .lang-flag.active { opacity: 1; }
  body { padding-top: 90px; }
 
+ @media (min-width: 1024px) {
+ .menu-toggle { display: none; }
+ .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; margin-left: auto; background: transparent; box-shadow: none; }
+ .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; }
+ .nav-links a { padding: 0; font-size: .95rem; }
+ }
+
+
+
+ /* === STANDARD NAV/FOOTER CONSISTENCY OVERRIDE === */
+ .site-header { position: fixed; inset: 0 0 auto; z-index: 100; height: var(--nav-height, 90px); background: #fff; color: #1a6b69; box-shadow: 0 8px 28px rgba(26,107,105,.08); }
+ .nav { height: var(--nav-height, 90px); display: flex; align-items: center; gap: 10px; padding: 0 28px; }
+ .lang-flags { display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: 0; margin-right: 0; }
+ .lang-flag { font-size: 1.3rem; line-height: 1; opacity: .5; transition: opacity .2s ease; padding: 2px; text-decoration: none; }
+ .lang-flag:hover { opacity: .8; }
+ .lang-flag.active { opacity: 1; }
+ .brand { display: inline-flex; align-items: center; flex: 0 0 auto; min-width: 0; }
+ .brand img { width: 154px; height: auto; }
+ .menu-toggle { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(26,107,105,.18); border-radius: 8px; background: #fff; color: #1a6b69; cursor: pointer; margin-left: auto; }
+ .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { width: 21px; height: 2px; display: block; position: relative; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+ .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+ .menu-toggle span::before { top: -7px; }
+ .menu-toggle span::after { top: 7px; }
+ .menu-toggle[aria-expanded="true"] span { background: transparent; }
+ .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+ .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+ .nav-panel { display: none; position: absolute; top: var(--nav-height, 90px); left: 0; right: 0; padding: 1rem 28px 1.25rem; background: rgba(255,255,255,.98); box-shadow: 0 20px 35px rgba(26,107,105,.12); }
+ .nav-panel.open { display: block; }
+ .nav-links { display: flex; flex-direction: column; gap: .2rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+ .nav-links a { display: block; padding: .65rem 0; font-weight: 800; text-decoration: none; }
+ .nav-links a:hover { color: #1a6b69; }
+ .nav-actions { display: flex; align-items: center; gap: .75rem; }
+ .lang-flag .flag-img { display: none; }
+ .fade-in { opacity: 1; transform: none; transition: opacity 0.75s ease, transform 0.75s ease; }
+ .fade-in.visible { opacity: 1; transform: translateY(0); }
+ .site-footer { background: #1a6b69; color: #f0f4f4; padding: 54px 0 26px; }
+ .site-footer .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+ .footer-grid { display: grid; gap: 2rem; margin-bottom: 2rem; }
+ .footer-logo img { width: 155px; filter: brightness(0) invert(1); opacity: .94; }
+ .footer-heading { color: #e8c170; font-weight: 900; margin: 0 0 .9rem; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; }
+ .footer-links { display: grid; gap: .45rem; list-style: none; padding: 0; margin: 0; }
+ .footer-links a { color: inherit; text-decoration: none; }
+ .footer-links a:hover { color: #e8c170; }
+ .footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.25rem; color: rgba(240,244,244,.76); font-size: .92rem; }
+ @media (min-width: 640px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1.2fr; } }
+ @media (min-width: 1024px) {
+ .menu-toggle { display: none; }
+ .lang-flags { flex-direction: column; gap: 4px; }
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img { display: block; font-size: .65rem; font-weight: 700; color: #1a6b69; margin-top: 2px; }
+ .lang-flag::before { content: ""; display: block; width: 22px; height: 16px; border-radius: 2px; background-size: cover; }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; margin-left: auto; background: transparent; box-shadow: none; }
+ .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; }
+ .nav-links a { padding: 0; font-size: .95rem; }
+ }
+ @media (max-width: 430px) { .brand img { width: 130px; } }
+ /* === END STANDARD NAV/FOOTER CONSISTENCY OVERRIDE === */
 </style>
  <script type="application/ld+json">
 {
@@ -155,9 +214,9 @@
  <div class="nav">
  <div class="lang-flags" aria-label="Language">
  <a href="../../sv/resources/signs-your-child-may-have-an-airway-issue.html" class="lang-flag" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
- <a href="./" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
+ <a href="index.html" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
  </div>
- <a class="brand" href="../../" aria-label="Airway Clinic Stockholm">
+ <a class="brand" href="../../index.html" aria-label="Airway Clinic Stockholm">
  <img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm">
  </a>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
@@ -165,112 +224,138 @@
  </button>
  <nav class="nav-panel" id="navPanel" aria-label="Main navigation">
  <ul class="nav-links">
- <li><a href="../../#about">About</a></li>
- <li><a href="../../#services">Services</a></li>
- <li><a href="../../#team">Team</a></li>
- <li><a href="../../resources/">Resources</a></li>
- <li><a href="../../#contact">Contact</a></li>
+ <li><a href="../../index.html#about">About</a></li>
+ <li><a href="../../index.html#services">Services</a></li>
+ <li><a href="../../index.html#team">Team</a></li>
+ <li><a href="../index.html">Resources</a></li>
+ <li><a href="../../index.html#contact">Contact</a></li>
  </ul>
  <div class="nav-actions">
- <a class="btn btn-primary" href="../../#contact">Book Consultation</a>
+ <a class="btn btn-primary" href="../../index.html#contact">Book Consultation</a>
  </div>
  </nav>
  </div>
  </header>
  <div class="article-wrap">
  <a href="../" class="back-link">← Back to Resources</a>
- 1|<article>
- 2|<h1>Signs Your Child May Have an Airway Issue</h1>
- 3|
- 4|<p>As a parent, you watch your child grow and develop every day. You notice when they eat well, sleep soundly and have energy to spare. But what about the signs that are easy to miss — or that seem unrelated to each other?</p>
- 5|
- 6|<p>Mouth breathing at night. Teeth that seem too crowded. Difficulty sitting still in school. Frequent headaches. These may seem like separate issues, but they can all point to a common underlying cause: a compromised airway.</p>
- 7|
- 8|<p>Understanding the signs of airway issues in children is important because early identification allows for early intervention — and during childhood, the face and jaws are still growing, which makes treatment more effective and less invasive.</p>
- 9|
- 10|<h2>Why Children's Airways Are Vulnerable</h2>
- 11|
- 12|<p>A child's airway is smaller than an adult's, which means even modest narrowing can have a significant impact. The airway can be affected by several factors:</p>
- 13|
- 14|<ul>
- 15|<li><strong>Jaw development:</strong> If the upper and lower jaws do not grow forward and wide enough, the tongue and soft tissues have less space, which can restrict the airway</li>
- 16|<li><strong>Tongue position:</strong> A tongue that rests low in the mouth instead of on the palate fails to support proper jaw growth and can fall back during sleep, partially blocking the airway</li>
- 17|<li><strong>Enlarged tonsils and adenoids:</strong> Common in young children, these can physically obstruct the airway, particularly during sleep</li>
- 18|<li><strong>Allergies and nasal congestion:</strong> Chronic nasal blockage forces mouth breathing, which changes jaw growth patterns and muscle function</li>
- 19|<li><strong>Oral habits:</strong> Thumb sucking, dummy use and mouth breathing beyond the typical age can alter facial development</li>
- 20|</ul>
- 21|
- 22|<h2>Key Signs to Watch For</h2>
- 23|
- 24|<h3>1. Mouth Breathing</h3>
- 25|
- 26|<p>The most fundamental sign. If your child habitually breathes through their mouth rather than their nose — during the day, while eating, or especially while sleeping — it suggests that nasal breathing is compromised. Mouth breathing changes the resting position of the tongue and jaw, which over time alters facial growth.</p>
- 27|
- 28|<h3>2. Snoring and Noisy Breathing During Sleep</h3>
- 29|
- 30|<p>Children should not snore. While occasional snoring with a cold is normal, persistent snoring or noisy breathing during sleep is a red flag for airway obstruction. In some cases, it may indicate sleep-disordered breathing or obstructive sleep apnoea, conditions that affect oxygen levels and sleep quality.</p>
- 31|
- 32|<h3>3. Teeth Grinding (Bruxism)</h3>
- 33|
- 34|<p>Many parents hear their child grinding their teeth at night. While this can have several causes, research suggests that teeth grinding in children is frequently associated with airway obstruction. The body grinds the teeth as a mechanism to open the airway by pushing the jaw forward during sleep.</p>
- 35|
- 36|<h3>4. Restless Sleep and Unusual Sleep Positions</h3>
- 37|
- 38|<p>Does your child toss and turn all night? Sleep with their head tilted far back, or in unusual positions? These can be signs that the child is subconsciously trying to open their airway. Restless sleep often indicates that the child is not reaching the deep, restorative stages of sleep.</p>
- 39|
- 40|<h3>5. Bedwetting Beyond the Typical Age</h3>
- 41|
- 42|<p>While bedwetting is common in young children, its persistence beyond the expected age has been linked to sleep-disordered breathing. When the airway is partially obstructed during sleep, the body's hormonal regulation of bladder control can be disrupted.</p>
- 43|
- 44|<h3>6. Difficulty Concentrating or Behavioural Issues</h3>
- 45|
- 46|<p>Children who do not sleep well often show signs during the day that can resemble attention deficit disorders: difficulty focusing, hyperactivity, irritability and impulsive behaviour. Research has shown that some children diagnosed with ADHD actually have untreated sleep-disordered breathing, and addressing the airway can lead to significant improvements in attention and behaviour.</p>
- 47|
- 48|<h3>7. Crowded or Crooked Teeth</h3>
- 49|
- 50|<p>The teeth are a reflection of the jaws. When the dental arches are narrow or underdeveloped, there is not enough room for all the teeth to align properly. Crowding is rarely just a cosmetic issue — it often indicates that the jaws have not grown to their full potential, which can also mean the airway is compromised.</p>
- 51|
- 52|<h3>8. Delayed Speech or Articulation Issues</h3>
- 53|
- 54|<p>Tongue position plays a critical role in speech development. If the tongue cannot reach the correct positions for certain sounds because of restricted movement or habitual low posture, speech may be affected. A speech evaluation alongside an airway assessment can help identify whether oral muscle function is contributing.</p>
- 55|
- 56|<h3>9. Frequent Ear Infections or Nasal Congestion</h3>
- 57|
- 58|<p>Recurrent ear infections and chronic nasal congestion may be related to the anatomy and function of the upper airway. When the Eustachian tubes are affected by poor drainage — sometimes linked to jaw position and muscle tone — infections can become more frequent.</p>
- 59|
- 60|<h3>10. Dark Circles Under the Eyes</h3>
- 61|
- 62|<p>Often called "allergic shiners," dark circles under the eyes in children can be associated with chronic nasal congestion and mouth breathing. When nasal breathing is impaired, blood flow around the eyes can be affected, creating a darkened appearance.</p>
- 63|
- 64|<h2>What an Airway Assessment Involves</h2>
- 65|
- 66|<p>If you recognise several of these signs in your child, an airway assessment can provide clarity. At Airway Clinic Stockholm, an assessment typically includes:</p>
- 67|
- 68|<ul>
- 69|<li>A review of your child's medical and developmental history</li>
- 70|<li>Evaluation of breathing patterns, both awake and during sleep</li>
- 71|<li>Examination of the oral cavity, tongue position and palate shape</li>
- 72|<li>Assessment of jaw growth and facial development</li>
- 73|<li>Discussion of sleep habits, behaviour and any concerns you have noticed</li>
- 74|</ul>
- 75|
- 76|<p>Based on the findings, the team will discuss whether treatment is recommended and what options are most appropriate for your child's age and needs.</p>
- 77|
- 78|<h2>Why Early Evaluation Matters</h2>
- 79|
- 80|<p>Children's faces and jaws are growing rapidly. Between ages three and twelve, significant development occurs that shapes the airway for life. Intervening during this window allows practitioners to guide growth in a favourable direction — often without the need for surgery or extractions.</p>
- 81|
- 82|<p>Waiting to see if a child "grows out of it" can mean missing this critical window. While some children do improve with time, many airway issues persist or worsen, leading to more complex problems in adolescence and adulthood.</p>
- 83|
- 84|<h2>Taking the Next Step</h2>
- 85|
- 86|<p>If your child shows signs of airway compromise, trust your instincts. Parents are often the first to notice that something is not quite right, even when they cannot pinpoint exactly what it is. An airway assessment is a straightforward, non-invasive step that can provide answers and a path forward.</p>
- 87|
- 88|<p><em>Airway Clinic Stockholm — helping families breathe, sleep and grow better. Consultations available for children and adults.</em></p>
- 89|</article>
+ <article>
+ <h1>Signs Your Child May Have an Airway Issue</h1>
+ 
+ <p>As a parent, you watch your child grow and develop every day. You notice when they eat well, sleep soundly and have energy to spare. But what about the signs that are easy to miss — or that seem unrelated to each other?</p>
+ 
+ <p>Mouth breathing at night. Teeth that seem too crowded. Difficulty sitting still in school. Frequent headaches. These may seem like separate issues, but they can all point to a common underlying cause: a compromised airway.</p>
+ 
+ <p>Understanding the signs of airway issues in children is important because early identification allows for early intervention — and during childhood, the face and jaws are still growing, which makes treatment more effective and less invasive.</p>
+ 
+ <h2>Why Children's Airways Are Vulnerable</h2>
+ 
+ <p>A child's airway is smaller than an adult's, which means even modest narrowing can have a significant impact. The airway can be affected by several factors:</p>
+ 
+ <ul>
+ <li><strong>Jaw development:</strong> If the upper and lower jaws do not grow forward and wide enough, the tongue and soft tissues have less space, which can restrict the airway</li>
+ <li><strong>Tongue position:</strong> A tongue that rests low in the mouth instead of on the palate fails to support proper jaw growth and can fall back during sleep, partially blocking the airway</li>
+ <li><strong>Enlarged tonsils and adenoids:</strong> Common in young children, these can physically obstruct the airway, particularly during sleep</li>
+ <li><strong>Allergies and nasal congestion:</strong> Chronic nasal blockage forces mouth breathing, which changes jaw growth patterns and muscle function</li>
+ <li><strong>Oral habits:</strong> Thumb sucking, dummy use and mouth breathing beyond the typical age can alter facial development</li>
+ </ul>
+ 
+ <h2>Key Signs to Watch For</h2>
+ 
+ <h3>1. Mouth Breathing</h3>
+ 
+ <p>The most fundamental sign. If your child habitually breathes through their mouth rather than their nose — during the day, while eating, or especially while sleeping — it suggests that nasal breathing is compromised. Mouth breathing changes the resting position of the tongue and jaw, which over time alters facial growth.</p>
+ 
+ <h3>2. Snoring and Noisy Breathing During Sleep</h3>
+ 
+ <p>Children should not snore. While occasional snoring with a cold is normal, persistent snoring or noisy breathing during sleep is a red flag for airway obstruction. In some cases, it may indicate sleep-disordered breathing or obstructive sleep apnoea, conditions that affect oxygen levels and sleep quality.</p>
+ 
+ <h3>3. Teeth Grinding (Bruxism)</h3>
+ 
+ <p>Many parents hear their child grinding their teeth at night. While this can have several causes, research suggests that teeth grinding in children is frequently associated with airway obstruction. The body grinds the teeth as a mechanism to open the airway by pushing the jaw forward during sleep.</p>
+ 
+ <h3>4. Restless Sleep and Unusual Sleep Positions</h3>
+ 
+ <p>Does your child toss and turn all night? Sleep with their head tilted far back, or in unusual positions? These can be signs that the child is subconsciously trying to open their airway. Restless sleep often indicates that the child is not reaching the deep, restorative stages of sleep.</p>
+ 
+ <h3>5. Bedwetting Beyond the Typical Age</h3>
+ 
+ <p>While bedwetting is common in young children, its persistence beyond the expected age has been linked to sleep-disordered breathing. When the airway is partially obstructed during sleep, the body's hormonal regulation of bladder control can be disrupted.</p>
+ 
+ <h3>6. Difficulty Concentrating or Behavioural Issues</h3>
+ 
+ <p>Children who do not sleep well often show signs during the day that can resemble attention deficit disorders: difficulty focusing, hyperactivity, irritability and impulsive behaviour. Research has shown that some children diagnosed with ADHD actually have untreated sleep-disordered breathing, and addressing the airway can lead to significant improvements in attention and behaviour.</p>
+ 
+ <h3>7. Crowded or Crooked Teeth</h3>
+ 
+ <p>The teeth are a reflection of the jaws. When the dental arches are narrow or underdeveloped, there is not enough room for all the teeth to align properly. Crowding is rarely just a cosmetic issue — it often indicates that the jaws have not grown to their full potential, which can also mean the airway is compromised.</p>
+ 
+ <h3>8. Delayed Speech or Articulation Issues</h3>
+ 
+ <p>Tongue position plays a critical role in speech development. If the tongue cannot reach the correct positions for certain sounds because of restricted movement or habitual low posture, speech may be affected. A speech evaluation alongside an airway assessment can help identify whether oral muscle function is contributing.</p>
+ 
+ <h3>9. Frequent Ear Infections or Nasal Congestion</h3>
+ 
+ <p>Recurrent ear infections and chronic nasal congestion may be related to the anatomy and function of the upper airway. When the Eustachian tubes are affected by poor drainage — sometimes linked to jaw position and muscle tone — infections can become more frequent.</p>
+ 
+ <h3>10. Dark Circles Under the Eyes</h3>
+ 
+ <p>Often called "allergic shiners," dark circles under the eyes in children can be associated with chronic nasal congestion and mouth breathing. When nasal breathing is impaired, blood flow around the eyes can be affected, creating a darkened appearance.</p>
+ 
+ <h2>What an Airway Assessment Involves</h2>
+ 
+ <p>If you recognise several of these signs in your child, an airway assessment can provide clarity. At Airway Clinic Stockholm, an assessment typically includes:</p>
+ 
+ <ul>
+ <li>A review of your child's medical and developmental history</li>
+ <li>Evaluation of breathing patterns, both awake and during sleep</li>
+ <li>Examination of the oral cavity, tongue position and palate shape</li>
+ <li>Assessment of jaw growth and facial development</li>
+ <li>Discussion of sleep habits, behaviour and any concerns you have noticed</li>
+ </ul>
+ 
+ <p>Based on the findings, the team will discuss whether treatment is recommended and what options are most appropriate for your child's age and needs.</p>
+ 
+ <h2>Why Early Evaluation Matters</h2>
+ 
+ <p>Children's faces and jaws are growing rapidly. Between ages three and twelve, significant development occurs that shapes the airway for life. Intervening during this window allows practitioners to guide growth in a favourable direction — often without the need for surgery or extractions.</p>
+ 
+ <p>Waiting to see if a child "grows out of it" can mean missing this critical window. While some children do improve with time, many airway issues persist or worsen, leading to more complex problems in adolescence and adulthood.</p>
+ 
+ <h2>Taking the Next Step</h2>
+ 
+ <p>If your child shows signs of airway compromise, trust your instincts. Parents are often the first to notice that something is not quite right, even when they cannot pinpoint exactly what it is. An airway assessment is a straightforward, non-invasive step that can provide answers and a path forward.</p>
+ 
+ <p><em>Airway Clinic Stockholm — helping families breathe, sleep and grow better. Consultations available for children and adults.</em></p>
+ </article>
  </div>
- <footer class="footer">
- &copy; 2026 Airway Clinic Stockholm. <a href="../../privacy.html">Privacy Policy</a>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-logo">
+ <img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
+ </div>
+ <div>
+ <p class="footer-heading">Navigation</p>
+ <ul class="footer-links">
+ <li><a href="../../index.html#about">About</a></li>
+ <li><a href="../../index.html#services">Services</a></li>
+ <li><a href="../../index.html#team">Team</a></li>
+ <li><a href="../../index.html#contact">Contact</a></li>
+ </ul>
+ </div>
+ <div>
+ <p class="footer-heading">Contact</p>
+ <p>Sveavägen 91<br>113 50 Stockholm, Sweden</p>
+ <p>Monday &amp; Friday: 09:00 – 17:00</p>
+ <p><a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a></p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ &copy; 2026 Airway Clinic Stockholm. All rights reserved. <a href="../../privacy.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Privacy Policy</a>
+ </div>
+ </div>
+ <p class="disclaimer" style="font-size:0.75rem;color:rgba(255,255,255,.4);text-align:center;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">The information on this website is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional for diagnosis and treatment recommendations.</p>
+ </div>
  </footer>
 
  <script>

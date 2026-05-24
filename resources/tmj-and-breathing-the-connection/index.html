@@ -6,16 +6,16 @@
  <meta name="robots" content="index, follow">
  <title>TMJ and Breathing: The Connection — Airway Clinic Stockholm</title>
  <meta name="description" content="How jaw dysfunction and breathing issues are linked, and why treating them together leads to better outcomes.">
- <link rel="canonical" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection.html">
+ <link rel="canonical" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/">
  <meta property="og:title" content="TMJ and Breathing: The Connection — Airway Clinic Stockholm">
  <meta property="og:description" content="How jaw dysfunction and breathing issues are linked, and why treating them together leads to better outcomes.">
  <meta property="og:type" content="article">
- <meta property="og:url" content="https://airwayclinic.se/resources/tmj-and-breathing-the-connection.html">
+ <meta property="og:url" content="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/">
  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
- <link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection.html">
+ <link rel="alternate" hreflang="en" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/">
  <link rel="alternate" hreflang="sv" href="https://airwayclinic.se/sv/resources/tmj-and-breathing-the-connection.html">
- <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection.html">
+ <link rel="alternate" hreflang="x-default" href="https://airwayclinic.se/resources/tmj-and-breathing-the-connection/">
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
  <script>
@@ -128,6 +128,65 @@
  .lang-flag.active { opacity: 1; }
  body { padding-top: 90px; }
 
+ @media (min-width: 1024px) {
+ .menu-toggle { display: none; }
+ .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; margin-left: auto; background: transparent; box-shadow: none; }
+ .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; }
+ .nav-links a { padding: 0; font-size: .95rem; }
+ }
+
+
+
+ /* === STANDARD NAV/FOOTER CONSISTENCY OVERRIDE === */
+ .site-header { position: fixed; inset: 0 0 auto; z-index: 100; height: var(--nav-height, 90px); background: #fff; color: #1a6b69; box-shadow: 0 8px 28px rgba(26,107,105,.08); }
+ .nav { height: var(--nav-height, 90px); display: flex; align-items: center; gap: 10px; padding: 0 28px; }
+ .lang-flags { display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: 0; margin-right: 0; }
+ .lang-flag { font-size: 1.3rem; line-height: 1; opacity: .5; transition: opacity .2s ease; padding: 2px; text-decoration: none; }
+ .lang-flag:hover { opacity: .8; }
+ .lang-flag.active { opacity: 1; }
+ .brand { display: inline-flex; align-items: center; flex: 0 0 auto; min-width: 0; }
+ .brand img { width: 154px; height: auto; }
+ .menu-toggle { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(26,107,105,.18); border-radius: 8px; background: #fff; color: #1a6b69; cursor: pointer; margin-left: auto; }
+ .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { width: 21px; height: 2px; display: block; position: relative; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+ .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+ .menu-toggle span::before { top: -7px; }
+ .menu-toggle span::after { top: 7px; }
+ .menu-toggle[aria-expanded="true"] span { background: transparent; }
+ .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+ .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+ .nav-panel { display: none; position: absolute; top: var(--nav-height, 90px); left: 0; right: 0; padding: 1rem 28px 1.25rem; background: rgba(255,255,255,.98); box-shadow: 0 20px 35px rgba(26,107,105,.12); }
+ .nav-panel.open { display: block; }
+ .nav-links { display: flex; flex-direction: column; gap: .2rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+ .nav-links a { display: block; padding: .65rem 0; font-weight: 800; text-decoration: none; }
+ .nav-links a:hover { color: #1a6b69; }
+ .nav-actions { display: flex; align-items: center; gap: .75rem; }
+ .lang-flag .flag-img { display: none; }
+ .fade-in { opacity: 1; transform: none; transition: opacity 0.75s ease, transform 0.75s ease; }
+ .fade-in.visible { opacity: 1; transform: translateY(0); }
+ .site-footer { background: #1a6b69; color: #f0f4f4; padding: 54px 0 26px; }
+ .site-footer .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+ .footer-grid { display: grid; gap: 2rem; margin-bottom: 2rem; }
+ .footer-logo img { width: 155px; filter: brightness(0) invert(1); opacity: .94; }
+ .footer-heading { color: #e8c170; font-weight: 900; margin: 0 0 .9rem; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; }
+ .footer-links { display: grid; gap: .45rem; list-style: none; padding: 0; margin: 0; }
+ .footer-links a { color: inherit; text-decoration: none; }
+ .footer-links a:hover { color: #e8c170; }
+ .footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.25rem; color: rgba(240,244,244,.76); font-size: .92rem; }
+ @media (min-width: 640px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1.2fr; } }
+ @media (min-width: 1024px) {
+ .menu-toggle { display: none; }
+ .lang-flags { flex-direction: column; gap: 4px; }
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img { display: block; font-size: .65rem; font-weight: 700; color: #1a6b69; margin-top: 2px; }
+ .lang-flag::before { content: ""; display: block; width: 22px; height: 16px; border-radius: 2px; background-size: cover; }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; margin-left: auto; background: transparent; box-shadow: none; }
+ .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; }
+ .nav-links a { padding: 0; font-size: .95rem; }
+ }
+ @media (max-width: 430px) { .brand img { width: 130px; } }
+ /* === END STANDARD NAV/FOOTER CONSISTENCY OVERRIDE === */
 </style>
  <script type="application/ld+json">
 {
@@ -155,9 +214,9 @@
  <div class="nav">
  <div class="lang-flags" aria-label="Language">
  <a href="../../sv/resources/tmj-and-breathing-the-connection.html" class="lang-flag" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
- <a href="./" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
+ <a href="index.html" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
  </div>
- <a class="brand" href="../../" aria-label="Airway Clinic Stockholm">
+ <a class="brand" href="../../index.html" aria-label="Airway Clinic Stockholm">
  <img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm">
  </a>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
@@ -165,138 +224,164 @@
  </button>
  <nav class="nav-panel" id="navPanel" aria-label="Main navigation">
  <ul class="nav-links">
- <li><a href="../../#about">About</a></li>
- <li><a href="../../#services">Services</a></li>
- <li><a href="../../#team">Team</a></li>
- <li><a href="../../resources/">Resources</a></li>
- <li><a href="../../#contact">Contact</a></li>
+ <li><a href="../../index.html#about">About</a></li>
+ <li><a href="../../index.html#services">Services</a></li>
+ <li><a href="../../index.html#team">Team</a></li>
+ <li><a href="../index.html">Resources</a></li>
+ <li><a href="../../index.html#contact">Contact</a></li>
  </ul>
  <div class="nav-actions">
- <a class="btn btn-primary" href="../../#contact">Book Consultation</a>
+ <a class="btn btn-primary" href="../../index.html#contact">Book Consultation</a>
  </div>
  </nav>
  </div>
  </header>
  <div class="article-wrap">
  <a href="../" class="back-link">← Back to Resources</a>
- 1|<article>
- 2|<h1>TMJ and Breathing: The Connection You Might Not Expect</h1>
- 3|
- 4|<p>Jaw pain. Clicking when you chew. Headaches that start at the temples and radiate down your neck. If you have experienced any of these, you may have been told you have a TMJ problem — a dysfunction of the temporomandibular joint that connects your jaw to your skull.</p>
- 5|
- 6|<p>What is less commonly known is that TMJ dysfunction and breathing issues are often deeply connected. At <strong>Airway Clinic Stockholm</strong>, evaluating the relationship between jaw function, airway health and breathing patterns is a central part of how we approach TMJ care.</p>
- 7|
- 8|<h2>What Is the TMJ?</h2>
- 9|
- 10|<p>The temporomandibular joint (TMJ) is one of the most complex joints in the body. Located just in front of each ear, it allows the jaw to open, close, slide forward and move side to side. A small disc of cartilage sits between the jawbone and the skull, cushioning the joint and enabling smooth movement.</p>
- 11|
- 12|<p>TMJ dysfunction — sometimes called TMD or TMJ disorder — occurs when this joint, the surrounding muscles, or both are not working properly. Common symptoms include:</p>
- 13|
- 14|<ul>
- 15|<li>Pain or tenderness in the jaw, face or around the ear</li>
- 16|<li>Clicking, popping or grating sounds when opening or closing the mouth</li>
- 17|<li>Difficulty or discomfort when chewing</li>
- 18|<li>Jaw locking open or closed</li>
- 19|<li>Headaches, particularly in the temples</li>
- 20|<li>Neck and shoulder tension</li>
- 21|<li>Earaches or a feeling of fullness in the ears</li>
- 22|</ul>
- 23|
- 24|<p>These symptoms can range from mild and occasional to severe and persistent, affecting daily activities like eating, speaking and sleeping.</p>
- 25|
- 26|<h2>The Airway-TMJ Link</h2>
- 27|
- 28|<p>The connection between the TMJ and the airway is anatomical, functional and neurological. Understanding this connection helps explain why treating TMJ symptoms in isolation often provides only temporary relief.</p>
- 29|
- 30|<h3>Jaw Position and Airway Space</h3>
- 31|
- 32|<p>The lower jaw (mandible) is attached to the skull at the TMJ, and its position directly affects the space available in the airway. When the lower jaw sits too far back — a condition known as retrognathia — the tongue and soft tissues attached to it are also positioned further back, which can narrow or partially obstruct the airway.</p>
- 33|
- 34|<p>This is particularly noticeable during sleep, when muscle tone decreases. The jaw drops back, the tongue follows, and the airway narrows. The body responds by increasing muscle activity in the jaw to pull it forward and reopen the airway — which can manifest as teeth clenching and grinding (bruxism).</p>
- 35|
- 36|<h3>Mouth Breathing and Jaw Muscle Tension</h3>
- 37|
- 38|<p>Chronic mouth breathing changes the resting position of the jaw. Instead of the lips being sealed and the jaw resting in a relaxed position with the tongue on the palate, mouth breathing keeps the jaw slightly open and the muscles of the jaw, face and neck in a constant state of low-level tension.</p>
- 39|
- 40|<p>Over time, this sustained tension contributes to muscle fatigue, pain and dysfunction in the TMJ and its surrounding structures. The muscles never fully relax, even during sleep.</p>
- 41|
- 42|<h3>Nasal Breathing and Nitric Oxide</h3>
- 43|
- 44|<p>Nasal breathing produces nitric oxide, a molecule that plays a crucial role in regulating blood flow, oxygen uptake and airway tone. When nasal breathing is impaired and replaced by mouth breathing, the body loses this natural regulatory mechanism. Reduced nitric oxide has been associated with increased airway resistance and poorer oxygen exchange — factors that can worsen both breathing quality and TMJ-related muscle tension.</p>
- 45|
- 46|<h3>Head Posture and the Chain Effect</h3>
- 47|
- 48|<p>Airway compromise often leads to postural compensation. When the airway is restricted, people instinctively adjust their head position — typically tilting the head forward and extending the neck — to create more space for breathing. This forward head posture places additional strain on the muscles of the neck, shoulders and jaw, contributing to TMJ dysfunction.</p>
- 49|
- 50|<p>The relationship becomes a cycle: poor breathing affects posture, which affects the jaw, which further compromises breathing.</p>
- 51|
- 52|<h2>Sleep, Breathing and TMJ Pain</h2>
- 53|
- 54|<p>The connection between TMJ dysfunction and sleep-disordered breathing is well documented in the research literature. Studies have found that individuals with TMJ disorders are significantly more likely to also have obstructive sleep apnoea (OSA) compared to the general population.</p>
- 55|
- 56|<p>During episodes of airway obstruction in sleep, the body activates the jaw muscles in an attempt to pull the tongue and soft tissues forward and reopen the airway. This repeated activation through the night places enormous stress on the TMJ, which can result in morning jaw pain, stiffness and headaches.</p>
- 57|
- 58|<p>Many patients who believe they clench their teeth due to stress are actually experiencing the body's protective response to airway obstruction during sleep.</p>
- 59|
- 60|<h2>Why Treating Only the Symptoms Falls Short</h2>
- 61|
- 62|<p>Conventional TMJ treatment often focuses on managing symptoms: pain medication, muscle relaxants, night guards (splints) to protect the teeth from grinding, and sometimes physical therapy. These approaches can provide relief, but if the underlying airway issue is not addressed, the root cause remains.</p>
- 63|
- 64|<p>A night guard, for example, may protect the teeth from wear, but it does not address why the jaw is clenching in the first place. If the cause is airway obstruction during sleep, the grinding will continue — the body is trying to survive, not just grind.</p>
- 65|
- 66|<p>An airway-focused approach to TMJ care evaluates the full picture:</p>
- 67|
- 68|<ul>
- 69|<li>Is the jaw position compromising the airway?</li>
- 70|<li>Is mouth breathing contributing to muscle dysfunction?</li>
- 71|<li>Is sleep-disordered breathing driving nocturnal clenching?</li>
- 72|<li>Are there myofunctional issues (tongue posture, swallowing) affecting jaw stability?</li>
- 73|<li>Is head and neck posture placing additional strain on the TMJ?</li>
- 74|</ul>
- 75|
- 76|<p>By addressing these underlying factors, treatment aims to create lasting improvement rather than temporary symptom management.</p>
- 77|
- 78|<h2>Airway-Focused TMJ Treatment</h2>
- 79|
- 80|<p>At Airway Clinic Stockholm, TMJ treatment is approached with attention to the airway and overall functional health:</p>
- 81|
- 82|<ul>
- 83|<li><strong>Comprehensive assessment:</strong> Evaluation of jaw joint function, muscle patterns, breathing habits, sleep quality and airway space</li>
- 84|<li><strong>Airway and sleep analysis:</strong> Screening for signs of sleep-disordered breathing that may be contributing to TMJ symptoms</li>
- 85|<li><strong>Myofunctional therapy:</strong> Exercises to improve tongue posture, swallowing and nasal breathing — reducing strain on the jaw muscles</li>
- 86|<li><strong>Functional jaw treatment:</strong> Techniques to improve jaw alignment, range of motion and joint health</li>
- 87|<li><strong>Collaborative care:</strong> Coordination with ENT specialists, sleep physicians and physical therapists when needed</li>
- 88|</ul>
- 89|
- 90|<p>Treatment is individualised based on each patient's specific findings and needs. For some, improving breathing patterns and tongue posture provides significant TMJ relief. For others, a combination of approaches may be most effective.</p>
- 91|
- 92|<h2>When to Seek an Evaluation</h2>
- 93|
- 94|<p>If you experience persistent TMJ symptoms — jaw pain, clicking, headaches, neck tension or teeth grinding — and conventional treatment has not provided lasting relief, an airway evaluation may reveal contributing factors that have been overlooked.</p>
- 95|
- 96|<p>This is especially relevant if you also experience:</p>
- 97|
- 98|<ul>
- 99|<li>Chronic mouth breathing or nasal congestion</li>
- 100|<li>Poor sleep quality or daytime fatigue</li>
- 101|<li>Snoring or suspected sleep apnoea</li>
- 102|<li>Forward head posture or neck stiffness</li>
- 103|<li>Morning jaw stiffness or soreness</li>
- 104|</ul>
- 105|
- 106|<p>These signs suggest that the TMJ symptoms may be connected to breathing and airway health, and a comprehensive evaluation can help determine the best path forward.</p>
- 107|
- 108|<h2>A Better Approach to Jaw Health</h2>
- 109|
- 110|<p>The TMJ does not exist in isolation. It is part of a functional system that includes the teeth, muscles, airway, breathing and posture. When one part of this system is compromised, the effects ripple outward.</p>
- 111|
- 112|<p>Airway-focused TMJ care recognises these connections and addresses them together, offering a path to more complete and lasting relief. If jaw pain has been a persistent part of your life, understanding the role of the airway may be the missing piece.</p>
- 113|
- 114|<p><em>Airway Clinic Stockholm — Dr. Siavosh Hakimmaani and team. Airway-focused dentistry and TMJ care for children and adults.</em></p>
- 115|</article>
+ <article>
+ <h1>TMJ and Breathing: The Connection You Might Not Expect</h1>
+ 
+ <p>Jaw pain. Clicking when you chew. Headaches that start at the temples and radiate down your neck. If you have experienced any of these, you may have been told you have a TMJ problem — a dysfunction of the temporomandibular joint that connects your jaw to your skull.</p>
+ 
+ <p>What is less commonly known is that TMJ dysfunction and breathing issues are often deeply connected. At <strong>Airway Clinic Stockholm</strong>, evaluating the relationship between jaw function, airway health and breathing patterns is a central part of how we approach TMJ care.</p>
+ 
+ <h2>What Is the TMJ?</h2>
+ 
+ <p>The temporomandibular joint (TMJ) is one of the most complex joints in the body. Located just in front of each ear, it allows the jaw to open, close, slide forward and move side to side. A small disc of cartilage sits between the jawbone and the skull, cushioning the joint and enabling smooth movement.</p>
+ 
+ <p>TMJ dysfunction — sometimes called TMD or TMJ disorder — occurs when this joint, the surrounding muscles, or both are not working properly. Common symptoms include:</p>
+ 
+ <ul>
+ <li>Pain or tenderness in the jaw, face or around the ear</li>
+ <li>Clicking, popping or grating sounds when opening or closing the mouth</li>
+ <li>Difficulty or discomfort when chewing</li>
+ <li>Jaw locking open or closed</li>
+ <li>Headaches, particularly in the temples</li>
+ <li>Neck and shoulder tension</li>
+ <li>Earaches or a feeling of fullness in the ears</li>
+ </ul>
+ 
+ <p>These symptoms can range from mild and occasional to severe and persistent, affecting daily activities like eating, speaking and sleeping.</p>
+ 
+ <h2>The Airway-TMJ Link</h2>
+ 
+ <p>The connection between the TMJ and the airway is anatomical, functional and neurological. Understanding this connection helps explain why treating TMJ symptoms in isolation often provides only temporary relief.</p>
+ 
+ <h3>Jaw Position and Airway Space</h3>
+ 
+ <p>The lower jaw (mandible) is attached to the skull at the TMJ, and its position directly affects the space available in the airway. When the lower jaw sits too far back — a condition known as retrognathia — the tongue and soft tissues attached to it are also positioned further back, which can narrow or partially obstruct the airway.</p>
+ 
+ <p>This is particularly noticeable during sleep, when muscle tone decreases. The jaw drops back, the tongue follows, and the airway narrows. The body responds by increasing muscle activity in the jaw to pull it forward and reopen the airway — which can manifest as teeth clenching and grinding (bruxism).</p>
+ 
+ <h3>Mouth Breathing and Jaw Muscle Tension</h3>
+ 
+ <p>Chronic mouth breathing changes the resting position of the jaw. Instead of the lips being sealed and the jaw resting in a relaxed position with the tongue on the palate, mouth breathing keeps the jaw slightly open and the muscles of the jaw, face and neck in a constant state of low-level tension.</p>
+ 
+ <p>Over time, this sustained tension contributes to muscle fatigue, pain and dysfunction in the TMJ and its surrounding structures. The muscles never fully relax, even during sleep.</p>
+ 
+ <h3>Nasal Breathing and Nitric Oxide</h3>
+ 
+ <p>Nasal breathing produces nitric oxide, a molecule that plays a crucial role in regulating blood flow, oxygen uptake and airway tone. When nasal breathing is impaired and replaced by mouth breathing, the body loses this natural regulatory mechanism. Reduced nitric oxide has been associated with increased airway resistance and poorer oxygen exchange — factors that can worsen both breathing quality and TMJ-related muscle tension.</p>
+ 
+ <h3>Head Posture and the Chain Effect</h3>
+ 
+ <p>Airway compromise often leads to postural compensation. When the airway is restricted, people instinctively adjust their head position — typically tilting the head forward and extending the neck — to create more space for breathing. This forward head posture places additional strain on the muscles of the neck, shoulders and jaw, contributing to TMJ dysfunction.</p>
+ 
+ <p>The relationship becomes a cycle: poor breathing affects posture, which affects the jaw, which further compromises breathing.</p>
+ 
+ <h2>Sleep, Breathing and TMJ Pain</h2>
+ 
+ <p>The connection between TMJ dysfunction and sleep-disordered breathing is well documented in the research literature. Studies have found that individuals with TMJ disorders are significantly more likely to also have obstructive sleep apnoea (OSA) compared to the general population.</p>
+ 
+ <p>During episodes of airway obstruction in sleep, the body activates the jaw muscles in an attempt to pull the tongue and soft tissues forward and reopen the airway. This repeated activation through the night places enormous stress on the TMJ, which can result in morning jaw pain, stiffness and headaches.</p>
+ 
+ <p>Many patients who believe they clench their teeth due to stress are actually experiencing the body's protective response to airway obstruction during sleep.</p>
+ 
+ <h2>Why Treating Only the Symptoms Falls Short</h2>
+ 
+ <p>Conventional TMJ treatment often focuses on managing symptoms: pain medication, muscle relaxants, night guards (splints) to protect the teeth from grinding, and sometimes physical therapy. These approaches can provide relief, but if the underlying airway issue is not addressed, the root cause remains.</p>
+ 
+ <p>A night guard, for example, may protect the teeth from wear, but it does not address why the jaw is clenching in the first place. If the cause is airway obstruction during sleep, the grinding will continue — the body is trying to survive, not just grind.</p>
+ 
+ <p>An airway-focused approach to TMJ care evaluates the full picture:</p>
+ 
+ <ul>
+ <li>Is the jaw position compromising the airway?</li>
+ <li>Is mouth breathing contributing to muscle dysfunction?</li>
+ <li>Is sleep-disordered breathing driving nocturnal clenching?</li>
+ <li>Are there myofunctional issues (tongue posture, swallowing) affecting jaw stability?</li>
+ <li>Is head and neck posture placing additional strain on the TMJ?</li>
+ </ul>
+ 
+ <p>By addressing these underlying factors, treatment aims to create lasting improvement rather than temporary symptom management.</p>
+ 
+ <h2>Airway-Focused TMJ Treatment</h2>
+ 
+ <p>At Airway Clinic Stockholm, TMJ treatment is approached with attention to the airway and overall functional health:</p>
+ 
+ <ul>
+ <li><strong>Comprehensive assessment:</strong> Evaluation of jaw joint function, muscle patterns, breathing habits, sleep quality and airway space</li>
+ <li><strong>Airway and sleep analysis:</strong> Screening for signs of sleep-disordered breathing that may be contributing to TMJ symptoms</li>
+ <li><strong>Myofunctional therapy:</strong> Exercises to improve tongue posture, swallowing and nasal breathing — reducing strain on the jaw muscles</li>
+ <li><strong>Functional jaw treatment:</strong> Techniques to improve jaw alignment, range of motion and joint health</li>
+ <li><strong>Collaborative care:</strong> Coordination with ENT specialists, sleep physicians and physical therapists when needed</li>
+ </ul>
+ 
+ <p>Treatment is individualised based on each patient's specific findings and needs. For some, improving breathing patterns and tongue posture provides significant TMJ relief. For others, a combination of approaches may be most effective.</p>
+ 
+ <h2>When to Seek an Evaluation</h2>
+ 
+ <p>If you experience persistent TMJ symptoms — jaw pain, clicking, headaches, neck tension or teeth grinding — and conventional treatment has not provided lasting relief, an airway evaluation may reveal contributing factors that have been overlooked.</p>
+ 
+ <p>This is especially relevant if you also experience:</p>
+ 
+ <ul>
+ <li>Chronic mouth breathing or nasal congestion</li>
+ <li>Poor sleep quality or daytime fatigue</li>
+ <li>Snoring or suspected sleep apnoea</li>
+ <li>Forward head posture or neck stiffness</li>
+ <li>Morning jaw stiffness or soreness</li>
+ </ul>
+ 
+ <p>These signs suggest that the TMJ symptoms may be connected to breathing and airway health, and a comprehensive evaluation can help determine the best path forward.</p>
+ 
+ <h2>A Better Approach to Jaw Health</h2>
+ 
+ <p>The TMJ does not exist in isolation. It is part of a functional system that includes the teeth, muscles, airway, breathing and posture. When one part of this system is compromised, the effects ripple outward.</p>
+ 
+ <p>Airway-focused TMJ care recognises these connections and addresses them together, offering a path to more complete and lasting relief. If jaw pain has been a persistent part of your life, understanding the role of the airway may be the missing piece.</p>
+ 
+ <p><em>Airway Clinic Stockholm — Dr. Siavosh Hakimmaani and team. Airway-focused dentistry and TMJ care for children and adults.</em></p>
+ </article>
  </div>
- <footer class="footer">
- &copy; 2026 Airway Clinic Stockholm. <a href="../../privacy.html">Privacy Policy</a>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-logo">
+ <img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm" loading="lazy">
+ </div>
+ <div>
+ <p class="footer-heading">Navigation</p>
+ <ul class="footer-links">
+ <li><a href="../../index.html#about">About</a></li>
+ <li><a href="../../index.html#services">Services</a></li>
+ <li><a href="../../index.html#team">Team</a></li>
+ <li><a href="../../index.html#contact">Contact</a></li>
+ </ul>
+ </div>
+ <div>
+ <p class="footer-heading">Contact</p>
+ <p>Sveavägen 91<br>113 50 Stockholm, Sweden</p>
+ <p>Monday &amp; Friday: 09:00 – 17:00</p>
+ <p><a href="mailto:info@airwayclinic.se">info@airwayclinic.se</a></p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ &copy; 2026 Airway Clinic Stockholm. All rights reserved. <a href="../../privacy.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Privacy Policy</a>
+ </div>
+ </div>
+ <p class="disclaimer" style="font-size:0.75rem;color:rgba(255,255,255,.4);text-align:center;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">The information on this website is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional for diagnosis and treatment recommendations.</p>
+ </div>
  </footer>
 
  <script>
