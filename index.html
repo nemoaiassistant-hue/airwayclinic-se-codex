@@ -381,18 +381,27 @@
  .lang-flags {
  display: flex;
  align-items: center;
- gap: 6px;
- margin-left: auto;
+ gap: 4px;
+ margin-left: 8px;
  }
 
  .lang-flag {
- font-size: 1.3rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
  text-decoration: none;
  line-height: 1;
  opacity: .5;
  transition: opacity .2s ease;
  padding: 2px;
+ font-size: 0.65rem;
+ font-weight: 700;
+ color: var(--dark-teal);
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
  }
+
+ .lang-flag .flag-icon { font-size: 1.3rem; line-height: 1; }
 
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
@@ -1342,8 +1351,8 @@
  <img src="assets/logo-original.png" alt="Airway Clinic Stockholm logo">
  </a>
  <div class="lang-flags" aria-label="Language">
- <a href="./sv/" class="lang-flag" title="Svenska">🇸🇪</a>
- <a href="./" class="lang-flag active" title="English">🇬🇧</a>
+ <a href="./sv/" class="lang-flag" title="Svenska"><span class="flag-icon">🇸🇪</span>SV</a>
+ <a href="./" class="lang-flag active" title="English"><span class="flag-icon">🇬🇧</span>EN</a>
  </div>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
  <span aria-hidden="true"></span>
