@@ -84,7 +84,29 @@
  .lang-flags { display: flex; gap: 6px; margin-left: auto; font-size: 1.3rem; }
  .lang-flags a { text-decoration: none; opacity: .5; }
  .lang-flags a.active { opacity: 1; }
- </style>
+ 
+ @media (min-width: 1024px) {
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img {
+ display: block;
+ font-size: 0.65rem;
+ font-weight: 700;
+ color: #1a6b69;
+ margin-top: 2px;
+ }
+ .lang-flag::before {
+ content: "";
+ display: block;
+ width: 22px;
+ height: 16px;
+ border-radius: 2px;
+ background-size: cover;
+ }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ }
+
+</style>
 
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
@@ -119,8 +141,8 @@
  <header class="site-header">
    <a href="/sv/"><img src="../assets/logo-original.png" alt="Airway Clinic Stockholm" height="44"></a>
    <div class="lang-flags">
-     <a href="/terms" title="English">🇬🇧</a>
-     <a href="/sv/terms" class="active" title="Svenska">🇸🇪</a>
+     <a href="/terms" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
+     <a href="/sv/terms" class="active" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
    </div>
  </header>
  <div class="wrap">

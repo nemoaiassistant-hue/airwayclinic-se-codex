@@ -82,7 +82,20 @@
  .lang-flag.active { opacity: 1; }
  body { padding-top: 90px; }
 
- </style>
+ 
+ .lang-flag .flag-img { display: none; }
+
+ /* Desktop flag images */
+ @media (min-width: 1024px) {
+ .lang-flag { display: flex; flex-direction: column; align-items: center; }
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img { display: block; font-size: 0.65rem; font-weight: 700; color: #1a6b69; margin-top: 2px; }
+ .lang-flag::before { content: ""; display: block; width: 22px; height: 16px; border-radius: 2px; background-size: cover; }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ }
+
+</style>
 
  <meta property="og:title" content="Resources — Airway Clinic Stockholm">
  <meta property="og:description" content="Educational resources about airway dentistry, myofunctional therapy and children's oral health from Airway Clinic Stockholm.">
@@ -115,8 +128,8 @@
  <div class="nav">
  <a class="brand" href="../"><img src="../assets/logo-original.png" alt="Airway Clinic Stockholm"></a>
  <div class="lang-flags">
- <a href="index.html" class="lang-flag active" title="English">🇬🇧</a>
- <a href="../sv/resources/" class="lang-flag" title="Svenska">🇸🇪</a>
+ <a href="index.html" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
+ <a href="../sv/resources/" class="lang-flag" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
  </div>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false"><span aria-hidden="true"></span></button>
  <nav class="nav-panel" id="navPanel">

@@ -165,7 +165,20 @@
  @media (min-width: 1024px) { .menu-toggle { display: none; } .nav-panel { position: static; display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; padding: 0; background: transparent; box-shadow: none; } .nav-links { flex-direction: row; align-items: center; margin: 0; gap: 1.5rem; } .nav-links a { padding: 0; font-size: .95rem; } .grid.benefits { grid-template-columns: repeat(3, minmax(0, 1fr)); } .hero { min-height: 620px; } }
  @media (max-width: 430px) { .container { width: min(100% - 28px, 1200px); } .brand img { width: 136px; } .btn { width: 100%; } .nav-panel .btn { width: auto; } .audience-box { padding: 1.35rem; } }
 
- </style>
+ 
+ .lang-flag .flag-img { display: none; }
+
+ /* Desktop flag images */
+ @media (min-width: 1024px) {
+ .lang-flag { display: flex; flex-direction: column; align-items: center; }
+ .lang-flag .flag-emoji { display: none; }
+ .lang-flag .flag-img { display: block; font-size: 0.65rem; font-weight: 700; color: #1a6b69; margin-top: 2px; }
+ .lang-flag::before { content: ""; display: block; width: 22px; height: 16px; border-radius: 2px; background-size: cover; }
+ .lang-flag[title="Svenska"]::before { background-image: url("https://flagcdn.com/w40/se.png"); }
+ .lang-flag[title="English"]::before { background-image: url("https://flagcdn.com/w40/gb.png"); }
+ }
+
+</style>
 
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
@@ -204,8 +217,8 @@
  <img src="../../assets/logo-original.png" alt="Airway Clinic Stockholm logo">
  </a>
  <div class="lang-flags" aria-label="Language">
- <a href="./sv/" class="lang-flag" title="Svenska">🇸🇪</a>
- <a href="./" class="lang-flag active" title="English">🇬🇧</a>
+ <a href="./sv/" class="lang-flag" title="Svenska"><span class="flag-emoji">🇸🇪</span><span class="flag-img">SV</span></a>
+ <a href="./" class="lang-flag active" title="English"><span class="flag-emoji">🇬🇧</span><span class="flag-img">EN</span></a>
  </div>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false"><span aria-hidden="true"></span></button>
  <nav class="nav-panel" id="navPanel" aria-label="Main navigation">
