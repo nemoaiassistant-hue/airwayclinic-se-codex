@@ -1196,22 +1196,26 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
- font-size: 1.3rem;
- }
-
- .lang-flag::after {
  font-size: 0.65rem;
  font-weight: 700;
  color: var(--dark-teal);
  text-transform: uppercase;
  letter-spacing: 0.04em;
- line-height: 1.2;
- margin-top: 1px;
+ text-decoration: none;
+ opacity: .5;
+ transition: opacity .2s ease;
+ padding: 2px;
  }
 
- .lang-flag[title="Svenska"]::after { content: "SV"; }
- .lang-flag[title="English"]::after { content: "EN"; }
+ .lang-flag:hover { opacity: .8; }
+ .lang-flag.active { opacity: 1; }
+
+ .lang-flag img {
+ width: 22px;
+ height: 16px;
+ border-radius: 2px;
+ margin-bottom: 2px;
+ }
 
  .nav-panel {
  position: static;
@@ -1368,8 +1372,8 @@
  <img src="assets/logo-original.png" alt="Airway Clinic Stockholm logo">
  </a>
  <div class="lang-flags" aria-label="Language">
- <a href="./sv/" class="lang-flag" title="Svenska">🇸🇪</a>
- <a href="./" class="lang-flag active" title="English">🇬🇧</a>
+ <a href="./sv/" class="lang-flag" title="Svenska"><img src="https://flagcdn.com/w40/se.png" alt="SE" width="22" height="16">SV</a>
+ <a href="./" class="lang-flag active" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN" width="22" height="16">EN</a>
  </div>
  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navPanel" aria-expanded="false">
  <span aria-hidden="true"></span>
