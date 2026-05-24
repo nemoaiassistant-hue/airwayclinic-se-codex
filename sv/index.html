@@ -111,27 +111,18 @@
  .lang-flags {
  display: flex;
  align-items: center;
- gap: 4px;
- margin-left: 8px;
+ gap: 6px;
+ margin-left: auto;
  }
 
  .lang-flag {
- display: flex;
- flex-direction: column;
- align-items: center;
+ font-size: 1.3rem;
  text-decoration: none;
  line-height: 1;
  opacity: .5;
  transition: opacity .2s ease;
  padding: 2px;
- font-size: 0.65rem;
- font-weight: 700;
- color: var(--dark-teal);
- text-transform: uppercase;
- letter-spacing: 0.04em;
  }
-
- .lang-flag .flag-icon { font-size: 1.3rem; line-height: 1; }
 
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
@@ -951,6 +942,32 @@
  .nav-menu,
  .nav-actions { display: flex; }
  .menu-toggle { display: none; }
+
+ .lang-flags {
+ gap: 4px;
+ margin-left: 8px;
+ }
+
+ .lang-flag {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-size: 1.3rem;
+ }
+
+ .lang-flag::after {
+ font-size: 0.65rem;
+ font-weight: 700;
+ color: var(--dark-teal);
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ line-height: 1.2;
+ margin-top: 1px;
+ }
+
+ .lang-flag[title="Svenska"]::after { content: "SV"; }
+ .lang-flag[title="English"]::after { content: "EN"; }
+
  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
  .service-card:last-child { grid-column: 2 / span 1; }
  .hero { background-position: center center; }
@@ -1193,8 +1210,8 @@
  <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
  </a>
  <div class="lang-flags" aria-label="Språkval">
- <a href="./" class="lang-flag active" title="Svenska"><span class="flag-icon">🇸🇪</span>SV</a>
- <a href="../" class="lang-flag" title="English"><span class="flag-icon">🇬🇧</span>EN</a>
+ <a href="./" class="lang-flag active" title="Svenska">🇸🇪</a>
+ <a href="../" class="lang-flag" title="English">🇬🇧</a>
  </div>
  <nav class="nav-menu" aria-label="Primär navigation">
  <a class="nav-link" href="#om-oss">Om oss</a>
