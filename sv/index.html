@@ -97,6 +97,7 @@
  align-items: center;
  width: 150px;
  flex: 0 0 auto;
+ order: -1;
  }
 
  .brand img {
@@ -200,19 +201,42 @@
  }
 
  .menu-toggle span,
- .menu-toggle::before,
- .menu-toggle::after {
- display: block;
- width: 20px;
+ .menu-toggle span::before,
+ .menu-toggle span::after {
+ width: 21px;
  height: 2px;
- content: "";
+ display: block;
+ position: relative;
  background: currentColor;
- transition: transform .2s ease, opacity .2s ease;
+ transition: transform 0.2s ease, opacity 0.2s ease;
  }
 
- .menu-toggle[aria-expanded="true"] span { opacity: 0; }
- .menu-toggle[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
- .menu-toggle[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
+ .menu-toggle span::before,
+ .menu-toggle span::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ }
+
+ .menu-toggle span::before {
+ top: -7px;
+ }
+
+ .menu-toggle span::after {
+ top: 7px;
+ }
+
+ .menu-toggle[aria-expanded="true"] span {
+ background: transparent;
+ }
+
+ .menu-toggle[aria-expanded="true"] span::before {
+ transform: translateY(7px) rotate(45deg);
+ }
+
+ .menu-toggle[aria-expanded="true"] span::after {
+ transform: translateY(-7px) rotate(-45deg);
+ }
 
  .btn {
  display: inline-flex;
@@ -908,6 +932,10 @@
  margin-left: 0;
  margin-right: 10px;
  flex-direction: column;
+ }
+
+ .brand {
+ order: 0;
  }
 
  .lang-flag {
