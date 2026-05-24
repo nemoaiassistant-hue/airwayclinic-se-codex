@@ -72,41 +72,37 @@
  .site-header {
  position: fixed;
  inset: 0 0 auto;
- z-index: 100;
- height: var(--nav-height);
- color: var(--dark-teal);
+ z-index: 50;
+ transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
  background: rgba(255, 255, 255, .97);
- transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
  }
 
  .site-header.scrolled,
  .site-header.menu-active {
  background: rgba(255, 255, 255, 1);
- box-shadow: 0 10px 30px rgba(26, 107, 105, .12);
- backdrop-filter: blur(16px);
+ box-shadow: 0 10px 28px rgba(26, 107, 105, 0.08);
+ backdrop-filter: blur(14px);
  }
 
  .nav {
- height: var(--nav-height);
+ min-height: 90px;
  display: flex;
  align-items: center;
  justify-content: space-between;
- gap: 18px;
+ gap: 1rem;
  }
 
- .logo {
- display: inline-flex;
+ .brand {
+ display: flex;
  align-items: center;
- min-width: 132px;
+ width: 150px;
+ flex: 0 0 auto;
  }
 
- .logo img {
- width: 154px;
+ .brand img {
+ width: 150px;
  height: auto;
  }
-
- .site-header.scrolled .logo img,
- .site-header.menu-active .logo img { filter: none; }
 
  .lang-flags {
  display: flex;
@@ -127,111 +123,78 @@
  .lang-flag:hover { opacity: .8; }
  .lang-flag.active { opacity: 1; }
 
- .nav-menu,
- .nav-actions {
+ .nav-panel {
  display: none;
- align-items: center;
- }
-
- .nav-menu {
- gap: 28px;
- font-size: .95rem;
- font-weight: 800;
- }
-
- .nav-link {
- position: relative;
- padding-block: 8px;
- }
-
- .nav-link::after {
  position: absolute;
+ top: 90px;
  left: 0;
  right: 0;
- bottom: 1px;
- height: 2px;
- content: "";
- background: var(--gold);
- transform: scaleX(0);
- transition: transform .2s ease;
+ padding: 1rem 16px 1.25rem;
+ background: rgba(255, 255, 255, 0.98);
+ box-shadow: 0 20px 35px rgba(26, 107, 105, 0.12);
  }
 
- .nav-link:hover::after,
- .nav-link:focus-visible::after { transform: scaleX(1); }
+ .nav-panel.open {
+ display: block;
+ }
 
- .nav-actions { gap: 16px; }
-
- .language-switch {
- display: inline-flex;
+ .nav-links,
+ .language-switcher {
+ display: flex;
  align-items: center;
- gap: 8px;
- font-size: .88rem;
- font-weight: 800;
- white-space: nowrap;
+ gap: 1rem;
+ list-style: none;
+ padding: 0;
+ margin: 0;
  }
 
- .language-switch .active { font-weight: 900; }
- .language-switch a { opacity: .78; }
- .language-switch a:hover { opacity: 1; color: var(--gold); }
+ .nav-links {
+ flex-direction: column;
+ align-items: stretch;
+ margin-bottom: 1rem;
+ }
 
- .btn {
- display: inline-flex;
+ .nav-links a {
+ display: block;
+ padding: 0.65rem 0;
+ color: var(--dark-text);
+ font-weight: 700;
+ }
+
+ .nav-links a:hover {
+ color: var(--dark-teal);
+ }
+
+ .nav-actions {
+ display: flex;
  align-items: center;
- justify-content: center;
- min-height: 46px;
- padding: 12px 22px;
- border: 1px solid transparent;
- border-radius: 999px;
+ justify-content: space-between;
+ gap: 0.9rem;
+ flex-wrap: wrap;
+ }
+
+ .language-switcher {
+ color: var(--muted);
+ font-size: 0.85rem;
  font-weight: 800;
- line-height: 1.1;
- cursor: pointer;
- transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+ gap: 0.45rem;
  }
 
- .btn:hover { transform: translateY(-2px); }
-
- .btn-primary {
- color: var(--white);
- background: var(--primary);
- box-shadow: 0 12px 28px rgba(59, 182, 179, .28);
- }
-
- .btn-primary:hover {
- background: var(--dark-teal);
- box-shadow: 0 16px 34px rgba(26, 107, 105, .25);
- }
-
- .btn-hero {
- color: #173f3e;
- background: linear-gradient(135deg, var(--gold), #f4dc9b);
- box-shadow: 0 18px 36px rgba(232, 193, 112, .28);
- }
-
- .btn-hero:hover {
- color: var(--white);
- background: var(--primary);
- box-shadow: 0 18px 40px rgba(59, 182, 179, .3);
+ .language-switcher .active {
+ color: var(--dark-teal);
  }
 
  .menu-toggle {
+ width: 44px;
+ height: 44px;
  display: inline-flex;
  align-items: center;
  justify-content: center;
- flex-direction: column;
- gap: 5px;
- width: 44px;
- height: 44px;
- border: 1px solid rgba(255, 255, 255, .4);
+ border: 1px solid rgba(26, 107, 105, 0.18);
  border-radius: 8px;
- color: currentColor;
- background: rgba(255, 255, 255, .16);
+ background: rgba(255, 255, 255, 0.7);
+ color: var(--dark-teal);
  cursor: pointer;
- }
-
- .site-header.scrolled .menu-toggle,
- .site-header.menu-active .menu-toggle {
- border-color: rgba(26, 107, 105, .2);
- background: rgba(26, 107, 105, .05);
  }
 
  .menu-toggle span,
@@ -249,40 +212,35 @@
  .menu-toggle[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
  .menu-toggle[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
 
- .mobile-panel {
- position: fixed;
- top: var(--nav-height);
- left: 0;
- right: 0;
- z-index: 99;
- display: grid;
- gap: 18px;
- padding: 24px 20px 30px;
- color: var(--dark-teal);
- background: rgba(255, 255, 255, .98);
- border-bottom: 1px solid var(--line);
- box-shadow: 0 26px 40px rgba(26, 107, 105, .16);
- transform: translateY(-140%);
- opacity: 0;
- pointer-events: none;
- transition: transform .25s ease, opacity .25s ease;
- }
-
- .mobile-panel.open {
- transform: translateY(0);
- opacity: 1;
- pointer-events: auto;
- }
-
- .mobile-panel a {
- min-height: 44px;
- display: flex;
+ .btn {
+ display: inline-flex;
  align-items: center;
+ justify-content: center;
+ min-height: 48px;
+ padding: 0.8rem 1.25rem;
+ border-radius: 999px;
+ border: 1px solid transparent;
  font-weight: 800;
+ line-height: 1;
+ transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+ cursor: pointer;
+ white-space: nowrap;
  }
 
- .mobile-panel .language-switch { justify-content: flex-start; }
- .mobile-panel .btn { width: fit-content; }
+ .btn:hover {
+ transform: translateY(-2px);
+ }
+
+ .btn-primary {
+ color: var(--white);
+ background: var(--primary);
+ box-shadow: 0 12px 28px rgba(59, 182, 179, 0.25);
+ }
+
+ .btn-primary:hover {
+ background: var(--dark-teal);
+ box-shadow: 0 16px 34px rgba(26, 107, 105, 0.25);
+ }
 
  .hero {
  position: relative;
@@ -939,9 +897,9 @@
  }
 
  @media (min-width: 1024px) {
- .nav-menu,
- .nav-actions { display: flex; }
- .menu-toggle { display: none; }
+ .menu-toggle {
+ display: none;
+ }
 
  .lang-flags {
  gap: 4px;
@@ -973,6 +931,37 @@
  height: 16px;
  border-radius: 2px;
  margin-bottom: 2px;
+ }
+
+ .site-header:not(.scrolled):not(.menu-active) .nav-links a {
+ color: var(--dark-teal);
+ }
+
+ .nav-panel {
+ position: static;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ gap: 1.6rem;
+ padding: 0;
+ background: transparent;
+ box-shadow: none;
+ }
+
+ .nav-links {
+ flex-direction: row;
+ align-items: center;
+ margin: 0;
+ gap: 1.5rem;
+ }
+
+ .nav-links a {
+ padding: 0;
+ font-size: 0.95rem;
+ }
+
+ .nav-actions {
+ flex-wrap: nowrap;
  }
 
  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1212,43 +1201,31 @@
 </head>
 <body>
  <header class="site-header" id="siteHeader">
- <div class="container nav" aria-label="Huvudnavigation">
+ <div class="container nav">
  <div class="lang-flags" aria-label="Språkval">
  <a href="./" class="lang-flag active" title="Svenska"><img src="https://flagcdn.com/w40/se.png" alt="SV" width="22" height="16">SV</a>
  <a href="../" class="lang-flag" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN" width="22" height="16">EN</a>
  </div>
- <a class="logo" href="#top" aria-label="Airway Clinic Stockholm">
+ <a class="brand" href="#top" aria-label="Airway Clinic Stockholm">
  <img src="../assets/logo-original.png" alt="Airway Clinic Stockholm">
  </a>
- <nav class="nav-menu" aria-label="Primär navigation">
- <a class="nav-link" href="#om-oss">Om oss</a>
- <a class="nav-link" href="#behandlingar">Behandlingar</a>
- <a class="nav-link" href="#team">Team</a>
- <a class="nav-link" href="../resources/">Resurser</a>
- <a class="nav-link" href="#kontakt">Kontakt</a>
- </nav>
+ <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="navPanel" aria-expanded="false">
+ <span aria-hidden="true"></span>
+ </button>
+ <nav class="nav-panel" id="navPanel" aria-label="Primär navigation">
+ <ul class="nav-links">
+ <li><a href="#om-oss">Om oss</a></li>
+ <li><a href="#behandlingar">Behandlingar</a></li>
+ <li><a href="#team">Team</a></li>
+ <li><a href="../resources/">Resurser</a></li>
+ <li><a href="#kontakt">Kontakt</a></li>
+ </ul>
  <div class="nav-actions">
  <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
  </div>
- <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-controls="mobilePanel" aria-expanded="false">
- <span></span>
- </button>
+ </nav>
  </div>
  </header>
-
- <div class="mobile-panel" id="mobilePanel">
- <a href="#om-oss">Om oss</a>
- <a href="#behandlingar">Behandlingar</a>
- <a href="#team">Team</a>
- <a href="../resources/">Resurser</a>
- <a href="#kontakt">Kontakt</a>
- <div class="language-switch" aria-label="Språkval mobil">
- <span class="active" aria-current="true">SV</span>
- <span aria-hidden="true">|</span>
- <a href="/en/" lang="en">EN</a>
- </div>
- <a class="btn btn-primary" href="#kontakt">Boka konsultation</a>
- </div>
 
  <nav class="breadcrumbs" aria-label="Brödsmulor">
  <div class="container">
@@ -1509,37 +1486,37 @@
 
  <script>
  const header = document.getElementById('siteHeader');
- const menuButton = document.querySelector('.menu-toggle');
- const mobilePanel = document.getElementById('mobilePanel');
- const mobileLinks = mobilePanel.querySelectorAll('a');
+ const toggle = document.querySelector('.menu-toggle');
+ const panel = document.getElementById('navPanel');
+ const navLinks = panel.querySelectorAll('a[href^="#"]');
 
- function syncHeader() {
- header.classList.toggle('scrolled', window.scrollY > 24);
+ function updateHeader() {
+ header.classList.toggle('scrolled', window.scrollY > 16);
  }
 
  function closeMenu() {
- document.body.classList.remove('menu-open');
+ panel.classList.remove('open');
  header.classList.remove('menu-active');
- mobilePanel.classList.remove('open');
- menuButton.setAttribute('aria-expanded', 'false');
- menuButton.setAttribute('aria-label', 'Öppna meny');
+ document.body.classList.remove('menu-open');
+ toggle.setAttribute('aria-expanded', 'false');
+ toggle.setAttribute('aria-label', 'Öppna meny');
  }
 
- menuButton.addEventListener('click', () => {
- const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
- document.body.classList.toggle('menu-open', !isOpen);
- header.classList.toggle('menu-active', !isOpen);
- mobilePanel.classList.toggle('open', !isOpen);
- menuButton.setAttribute('aria-expanded', String(!isOpen));
- menuButton.setAttribute('aria-label', isOpen ? 'Öppna meny' : 'Stäng meny');
+ toggle.addEventListener('click', () => {
+ const isOpen = panel.classList.toggle('open');
+ header.classList.toggle('menu-active', isOpen);
+ document.body.classList.toggle('menu-open', isOpen);
+ toggle.setAttribute('aria-expanded', String(isOpen));
+ toggle.setAttribute('aria-label', isOpen ? 'Stäng meny' : 'Öppna meny');
  });
 
- mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
- window.addEventListener('scroll', syncHeader, { passive: true });
+ navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+ window.addEventListener('scroll', updateHeader, { passive: true });
  window.addEventListener('resize', () => {
  if (window.innerWidth >= 1024) closeMenu();
  });
- syncHeader();
+ updateHeader();
 
  const observer = new IntersectionObserver((entries) => {
  entries.forEach((entry) => {
