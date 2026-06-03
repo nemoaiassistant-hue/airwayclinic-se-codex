@@ -537,11 +537,10 @@
  text-shadow: none;
  }
 
- .contact { background: var(--light-bg); }
+ .contact { background: var(--white); }
 
  .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: stretch;
  }
@@ -558,7 +557,6 @@
   display: grid;
   gap: 0.9rem;
   margin: 1.25rem 0;
-  list-style: none;
  }
 
  .contact-item {
@@ -581,31 +579,36 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background: rgba(232, 193, 112, 0.2);
   color: var(--dark-teal);
  }
 
- .map-link {
-  color: var(--dark-teal);
-  font-weight: 900;
-  text-decoration: underline;
-  text-decoration-color: var(--gold);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
+ .map-frame,
+ .form-frame {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius);
+  background: #eef6f5;
  }
 
- .form-wrap {
+ .map-frame {
+  min-height: 270px;
+ }
+
+ .form-frame {
   padding: 32px;
   overflow: hidden;
  }
 
- .form-wrap form,
+ .form-frame form,
  #consultationForm {
  display: flex;
  flex-direction: column;
  gap: 18px;
  }
 
- .form-wrap label,
+ .form-frame label,
  #consultationForm label {
  display: block;
  font-size: 0.88rem;
@@ -614,10 +617,10 @@
  margin-bottom: 6px;
  }
 
- .form-wrap input[type="text"],
- .form-wrap input[type="email"],
- .form-wrap input[type="tel"],
- .form-wrap textarea,
+ .form-frame input[type="text"],
+ .form-frame input[type="email"],
+ .form-frame input[type="tel"],
+ .form-frame textarea,
  #consultationForm input[type="text"],
  #consultationForm input[type="email"],
  #consultationForm input[type="tel"],
@@ -634,8 +637,8 @@
  box-sizing: border-box;
  }
 
- .form-wrap input:focus,
- .form-wrap textarea:focus,
+ .form-frame input:focus,
+ .form-frame textarea:focus,
  #consultationForm input:focus,
  #consultationForm textarea:focus {
  outline: none;
@@ -647,19 +650,19 @@
  display: block;
  }
 
- .form-wrap textarea {
+ .form-frame textarea {
  min-height: 100px;
  resize: vertical;
  }
 
- .form-wrap .checkbox-group {
+ .form-frame .checkbox-group {
  display: flex;
  gap: 10px;
  align-items: flex-start;
  margin-top: 4px;
  }
 
- .form-wrap .checkbox-group input[type="checkbox"] {
+ .form-frame .checkbox-group input[type="checkbox"] {
  margin-top: 4px;
  accent-color: var(--primary);
  width: 18px;
@@ -667,13 +670,13 @@
  flex-shrink: 0;
  }
 
- .form-wrap .checkbox-group span {
+ .form-frame .checkbox-group span {
  font-size: 0.82rem;
  color: var(--muted);
  line-height: 1.5;
  }
 
- .form-wrap .submit-btn {
+ .form-frame .submit-btn {
  background: var(--primary);
  color: var(--white);
  border: none;
@@ -687,12 +690,12 @@
  align-self: flex-start;
  }
 
- .form-wrap .submit-btn:hover {
+ .form-frame .submit-btn:hover {
  background: var(--dark-teal);
  transform: translateY(-1px);
  }
 
- .form-wrap .submit-btn:disabled {
+ .form-frame .submit-btn:disabled {
  opacity: .6;
  cursor: not-allowed;
  transform: none;
@@ -791,11 +794,23 @@
  }
 
  @media (min-width: 768px) {
- section { padding: 110px 0; }
+ .section {
+ padding: 80px 0;
+ }
+
  .about-grid,
- .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
- .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
- .hero-content { padding-bottom: 150px; }
+ .team-grid,
+ .contact-grid {
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ }
+
+ .team-card {
+ padding: 2.35rem;
+ }
+
+ .testimonial-grid {
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ }
  }
 
  @media (min-width: 1024px) {
@@ -820,7 +835,6 @@
  background-attachment: scroll;
  background-position: center center;
  }
- .contact-details { padding: 28px 22px; }
  }
 
  .faq {
@@ -1319,7 +1333,7 @@
  <p class="section-lede">Skicka en konsultationsförfrågan via formuläret.</p>
  </div>
  <div class="contact-grid">
- <div class="contact-details contact-panel fade-in">
+ <div class="contact-panel fade-in">
  <h3>Airway Clinic Stockholm</h3>
  <div class="contact-list">
  <div class="contact-item">
@@ -1335,10 +1349,9 @@
  <span><strong>Öppettider</strong>Måndag &amp; fredag: 09:00 – 17:00</span>
  </div>
  </div>
- <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden">Visa karta →</a>
  <iframe class="map-frame" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed"></iframe>
  </div>
- <div class="form-wrap contact-panel fade-in">
+ <div class="contact-panel fade-in">
  <iframe src="https://api.leadconnectorhq.com/widget/form/xD58fF9SENlSKO7QQ8bG" style="width:100%;min-height:828px;border:none;border-radius:12px;" id="inline-xD58fF9SENlSKO7QQ8bG" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website Form" data-height="828" data-layout-iframe-id="inline-xD58fF9SENlSKO7QQ8bG" data-form-id="xD58fF9SENlSKO7QQ8bG" title="Book a consultation"></iframe>
  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
  </div>
