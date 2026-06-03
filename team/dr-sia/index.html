@@ -389,6 +389,16 @@
  navLinks.forEach((link) => { link.addEventListener("click", closeMenu); });
  window.addEventListener("resize", () => { if (window.innerWidth >= 1024) closeMenu(); });
 
+ // FAQ toggle
+ document.addEventListener("click", (e) => {
+   const btn = e.target.closest(".faq-question");
+   if (!btn) return;
+   const expanded = btn.getAttribute("aria-expanded") === "true";
+   const answer = btn.nextElementSibling;
+   btn.setAttribute("aria-expanded", String(!expanded));
+   if (answer) answer.classList.toggle("open", !expanded);
+ });
+
  </script>
 </body>
 </html>
