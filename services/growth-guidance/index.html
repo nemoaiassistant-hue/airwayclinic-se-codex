@@ -329,7 +329,7 @@
  <div class="container fade-in">
  <p class="eyebrow">SERVICE</p>
  <h1>Growth Guidance</h1>
- <p>Early orthodontic guidance for healthier jaw, facial, and airway development.</p>
+ <p>Early orthopaedic & orthodontic guidance for healthier jaw, facial, and airway development.</p>
  <a class="btn btn-gold" href="../../#contact">Book Consultation</a>
  </div>
  </section>
@@ -341,9 +341,9 @@
  <h2>Growth Guidance</h2>
  </div>
  <div class="copy fade-in">
- <p>Growth Guidance is early intervention orthodontic care for children whose jaws, bite, and facial growth patterns need support while they are still developing. Instead of waiting for all adult teeth to erupt, we assess how breathing, tongue posture, oral habits, and jaw position are shaping the face.</p>
+ <p>Growth Guidance is early intervention orthopaedic & orthodontic care for children whose jaws, bite, and facial growth patterns need support while they are still developing. Instead of waiting for all adult teeth to erupt, we assess how breathing, tongue posture, oral habits, and jaw positions are shaping the face.</p>
  <p>Treatment often uses removable appliances, habit guidance, and functional exercises to encourage broader arches, better nasal breathing, and more balanced jaw development. The goal is to work with natural growth rather than force late correction after growth opportunities have passed.</p>
- <p>When started at the right time, growth guidance may reduce the need for extractions, complex braces, or jaw surgery later in adolescence.</p>
+ <p>When started at the right time, growth guidance may reduce the need for extractions, complex braces, or jaw surgery later in adolescence and adulthood.</p>
  </div>
  </div>
  </section>
@@ -365,13 +365,13 @@
  <div class="section-header centered fade-in">
  <p class="eyebrow">How It Works</p>
  <h2>How It Works</h2>
- <p class="lede">Every plan is tailored to the patient’s anatomy, function, and goals.</p>
+ <p class="lede">Every plan is tailored to the patient’s anatomy, function, and growth pattern.</p>
  </div>
  <div class="grid steps">
- <article class="card step-card fade-in"><h3>Comprehensive Growth Assessment</h3><p>We review facial growth, bite, airway signs, oral habits, posture, and sleep-related symptoms.</p></article>
- <article class="card step-card fade-in"><h3>Personalised Appliance Plan</h3><p>When indicated, removable appliances are selected to guide jaw development gently and progressively.</p></article>
- <article class="card step-card fade-in"><h3>Habit And Muscle Support</h3><p>Tongue posture, lip seal, chewing, and breathing habits are coached so the appliance result has functional support.</p></article>
- <article class="card step-card fade-in"><h3>Growth Monitoring</h3><p>Regular visits track facial development, appliance fit, comfort, and changes in breathing or sleep.</p></article>
+ <article class="card step-card fade-in"><h3>Comprehensive Growth Assessment</h3><p>We review facial growth, bite, airway function, oral habits, posture, and sleep-related symptoms.</p></article>
+ <article class="card step-card fade-in"><h3>Personalised Appliance Plan</h3><p>When indicated, specific appliances are selected to guide jaw development gently and progressively.</p></article>
+ <article class="card step-card fade-in"><h3>Habit And Muscle Support</h3><p>Tongue posture, lip seal, chewing, and breathing habits are coached.</p></article>
+ <article class="card step-card fade-in"><h3>Growth Monitoring</h3><p>Regular visits track facial development, appliance fit, comfort, and changes in breathing or sleep patterns.</p></article>
  </div>
  </div>
  </section>
@@ -487,6 +487,17 @@
 
  navLinks.forEach((link) => { link.addEventListener("click", closeMenu); });
  window.addEventListener("resize", () => { if (window.innerWidth >= 1024) closeMenu(); });
+
+ // FAQ toggle
+ const faqButtons = document.querySelectorAll(".faq-question");
+ faqButtons.forEach((btn) => {
+   btn.addEventListener("click", () => {
+     const expanded = btn.getAttribute("aria-expanded") === "true";
+     const answer = btn.nextElementSibling;
+     btn.setAttribute("aria-expanded", String(!expanded));
+     if (answer) answer.classList.toggle("open", !expanded);
+   });
+ });
 
  </script>
 </body>
