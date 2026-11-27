@@ -180,7 +180,7 @@
     '.awc-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}' +
     '.awc-btn{border:none;border-radius:9px;padding:10px 18px;font-weight:700;font-size:.88rem;cursor:pointer;font-family:inherit;}' +
     '.awc-btn-primary{background:#1a6b69;color:#fff;}' +
-    '.awc-btn-secondary{background:#41545e;color:#fff;}' +
+    '.awc-btn-secondary{background:#1a6b69;color:#fff;}' +
     '.awc-btn-link{background:none;color:#1a6b69;text-decoration:underline;padding:10px 6px;}' +
     '.awc-row{border-top:1px solid #e3e8e8;padding:10px 0;}' +
     '.awc-row-label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;}' +
