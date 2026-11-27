@@ -1098,14 +1098,13 @@
  "cssSelector": [".faq-answer", ".service-card p", "#about p"]
  }
  </script>
- <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZNFWFLPY"></script>
+ <!-- Cookie consent + Google Consent Mode v2 (default denied; GA loads only after consent) -->
  <script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-PWZNFWFLPY');
+ gtag('consent', 'default', {ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'denied',personalization_storage:'denied',security_storage:'granted',wait_for_update:500});
  </script>
+ <script src="../assets/consent.js" defer></script>
 </head>
 <body>
  <header class="site-header" id="siteHeader">
@@ -1402,7 +1401,11 @@
  <span><strong>Öppettider</strong>Måndag &amp; fredag: 09:00 – 17:00</span>
  </div>
  </div>
- <iframe class="map-frame" title="Karta till Airway Clinic Stockholm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed"></iframe>
+ <div class="awc-map-placeholder" data-awc-map="https://www.google.com/maps?q=Sveavagen%2091%2C%20113%2050%20Stockholm%2C%20Sweden&output=embed" data-awc-map-title="Karta till Airway Clinic Stockholm">
+ <p style="margin:0;"><strong>Airway Clinic Stockholm</strong><br>Sveavägen 91, 113 50 Stockholm</p>
+ <div><button type="button" class="awc-btn awc-btn-primary" data-awc-map-load>Visa karta</button><a class="awc-btn awc-btn-link" href="https://www.google.com/maps/place/?q=place_id:ChIJLRblYhSdX0YRgDT89Ew-zYw" target="_blank" rel="noopener">Öppna i Google Maps</a></div>
+ <p class="awc-map-note">Kartan tillhandahålls av Google och laddas först när du väljer det.</p>
+</div>
  </div>
  <div class="contact-panel fade-in">
  <div class="form-notice" style="font-size:.85rem;line-height:1.55;color:var(--muted);background:var(--light-bg);border-left:3px solid var(--dark-teal);padding:14px 16px;border-radius:0 10px 10px 0;margin-bottom:16px;">Det här formuläret gäller endast en konsultationsförfrågan. Skriv inte sjukdomshistoria, detaljerade symtom, läkemedel, allergier eller personnummer här — det går vi igenom med dig på ett säkert sätt vid besöket. Airway Clinic Stockholm är personuppgiftsansvarig. Vi använder dina uppgifter endast för att hantera den här förfrågan och kontakta dig om den, med GoHighLevel som personuppgiftsbiträde (uppgifter kan behandlas i USA — se vår <a href="privacy.html">integritetspolicy</a>).</div>
@@ -1439,7 +1442,7 @@
  </div>
  <div class="footer-bottom">
  &copy; 2026 Airway Clinic Stockholm. Alla rättigheter förbehållna. <a href="../sv/privacy.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Integritetspolicy</a> <a href="../sv/terms.html" style="color: rgba(255,255,255,.5); margin-left: 16px;">Användarvillkor</a>
- </div>
+  <a href="#" data-awc-cookie-settings style="color: rgba(255,255,255,.5); margin-left: 16px;">Cookieinställningar</a></div>
  </div>
  <p class="disclaimer" style="font-size:0.75rem;color:rgba(255,255,255,.4);text-align:center;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">Informationen på denna webbplats är endast i utbildningssyfte och utgör inte medicinsk rådgivning. Rådfråga alltid kvalificerad sjukvårdspersonal för diagnos och behandlingsrekommendationer.</p>
  </div>
